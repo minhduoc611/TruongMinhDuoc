@@ -6,7 +6,7 @@ const Portfolio = () => {
       description: "Comprehensive HRMS for The SHEA Company featuring modules for attendance tracking, training management, recruitment, internal communications, payroll processing, and employee records with role-based access control.",
       tags: ["Django", "PostgreSQL", "Tableau", "Lark Suite API", "Data Analytics"],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/truongminhduoc",
+      github: "https://github.com/minhduoc611",
       demo: "#",
       highlights: ["Role-based data access", "Advanced analytics integration", "Automated attendance tracking"],
       status: "Production"
@@ -17,7 +17,7 @@ const Portfolio = () => {
       description: "End-to-end data pipeline for automated course data collection and processing. Implements ETL processes with batch scripts and Windows Task Scheduler for consistent data quality.",
       tags: ["Python", "Pandas", "ETL", "Web Scraping", "Task Scheduler"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/truongminhduoc",
+      github: "https://github.com/minhduoc611",
       demo: "#",
       highlights: ["Automated ETL processes", "Data cleaning with Pandas", "Performance monitoring"],
       status: "Completed"
@@ -28,7 +28,7 @@ const Portfolio = () => {
       description: "Intelligent HR assistant using Retrieval-Augmented Generation with vector embeddings for semantic similarity search. Features statistical analysis for performance monitoring and query optimization.",
       tags: ["RAG", "Vector Embeddings", "Python", "Machine Learning", "NLP"],
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/truongminhduoc",
+      github: "https://github.com/minhduoc611",
       demo: "#",
       highlights: ["Semantic similarity search", "Statistical analysis", "Query pattern optimization"],
       status: "Production"
@@ -39,7 +39,7 @@ const Portfolio = () => {
       description: "Integrated timekeeping system combining Lark Attendance, Lark Approval, and Lark Base with automated data processing and analytics capabilities.",
       tags: ["Lark Suite", "API Integration", "Automation", "Data Processing"],
       image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/truongminhduoc",
+      github: "#",
       demo: "#",
       highlights: ["Multi-platform integration", "Automated workflows", "Analytics integration"],
       status: "Production"
@@ -50,7 +50,7 @@ const Portfolio = () => {
       description: "Contributed to company website development using WordPress with custom features and optimized performance for business needs.",
       tags: ["WordPress", "Web Development", "PHP", "MySQL"],
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/truongminhduoc",
+      github: "#",
       demo: "#",
       highlights: ["Custom WordPress development", "Performance optimization", "Business integration"],
       status: "Live"

@@ -1,6 +1,24 @@
 import portfolio1 from '../assets/portfolio1.jpg';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+// Register GSAP plugin
+gsap.registerPlugin(ScrollToPlugin);
 
 const Hero = () => {
+  // Scroll to contact section function
+  const scrollToSection = (sectionId) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: `#${sectionId}`,
+        offsetY: 80, 
+        autoKill: false
+      },
+      ease: "power3.out"
+    });
+  };
+
   return (
     <section className="relative h-screen flex items-center overflow-hidden" id="home">
       {/* Background Elements */}
@@ -20,8 +38,11 @@ const Hero = () => {
               <span className="text-white">Minh</span> <span className="text-secondary">Duoc</span>
             </h1>
             <p className="text-text text-xl mb-8 animate-fadeInLeft delay-100">Analytics Engineer</p>
-            <button
-              className="bg-secondary text-white py-3 px-10 rounded-full font-medium hover:bg-opacity-90 transition duration-300 animate-fadeInLeft delay-200"
+            
+            {/* Enhanced Get Connected Button */}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-secondary hover:bg-blue-500 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fadeInLeft delay-200"
             >
               Get Connected
             </button>
