@@ -20,7 +20,7 @@ const Navbar = () => {
   };
   
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'Portfolio', 'contact'];
+    const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
     
     const updateActiveSection = () => {
       // Thiết lập trạng thái scrolled để thay đổi hiệu ứng navbar
@@ -119,9 +119,9 @@ const Navbar = () => {
             to="/#Portfolio"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('Portfolio');
+              scrollToSection('portfolio');
             }}
-            className={getNavItemClass('Portfolio')}
+            className={getNavItemClass('portfolio')}
             style={{ animationDelay: '0.3s' }}
           >
             {translations.portfolio}
