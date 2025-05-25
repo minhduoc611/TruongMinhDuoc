@@ -25,8 +25,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-medium mb-1">Email</h3>
-                  <a href="mailto:your.email@example.com" className="text-secondary hover:text-white transition duration-300">
-                    minhduoc611@gmail.com
+                  <a href="mailto:minhduoc611.work@gmail.com" className="text-secondary hover:text-white transition duration-300">
+                    minhduoc611.work@gmail.com
                   </a>
                 </div>
               </div>
