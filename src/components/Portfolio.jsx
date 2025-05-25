@@ -167,17 +167,7 @@ const Portfolio = () => {
                     GitHub
                   </a>
                   
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center text-text opacity-70 hover:text-secondary hover:opacity-100 transition-all duration-300 text-sm group/link"
-                  >
-                    <svg className="w-4 h-4 mr-2 group-hover/link:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    Live Demo
-                  </a>
+
                 </div>
               </div>
             </div>
