@@ -21,7 +21,7 @@ const Footer = () => {
               <i className="fab fa-linkedin text-xl"></i>
             </a>
             <a 
-              href="minhduoc611@gmail.com"
+              href="minhduoc611.work@gmail.com"
               className="text-text hover:text-secondary transition duration-300 transform hover:scale-110"
             >
               <i className="fas fa-envelope text-xl"></i>

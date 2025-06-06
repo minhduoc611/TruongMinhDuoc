@@ -2,28 +2,61 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/Portfolio'; // Portfolio đã fix
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 
 function App() {
+  console.log('App component rendered with routing');
+  
   return (
     <BrowserRouter>
       <div className="min-h-screen text-white relative">
-        <Navbar />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Portfolio />
-              <Skills />
-              <Contact />
-            </>
-          } />
+          {/* Homepage - TEST TỪNG COMPONENT */}
+          <Route 
+            path="/" 
+            element={
+              <>
+                {/* HOMEPAGE HOÀN CHỈNH */}
+                <Navbar />
+                <Hero />
+                <About />
+                <Portfolio />
+                <Skills />
+                <Contact />
+                <Footer />
+              </>
+            } 
+          />
+          
+          {/* Project Detail Page */}
+          <Route 
+            path="/project/hrms" 
+            element={<ProjectDetailPage />} 
+          />
+          
+          {/* 404 Page */}
+          <Route 
+            path="*" 
+            element={
+              <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#1a1a2e', color: 'white' }}>
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+                  <p className="text-gray-400 mb-8">The page you're looking for doesn't exist.</p>
+                  <a
+                     href="/"
+                     className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"
+                  >
+                    Back to Home
+                  </a>
+                </div>
+              </div>
+            } 
+          />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );
