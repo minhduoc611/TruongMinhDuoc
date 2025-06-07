@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import CourseraProjectDetail from './pages/CourseraProjectDetail';
 
 function App() {
   console.log('App component rendered with routing');
@@ -15,12 +16,10 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen text-white relative">
         <Routes>
-          {/* Homepage - TEST TỪNG COMPONENT */}
           <Route 
             path="/" 
             element={
               <>
-                {/* HOMEPAGE HOÀN CHỈNH */}
                 <Navbar />
                 <Hero />
                 <About />
@@ -37,7 +36,10 @@ function App() {
             path="/project/hrms" 
             element={<ProjectDetailPage />} 
           />
-          
+          <Route 
+            path="/project/coursera" 
+            element={<CourseraProjectDetail />} 
+          />
           {/* 404 Page */}
           <Route 
             path="*" 

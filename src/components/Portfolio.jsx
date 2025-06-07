@@ -23,7 +23,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       github: "https://github.com/minhduoc611",
       demo: "#",
-      detailLink: "#",
+      detailLink: "/project/coursera",
       highlights: ["Automated ETL processes", "Data cleaning with Pandas", "Performance monitoring"],
       status: "Completed"
     },
