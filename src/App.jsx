@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import CourseraProjectDetail from './pages/CourseraProjectDetail';
+import RAGProjectDetail from './pages/RAGProjectDetail';
 
 function App() {
   console.log('App component rendered with routing');
@@ -40,7 +41,7 @@ function App() {
             path="/project/coursera" 
             element={<CourseraProjectDetail />} 
           />
-          {/* 404 Page */}
+          <Route path="/project/rag" element={<RAGProjectDetail />} />
           <Route 
             path="*" 
             element={

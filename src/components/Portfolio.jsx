@@ -35,7 +35,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       github: "https://github.com/minhduoc611",
       demo: "#",
-      detailLink: "#",
+      detailLink: "/project/rag",
       highlights: ["Semantic similarity search", "Statistical analysis", "Query pattern optimization"],
       status: "Production"
     },
@@ -127,13 +127,7 @@ const Portfolio = () => {
                       className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-80"></div>
-                    
-                    {/* Status Badge */}
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)} backdrop-blur-sm`}>
-                        {project.status}
-                      </span>
-                    </div>
+
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-300 flex items-center justify-center">
@@ -192,15 +186,6 @@ const Portfolio = () => {
                       className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-80"></div>
-                    
-                    {/* Status Badge */}
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)} backdrop-blur-sm`}>
-                        {project.status}
-                      </span>
-                    </div>
-
-                    {/* Coming Soon overlay */}
                     <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-300 flex items-center justify-center">
                       <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-500 px-4 py-2 rounded-lg">
                         Coming Soon
@@ -250,14 +235,7 @@ const Portfolio = () => {
         </div>
         
         {/* Contact CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-300 mb-4">
-            Want to see more projects or discuss potential collaboration?
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-lg text-white font-semibold transition-colors duration-300">
-            Get In Touch
-          </button>
-        </div>
+
       </div>
     </section>
   );
