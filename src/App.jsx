@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import CourseraProjectDetail from './pages/CourseraProjectDetail';
 import RAGProjectDetail from './pages/RAGProjectDetail';
+import DataVizDetail from './pages/DataVizDetail';
+import WebCrawlingDetail from './pages/WebCrawlingDetail';
 
 function App() {
   console.log('App component rendered with routing');
@@ -58,6 +60,14 @@ function App() {
                 </div>
               </div>
             } 
+          />
+          <Route 
+            path="/project/data-visualization" 
+            element={<DataVizDetail />} 
+          />
+          <Route 
+            path="/project/web-crawling" 
+            element={<WebCrawlingDetail />} 
           />
         </Routes>
       </div>

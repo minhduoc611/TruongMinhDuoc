@@ -5,237 +5,347 @@ const Portfolio = () => {
   const portfolioProjects = [
     {
       id: 1,
-      title: "Human Resource Management System",
-      description: "Comprehensive HRMS for The SHEA Company featuring modules for attendance tracking, training management, recruitment, internal communications, payroll processing, and employee records with role-based access control.",
-      tags: ["Django", "PostgreSQL", "Tableau", "Lark Suite API", "Data Analytics"],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/minhduoc611/hrms",
+      title: "Hệ thống Thu thập Dữ liệu Web, Kiến trúc Cơ sở Dữ liệu và Đường ống ETL",
+      description: "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế kiến trúc cơ sở dữ liệu hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch.",
+      tags: ["Thu thập Web", "Thiết kế Cơ sở dữ liệu", "Đường ống ETL", "PostgreSQL", "Xử lý Dữ liệu"],
+      image: "https://user-images.githubusercontent.com/53929423/122325785-d569ae80-cf48-11eb-93e6-4f9730c37105.png",
+      github: "#",
       demo: "#",
-      detailLink: "/project/hrms",
-      highlights: ["Role-based data access", "Advanced analytics integration", "Automated attendance tracking"],
-      status: "Production"
+      detailLink: "/project/web-crawling",
+      highlights: ["Trích xuất dữ liệu đa nền tảng", "Thiết kế kiến trúc cơ sở dữ liệu", "Quy trình ETL tự động"],
+      status: "",
+      gradient: "from-emerald-500/20 to-cyan-500/20",
+      accentColor: "emerald"
     },
     {
       id: 2,
-      title: "Automated Coursera Data Collection System",
-      description: "End-to-end data pipeline for automated course data collection and processing. Implements ETL processes with batch scripts and Windows Task Scheduler for consistent data quality.",
-      tags: ["Python", "Pandas", "ETL", "Web Scraping", "Task Scheduler"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/minhduoc611",
+      title: "Công cụ Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+      description: "Nền tảng phân tích dữ liệu toàn diện với SQL Query Engine mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp.",
+      tags: ["Công cụ Truy vấn SQL", "Xử lý Dữ liệu", "Trực quan hóa Dữ liệu", "Phân tích Python", "Thông tin Kinh doanh"],
+      image: "https://tse4.mm.bing.net/th/id/OIP.gNU_J2BKaPOU53YU6ZVJgwHaFM?rs=1&pid=ImgDetMain",
+      github: "#",
       demo: "#",
-      detailLink: "/project/coursera",
-      highlights: ["Automated ETL processes", "Data cleaning with Pandas", "Performance monitoring"],
-      status: "Completed"
+      detailLink: "/project/data-visualization",
+      highlights: ["Công cụ Truy vấn SQL tiên tiến với tối ưu hóa hiệu suất", "Đường ống xử lý dữ liệu thời gian thực sử dụng Python", "Dashboard trực quan tương tác với nhiều loại biểu đồ"],
+      status: "Hoạt động",
+      gradient: "from-purple-500/20 to-pink-500/20",
+      accentColor: "purple"
     },
     {
       id: 3,
-      title: "AI-Powered HR Assistant with RAG",
-      description: "Intelligent HR assistant using Retrieval-Augmented Generation with vector embeddings for semantic similarity search. Features statistical analysis for performance monitoring and query optimization.",
-      tags: ["RAG", "Vector Embeddings", "Python", "Machine Learning", "NLP"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Hệ thống Trợ lý AI với RAG",
+      description: "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng.",
+      tags: ["RAG", "Vector Embeddings", "Học máy", "Xử lý ngôn ngữ tự nhiên", "Trợ lý AI"],
+      image: "https://tse1.mm.bing.net/th/id/OIP.SvokklbDo1pUdDijtMrc2QHaEO?rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611",
       demo: "#",
       detailLink: "/project/rag",
-      highlights: ["Semantic similarity search", "Statistical analysis", "Query pattern optimization"],
-      status: "Production"
+      highlights: ["Tìm kiếm độ tương đồng ngữ nghĩa", "Phản hồi nhận biết ngữ cảnh", "Xử lý NLP tiên tiến"],
+      status: "",
+      gradient: "from-orange-500/20 to-red-500/20",
+      accentColor: "orange"
     },
     {
       id: 4,
-      title: "Timekeeping System Integration",
-      description: "Integrated timekeeping system combining Lark Attendance, Lark Approval, and Lark Base with automated data processing and analytics capabilities.",
-      tags: ["Lark Suite", "API Integration", "Automation", "Data Processing"],
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      title: "Hệ thống Tự động hóa Tác vụ",
+      description: "Giải pháp tự động hóa toàn diện sử dụng Python để tối ưu hóa các quy trình kinh doanh. Tính năng quản lý tệp, thu thập dữ liệu web, xử lý dữ liệu với pandas/numpy, và tích hợp API để tối ưu hóa quy trình làm việc.",
+      tags: ["Tự động hóa Tác vụ", "Python", "Tối ưu hóa Quy trình", "Tích hợp API", "Quy trình Làm việc"],
+      image: "https://tse2.mm.bing.net/th/id/OIP.mQSTnOrPTZddnGb5WwSDFQHaEO?r=0&rs=1&pid=ImgDetMain",
+      github: "https://github.com/minhduoc611",
       demo: "#",
-      detailLink: "#",
-      highlights: ["Multi-platform integration", "Automated workflows", "Analytics integration"],
-      status: "Production"
+      detailLink: "/project/coursera",
+      highlights: ["Quy trình kinh doanh tự động", "Tích hợp đa nền tảng", "Giám sát hiệu suất"],
+      status: "",
+      gradient: "from-indigo-500/20 to-blue-500/20",
+      accentColor: "indigo"
     },
     {
       id: 5,
-      title: "WordPress Company Website",
-      description: "Contributed to company website development using WordPress with custom features and optimized performance for business needs.",
-      tags: ["WordPress", "Web Development", "PHP", "MySQL"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      title: "Ứng dụng Web Django Full-Stack",
+      description: "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện.",
+      tags: ["Ứng dụng Web Django", "Full-Stack", "PostgreSQL", "Phát triển Web", "Backend"],
+      image: "https://tse1.mm.bing.net/th/id/OIP.8Gr2pMDdhQVf89D6TLuVagHaEK?r=0&rs=1&pid=ImgDetMain",
+      github: "https://github.com/minhduoc611/hrms",
       demo: "#",
-      detailLink: "#",
-      highlights: ["Custom WordPress development", "Performance optimization", "Business integration"],
-      status: "Live"
+      detailLink: "/project/hrms",
+      highlights: ["Kiến trúc web hiện đại", "Tối ưu hóa cơ sở dữ liệu", "Thiết kế responsive"],
+      status: "",
+      gradient: "from-teal-500/20 to-green-500/20",
+      accentColor: "teal"
     }
   ];
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'Production':
-        return 'bg-green-500/20 text-green-400 border border-green-500/30';
-      case 'Live':
-        return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
-      case 'Completed':
-        return 'bg-purple-500/20 text-purple-400 border border-purple-500/30';
+      case 'Đang vận hành':
+        return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg shadow-green-500/30';
+      case 'Hoạt động':
+        return 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/30';
+      case 'Hoàn thành':
+        return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30';
       default:
-        return 'bg-gray-500/20 text-gray-400 border border-gray-500/30';
+        return 'bg-gradient-to-r from-gray-500 to-gray-600 text-white shadow-lg shadow-gray-500/30';
     }
+  };
+
+  const getAccentColors = (accentColor) => {
+    const colors = {
+      emerald: {
+        border: 'border-emerald-400/50',
+        text: 'text-emerald-400',
+        bg: 'bg-emerald-500/10',
+        shadow: 'shadow-emerald-500/20'
+      },
+      purple: {
+        border: 'border-purple-400/50',
+        text: 'text-purple-400',
+        bg: 'bg-purple-500/10',
+        shadow: 'shadow-purple-500/20'
+      },
+      orange: {
+        border: 'border-orange-400/50',
+        text: 'text-orange-400',
+        bg: 'bg-orange-500/10',
+        shadow: 'shadow-orange-500/20'
+      },
+      indigo: {
+        border: 'border-indigo-400/50',
+        text: 'text-indigo-400',
+        bg: 'bg-indigo-500/10',
+        shadow: 'shadow-indigo-500/20'
+      },
+      teal: {
+        border: 'border-teal-400/50',
+        text: 'text-teal-400',
+        bg: 'bg-teal-500/10',
+        shadow: 'shadow-teal-500/20'
+      }
+    };
+    return colors[accentColor] || colors.emerald;
   };
 
   return (
     <section id="portfolio" className="py-20 relative overflow-hidden" style={{
       background: 'linear-gradient(125deg, #09092c 0%, #0d0d35 40%, #101048 100%)'
     }}>
-      {/* Background decorations */}
-      <div className="absolute w-96 h-96 rounded-full opacity-10 blur-3xl -top-40 -right-40 z-0 animate-pulse" style={{
-        background: 'radial-gradient(circle, rgba(0, 162, 255, 0.4) 0%, rgba(0, 162, 255, 0) 70%)'
+      {/* Enhanced Background decorations */}
+      <div className="absolute w-96 h-96 rounded-full opacity-15 blur-3xl -top-40 -right-40 z-0 animate-pulse" style={{
+        background: 'radial-gradient(circle, rgba(0, 162, 255, 0.6) 0%, rgba(0, 162, 255, 0) 70%)'
       }}></div>
-      <div className="absolute w-64 h-64 rounded-full opacity-10 blur-3xl -bottom-20 -left-20 z-0 animate-pulse" style={{
-        background: 'radial-gradient(circle, rgba(80, 130, 255, 0.4) 0%, rgba(80, 130, 255, 0) 70%)',
+      <div className="absolute w-64 h-64 rounded-full opacity-15 blur-3xl -bottom-20 -left-20 z-0 animate-pulse" style={{
+        background: 'radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0) 70%)',
         animationDelay: '0.2s'
       }}></div>
-      <div className="absolute w-80 h-80 rounded-full opacity-5 blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 animate-pulse" style={{
-        background: 'radial-gradient(circle, rgba(0, 100, 200, 0.3) 0%, rgba(0, 100, 200, 0) 70%)',
-        animationDelay: '0.3s'
+      <div className="absolute w-80 h-80 rounded-full opacity-10 blur-3xl top-1/3 right-1/4 z-0 animate-pulse" style={{
+        background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0) 70%)',
+        animationDelay: '0.5s'
       }}></div>
       
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-blue-400/30 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          />
+        ))}
+      </div>
+      
       <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            My <span className="text-blue-400">Portfolio</span>
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Showcasing real-world projects in <span className="text-blue-400 font-semibold">data analytics</span>, 
-              <span className="text-blue-400 font-semibold"> automation</span>, and 
-              <span className="text-blue-400 font-semibold"> system integration</span>
-              <br />built during my experience as an Analytics Engineer
-            </p>
+        {/* Enhanced Header */}
+        <div className="text-center mb-20 w-full">
+          <div className="relative inline-block">
+            <h2 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-purple-300 mb-8 relative">
+              Portfolio
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl -z-10"></div>
+            </h2>
           </div>
         </div>
         
-        <div className="w-full max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
-            {portfolioProjects.map((project, index) => (
-              project.detailLink !== "#" ? (
-                <Link 
-                  key={project.id}
-                  to={project.detailLink}
-                  className="w-full max-w-sm bg-gray-800/30 backdrop-blur-sm border border-gray-700/40 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300 group hover:transform hover:scale-105 hover:border-blue-400/50 cursor-pointer"
-                >
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-80"></div>
-
-
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-300 flex items-center justify-center">
-                      <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-500 px-4 py-2 rounded-lg">
-                        View Details
-                      </span>
-                    </div>
-                  </div>
+        <div className="w-full max-w-7xl mx-auto space-y-6">
+          {portfolioProjects.map((project, index) => {
+            const colors = getAccentColors(project.accentColor);
+            const isEven = index % 2 === 0;
+            
+            return project.detailLink !== "#" ? (
+              <Link 
+                key={project.id}
+                to={project.detailLink}
+                className="group block w-full"
+              >
+                <div className={`relative overflow-hidden rounded-3xl backdrop-blur-xl border ${colors.border} transition-all duration-500 hover:scale-[1.02] hover:${colors.shadow} hover:shadow-2xl`}
+                     style={{
+                       background: `linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.6) 100%)`
+                     }}>
                   
-                  {/* Project Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl text-white font-semibold mb-3 group-hover:text-blue-400 transition duration-300">
-                      {project.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    
-                    {/* Highlights */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-medium text-blue-400 mb-2">Key Features:</h4>
-                      <ul className="text-xs text-gray-400 space-y-1">
-                        {project.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></span>
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span 
-                          key={tagIndex} 
-                          className="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/30 hover:border-blue-400/50 hover:bg-blue-500/30 transition-all duration-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </Link>
-              ) : (
-                <div 
-                  key={project.id} 
-                  className="w-full max-w-sm bg-gray-800/30 backdrop-blur-sm border border-gray-700/40 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300 group hover:transform hover:scale-105 hover:border-blue-400/50"
-                >
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-80"></div>
-                    <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-300 flex items-center justify-center">
-                      <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-500 px-4 py-2 rounded-lg">
-                        Coming Soon
-                      </span>
-                    </div>
-                  </div>
+                  {/* Animated background gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
-                  {/* Project Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl text-white font-semibold mb-3 group-hover:text-blue-400 transition duration-300">
-                      {project.title}
-                    </h3>
+                  {/* Content */}
+                  <div className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[220px]`}>
                     
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    
-                    {/* Highlights */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-medium text-blue-400 mb-2">Key Features:</h4>
-                      <ul className="text-xs text-gray-400 space-y-1">
-                        {project.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></span>
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Project Image */}
+                    <div className="lg:w-2/5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-transparent z-10"></div>
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-40 lg:h-full object-cover transform group-hover:scale-110 transition duration-700"
+                      />
+                      
+                      {/* Floating status badge */}
+                      <div className="absolute top-3 left-3 z-20">
+                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${getStatusColor(project.status)} transform group-hover:scale-110 transition-transform duration-300`}>
+                          {project.status}
+                        </span>
+                      </div>
+
+                      {/* Project number */}
+                      <div className="absolute bottom-3 right-3 z-20">
+                        <div className={`w-10 h-10 ${colors.bg} backdrop-blur-sm rounded-full flex items-center justify-center border ${colors.border}`}>
+                          <span className={`text-sm font-bold ${colors.text}`}>
+                            {String(project.id).padStart(2, '0')}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Hover overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500 flex items-center justify-center z-10">
+                        <div className="transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                          <span className="text-white font-medium text-xs bg-gradient-to-r from-blue-500 to-purple-500 px-3 py-1.5 rounded-full shadow-lg">
+                            Xem →
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span 
-                          key={tagIndex} 
-                          className="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/30 hover:border-blue-400/50 hover:bg-blue-500/30 transition-all duration-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    {/* Project Content */}
+                    <div className="lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center space-y-3">
+                      
+                      {/* Title with animated underline */}
+                      <div className="relative">
+                        <h3 className="text-lg lg:text-xl font-bold text-white mb-1 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                          {project.title}
+                        </h3>
+                        <div className={`h-0.5 bg-gradient-to-r ${project.gradient} w-0 group-hover:w-16 transition-all duration-500 rounded-full`}></div>
+                      </div>
+                      
+                      <p className="text-gray-300 text-sm leading-relaxed font-light group-hover:text-gray-200 transition-colors duration-300 line-clamp-2">
+                        {project.description}
+                      </p>
+                      
+                      {/* Compact Highlights */}
+                      <div className="space-y-1.5">
+                        <h4 className={`text-xs font-bold ${colors.text} flex items-center`}>
+                          <span className="w-1 h-1 bg-current rounded-full mr-1.5"></span>
+                          Tính năng
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {project.highlights.slice(0, 2).map((highlight, idx) => (
+                            <span key={idx} className={`${colors.bg} ${colors.border} border rounded-md px-2 py-0.5 text-xs text-gray-300 font-medium`}>
+                              {highlight}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Compact Tech Stack */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                          <span 
+                            key={tagIndex} 
+                            className={`${colors.bg} ${colors.text} text-xs font-semibold px-2 py-0.5 rounded-full border ${colors.border} group-hover:scale-105 transition-all duration-300 backdrop-blur-sm`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {project.tags.length > 4 && (
+                          <span className="text-xs text-gray-400 px-2 py-0.5">
+                            +{project.tags.length - 4}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              )
-            ))}
-          </div>
-        </div>
-        
-        {/* Contact CTA */}
+              </Link>
+            ) : (
+              <div 
+                key={project.id} 
+                className="group block w-full"
+              >
+                <div className={`relative overflow-hidden rounded-3xl backdrop-blur-xl border ${colors.border} transition-all duration-500 hover:scale-[1.02] hover:${colors.shadow} hover:shadow-2xl opacity-75`}
+                     style={{
+                       background: `linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.6) 100%)`
+                     }}>
+                  
+                  {/* Content - Same structure but for coming soon projects */}
+                  <div className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[220px]`}>
+                    
+                    {/* Project Image */}
+                    <div className="lg:w-2/5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/30 to-transparent z-10"></div>
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-40 lg:h-full object-cover transform group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+                      />
+                      
+                      {/* Coming Soon badge */}
+                      <div className="absolute top-3 left-3 z-20">
+                        <span className="px-2 py-1 text-xs font-bold rounded-full bg-gradient-to-r from-gray-500 to-gray-600 text-white shadow-lg">
+                          Sắp ra mắt
+                        </span>
+                      </div>
 
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-gray-500/20 to-gray-600/20 flex items-center justify-center z-10">
+                        <div className="text-white font-medium text-xs bg-gray-500/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                          Đang phát triển
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Project Content - Same as above but with muted styling */}
+                    <div className="lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center space-y-3">
+                      <div className="relative">
+                        <h3 className="text-lg lg:text-xl font-bold text-gray-300 mb-1 leading-tight">
+                          {project.title}
+                        </h3>
+                      </div>
+                      
+                      <p className="text-gray-400 text-sm leading-relaxed font-light line-clamp-2">
+                        {project.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                          <span 
+                            key={tagIndex} 
+                            className="bg-gray-500/20 text-gray-400 text-xs font-semibold px-2 py-0.5 rounded-full border border-gray-500/30"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {project.tags.length > 4 && (
+                          <span className="text-xs text-gray-500 px-2 py-0.5">
+                            +{project.tags.length - 4}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

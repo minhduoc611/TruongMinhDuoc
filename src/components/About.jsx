@@ -12,7 +12,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-text mb-4 reveal">
-              I am a Data Analyst and Data Engineer with a passion for transforming complex data into valuable insights. Equipped with strong self-learning capabilities, continuous personal development mindset, and collaborative teamwork skills, I am committed to advancing to a middle-level position within the next 3-4 years.
+             Tôi là một người có tinh thần chủ động và đam mê học hỏi, luôn hứng thú với việc giải quyết các thách thức kỹ thuật phức tạp. Với khả năng làm việc nhóm tốt và tinh thần hỗ trợ đồng đội, tôi không ngừng nâng cao kỹ năng chuyên môn với mục tiêu đạt Middle level trong 2-3 năm tới. 
             </p>
             
             {/* Download CV Button */}
