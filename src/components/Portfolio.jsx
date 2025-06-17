@@ -8,7 +8,7 @@ const Portfolio = () => {
       title: "Hệ thống Thu thập Dữ liệu Web, Kiến trúc Cơ sở Dữ liệu và Đường ống ETL",
       description: "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế kiến trúc cơ sở dữ liệu hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch.",
       tags: ["Thu thập Web", "Thiết kế Cơ sở dữ liệu", "Đường ống ETL", "PostgreSQL", "Xử lý Dữ liệu"],
-      image: "https://user-images.githubusercontent.com/53929423/122325785-d569ae80-cf48-11eb-93e6-4f9730c37105.png",
+      image: "https://tse3.mm.bing.net/th/id/OIP.xiNoT9eRGm2XuO2ndZrzwwHaD5?r=0&w=1140&h=600&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/web-crawling",
@@ -22,7 +22,7 @@ const Portfolio = () => {
       title: "Công cụ Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
       description: "Nền tảng phân tích dữ liệu toàn diện với SQL Query Engine mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp.",
       tags: ["Công cụ Truy vấn SQL", "Xử lý Dữ liệu", "Trực quan hóa Dữ liệu", "Phân tích Python", "Thông tin Kinh doanh"],
-      image: "https://tse4.mm.bing.net/th/id/OIP.gNU_J2BKaPOU53YU6ZVJgwHaFM?rs=1&pid=ImgDetMain",
+      image: "https://tse3.mm.bing.net/th/id/OIP.0wrLYUfpiTr9SIDHeHdZRAHaEO?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/data-visualization",
@@ -161,10 +161,9 @@ const Portfolio = () => {
         {/* Enhanced Header */}
         <div className="text-center mb-20 w-full">
           <div className="relative inline-block">
-            <h2 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-purple-300 mb-8 relative">
-              Portfolio
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl -z-10"></div>
-            </h2>
+                  <h2 className="text-3xl font-bold text-white mb-12 text-center reveal">
+          Portfolio 
+        </h2>
           </div>
         </div>
         

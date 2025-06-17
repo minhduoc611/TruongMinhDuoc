@@ -154,20 +154,63 @@ const CourseraProjectDetail = () => {
 
 
         {/* System Architecture Image */}
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Quy trình hoạt động</h2>
           
-          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 rounded-lg p-4 border border-gray-600/20 overflow-hidden">
+          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 max-w-5xl mx-auto">
+            <div className="bg-gray-900/50 rounded-lg p-4 border border-gray-600/20">
               <img 
-                src={AutoImage} 
-                alt="Task Automation System Architecture"
-                className="w-full h-auto rounded-lg max-h-96 object-contain"
-              />
+              src={AutoImage} 
+              alt="Task Automation System Architecture"
+              className="w-1/2 h-auto rounded-lg object-cover mx-auto"
+            />
+
+
             </div>
             <div className="mt-6">
               <p className="text-gray-300 text-center leading-relaxed">
                 Hệ thống hoạt động hoàn toàn tự động thông qua Windows Task Scheduler, khởi động automation.bat script để crawl dữ liệu từ Coursera, xử lý và làm sạch thông tin, sau đó upload lên Google Sheets. Dữ liệu được đọc từ Google Sheets vào database và tự động refresh dashboard Tableau, đảm bảo người dùng luôn nhìn thấy insights mới nhất mà không cần bất kỳ can thiệp thủ công nào.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 24/7 Automation Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">Vận hành tự động 24/7</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Automated Operation */}
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 border border-blue-500/30">
+                <Clock className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Hoạt động liên tục</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Hệ thống được vận hành tự động liên tục 24/7 với Windows Task Scheduler, đảm bảo thu thập dữ liệu không gián đoạn và cập nhật thông tin theo thời gian thực.
+              </p>
+            </div>
+
+            {/* Real-time Logging */}
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 hover:border-green-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 border border-green-500/30">
+                <FileText className="w-6 h-6 text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Logging & Monitoring</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Được logging và report real-time với hệ thống giám sát toàn diện, theo dõi trạng thái hoạt động và phát hiện lỗi kịp thời.
+              </p>
+            </div>
+
+            {/* Google Sheets Sync */}
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 hover:border-purple-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 border border-purple-500/30">
+                <RefreshCw className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Đồng bộ Google Sheets</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Đồng bộ tự động với Google Sheets cho phép truy cập dữ liệu real-time từ mọi nơi và tích hợp seamless với các công cụ báo cáo khác.
               </p>
             </div>
           </div>

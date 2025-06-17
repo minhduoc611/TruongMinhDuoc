@@ -10,6 +10,13 @@ import DTImage from '../assets/images/daotao.png';
 import RGImage from '../assets/images/chat_regex.png';
 import FormIgmage from '../assets/images/formNhap.png';
 import LEMP from '../assets/images/LEMP.png';
+import BE1 from '../assets/images/backend1.png';
+import BE2 from '../assets/images/backend2.png';
+import ERD_ChamCong from '../assets/images/ERD-Chấm công.png';
+import ERD_DaoTao from '../assets/images/ERD-Đào tạo.png';
+import ERD_TuyenDung from '../assets/images/ERD-Tuyển dụng.png';
+import ERD_NhanVien from '../assets/images/ERD-Hồ sơ nhân viên.png';
+import ERD_Luong from '../assets/images/ERD-Lương.png';
 
 const ProjectDetailPage = () => {
   const projectData = {
@@ -138,26 +145,121 @@ const ProjectDetailPage = () => {
 
           
           {/* Database ERD */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Sơ Đồ Mối Quan Hệ Thực Thể (ERD)</h3>
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40 text-center">
-              <p className="text-gray-300 mb-6 text-lg">
-                Sơ đồ ERD chi tiết hiển thị mối quan hệ giữa các thực thể trong hệ thống HRMS, bao gồm các bảng dữ liệu chính như Employee, Attendance, Recruitment, Training và các mối quan hệ khóa ngoại.
+            <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
+              <h3 className="text-xl font-bold text-white mb-4">Database cho hệ thống quản lý nhân sự</h3>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. 
+                Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.
               </p>
-              <button 
-                onClick={() => window.location.href = '/project/web-crawling'}
-                className="inline-flex items-center bg-blue-600/30 hover:bg-blue-600/50 text-blue-300 hover:text-white px-6 py-3 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 backdrop-blur-sm group"
-              >
-                <Database className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                <span>Xem Sơ Đồ ERD Chi Tiết</span>
-                <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+
+              {/* ERD Images - 1 cột dọc */}
+              <div className="space-y-6">
+                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Hồ sơ Nhân viên</h4>
+                  <div className="bg-white rounded-lg p-4 flex justify-center">
+                    <img 
+                      src={ERD_NhanVien} 
+                      alt="ERD Hồ sơ Nhân viên" 
+                      className="w-[400px] h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Chấm công</h4>
+                  <div className="bg-white rounded-lg p-4 flex justify-center">
+                    <img 
+                      src={ERD_ChamCong} 
+                      alt="ERD Chấm công" 
+                      className="w-[400px] h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Tuyển dụng</h4>
+                  <div className="bg-white rounded-lg p-4 flex justify-center">
+                    <img 
+                      src={ERD_TuyenDung} 
+                      alt="ERD Tuyển dụng" 
+                      className="w-[400px] h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Lương</h4>
+                  <div className="bg-white rounded-lg p-4 flex justify-center">
+                    <img 
+                      src={ERD_Luong} 
+                      alt="ERD Lương" 
+                      className="w-[400px] h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Đào tạo</h4>
+                  <div className="bg-white rounded-lg p-4 flex justify-center">
+                    <img 
+                      src={ERD_DaoTao} 
+                      alt="ERD Đào tạo" 
+                      className="w-[400px] h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
+          
+<div className="mb-12">
+          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Back-end</h3>
+          
+          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Ảnh 1 */}
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                  <img 
+                    src={BE1} 
+                    alt="Giao diện đăng nhập"
+                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                  />
+                </div>
+                <h4 className="text-white font-semibold mb-2 text-center">View Django</h4>
+              </div>
+
+              {/* Ảnh 2 */}
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                  <img 
+                    src={BE2} 
+                    alt="backend"
+                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                  />
+                </div>
+                <h4 className="text-white font-semibold mb-2 text-center">URL Django</h4>
+              </div>
+
+            </div>
+
+            {/* Mô tả ngắn */}
+            <div className="mt-6 text-center">
+              <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
+                Backend được xây dựng với Django framework, sử dụng các view functions để xử lý logic nghiệp vụ 
+                và URL patterns để định tuyến các request. Hệ thống quản lý nhân viên với đầy đủ chức năng CRUD, 
+                xử lý dữ liệu JSON và tích hợp với cơ sở dữ liệu thông qua Django ORM.
+              </p>
+            </div>
+
           </div>
+        </div>
+
 
           {/* Web App Interface Screenshots */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Giao Diện Ứng Dụng Web</h3>
+            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Front-end</h3>
             <div className="grid grid-cols-1 gap-6">
               
               {/* Login Interface */}
@@ -225,25 +327,6 @@ const ProjectDetailPage = () => {
                 <p className="text-gray-400 text-xs">Nhập dữ liệu thêm khoá đào tạo nhân viên mới </p>
               </div>
 
-            </div>
-          </div>
-        </section>
-
-
-        {/* Architecture */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Kiến Trúc Hệ Thống</h2>
-          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
-            <p className="text-gray-300 mb-6 text-center text-lg">
-              {projectData.architecture.description}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {projectData.architecture.components.map((component, index) => (
-                <div key={index} className="flex items-center bg-gray-700/30 rounded-lg p-4">
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300 text-sm">{component}</span>
-                </div>
-              ))}
             </div>
           </div>
         </section>
