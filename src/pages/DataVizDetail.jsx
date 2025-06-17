@@ -110,10 +110,6 @@ const DataVisualizationDetail = () => {
               </div>
               <h2 className="text-3xl font-bold text-blue-400">1. Công Cụ Truy Vấn SQL</h2>
             </div>
-            
-            <div className="bg-gray-900/50 rounded-lg p-8 border border-gray-600/30 min-h-[200px] flex items-center justify-center">
-              <p className="text-gray-400 text-lg italic">Comming Soon....</p>
-            </div>
           </section>
 
           {/* 2. Data Processing */}
@@ -123,10 +119,6 @@ const DataVisualizationDetail = () => {
                 <Zap className="w-8 h-8 text-purple-400" />
               </div>
               <h2 className="text-3xl font-bold text-purple-400">2. Xử Lý Dữ Liệu</h2>
-            </div>
-            
-            <div className="bg-gray-900/50 rounded-lg p-8 border border-gray-600/30 min-h-[200px] flex items-center justify-center">
-              <p className="text-gray-400 text-lg italic">Đang phát triển...</p>
             </div>
           </section>
 
