@@ -16,11 +16,11 @@ const WebCrawlerDetail = () => {
   }, []);
 
   const projectData = {
-    title: "Web Data Crawler, Database Architecture và ETL Pipeline",
+    title: "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
     subtitle: "Thu thập dữ liệu web, xây dựng database, ETL pipeline",
     overview: "Hệ thống tích hợp hoàn chỉnh bao gồm thu thập dữ liệu web từ Coursera, thiết kế database cho hệ thống quản lý nhân sự, và xây dựng ETL pipeline tự động đồng bộ dữ liệu từ Lark Suite.",
     
-    tags: ["Python", "Selenium WebDriver", "PostgreSQL", "Database Design", "ETL Pipeline", "Django", "Celery", "Lark Suite API"],
+    tags: ["Web Crawling","Selenium WebDriver", "Thiết kế database", "Xây dựng ETL pipeline", "Celery", "Lark Suite API"],
     
     heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     
@@ -312,14 +312,7 @@ const WebCrawlerDetail = () => {
               <div className="bg-gray-800/40 rounded-xl p-6 border border-emerald-400/20">
                 <h3 className="text-xl font-bold text-white mb-4">Mô tả chi tiết</h3>
                 <p className="text-gray-300 leading-relaxed text-sm">
-                  Đây là một chương trình tự động thu thập thông tin các khóa học miễn phí từ website Coursera bằng cách giả lập hành vi duyệt web của con người. 
-                  Hệ thống hoạt động theo hai giai đoạn chính: đầu tiên là thu thập danh sách tổng quan các khóa học (tên, link, hình ảnh), 
-                  sau đó truy cập từng khóa học để lấy thông tin chi tiết như mô tả, đánh giá, số người học, giảng viên và thời gian học. 
-                  Chương trình có khả năng tự động chuyển trang, tải hình ảnh, và tránh trùng lặp dữ liệu bằng cách chỉ thu thập những khóa học chưa từng cào trước đó. 
-                  Dữ liệu được lưu trữ có tổ chức trong các thư mục theo thời gian và xuất ra file CSV để dễ dàng phân tích. 
-                  Hệ thống còn tích hợp các biện pháp an toàn như thời gian chờ giữa các lần truy cập để tránh bị website phát hiện và chặn. 
-                  Kết quả cuối cùng là một cơ sở dữ liệu hoàn chỉnh về các khóa học Coursera, hữu ích cho việc nghiên cứu thị trường giáo dục trực tuyến, 
-                  phân tích xu hướng học tập, và theo dõi sự phát triển của các khóa học theo thời gian.
+                  Đây là chương trình tự động thu thập thông tin các khóa học miễn phí từ Coursera bằng cách giả lập hành vi duyệt web, thu thập dữ liệu tổng quan và chi tiết của từng khóa học. Hệ thống có khả năng tự động chuyển trang, tránh trùng lặp dữ liệu và tích hợp các biện pháp an toàn để tránh bị phát hiện. Kết quả là cơ sở dữ liệu hoàn chỉnh được xuất ra file CSV, hữu ích cho nghiên cứu thị trường giáo dục trực tuyến và phân tích xu hướng học tập.
                 </p>
               </div>
             </div>
@@ -335,35 +328,9 @@ const WebCrawlerDetail = () => {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-white mb-2">1.2 Xây dựng Database</h2>
-                <p className="text-blue-400 text-xl font-medium">Database cho hệ thống thu thập dữ liệu Coursera</p>
               </div>
             </div>
 
-            {/* Database ERD - Ảnh nhỏ hơn */}
-            <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20 mb-8">
-              <h3 className="text-xl font-bold text-white mb-4 text-center">Database ERD Schema</h3>
-              <div className="bg-white rounded-lg p-4 flex justify-center">
-                <img 
-                  src={CouseraERD} 
-                  alt="Coursera Database ERD" 
-                  className="max-w-2xl h-auto rounded-lg"
-                />
-              </div>
-            </div>
-
-            {/* Mô tả chi tiết ở dưới */}
-            <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20 mb-8">
-              <h3 className="text-xl font-bold text-white mb-4">Mô tả chi tiết</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Database được xây dựng trên PostgreSQL với thiết kế normalized để đảm bảo tính toàn vẹn dữ liệu và hiệu suất truy vấn cao. 
-                Cấu trúc bao gồm bảng chính Course lưu trữ thông tin khóa học, các bảng lookup (CourseLevel, Instructor, Category) để chuẩn hóa dữ liệu, 
-                và các bảng junction (Course_Instructor, CourseCategory) để xử lý quan hệ nhiều-nhiều. 
-                Hệ thống sử dụng indexing tối ưu với B-tree index cho tìm kiếm nhanh, GIN index cho full-text search, 
-                và composite index cho việc filter phức tạp. Database hỗ trợ JSON fields cho metadata linh hoạt, 
-                constraints validation cho data integrity, và backup strategy với point-in-time recovery đảm bảo availability 99.9%. 
-                Thiết kế này tối ưu cho việc lưu trữ và truy vấn hàng nghìn khóa học với response time trung bình dưới 50ms.
-              </p>
-            </div>
 
             <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
               <h3 className="text-xl font-bold text-white mb-4">Database cho hệ thống quản lý nhân sự</h3>
@@ -471,10 +438,7 @@ const WebCrawlerDetail = () => {
             <div className="bg-gray-800/40 rounded-xl p-6 border border-purple-400/20">
               <h3 className="text-xl font-bold text-white mb-4">Chi tiết các tác vụ ETL</h3>
               <p className="text-gray-300 leading-relaxed">
-                ETL Pipeline thực hiện 3 tác vụ chính được chạy song song để tối ưu hiệu suất. 
-                <strong className="text-purple-400">Đầu tiên là đồng bộ dữ liệu chấm công</strong>, hệ thống trích xuất thông tin attendance từ Lark Suite API theo thời gian thực với danh sách user ID được định nghĩa sẵn, lấy dữ liệu chấm công của ngày hiện tại bao gồm thông tin check-in và check-out. Quá trình này bao gồm transform timezone từ UTC sang GMT+7, lưu trữ GPS, ảnh chấm công, device info và cập nhật vào AttendanceRecord, CheckInRecord.
-                <strong className="text-purple-400"> Tiếp theo là đồng bộ vị trí tuyển dụng</strong>, kết nối với Lark Bitable để trích xuất thông tin các vị trí tuyển dụng với việc mapping các trường như tên công việc, phòng ban, mô tả, yêu cầu, và mức lương. Module này tự động tạo/cập nhật Department objects, sử dụng job_id làm unique identifier, và convert timestamp cùng mapping work type.
-                <strong className="text-purple-400"> Cuối cùng là đồng bộ ứng viên</strong>, xử lý dữ liệu phức tạp nhất trong pipeline bằng cách không chỉ tạo Candidate records mà còn tự động download và lưu trữ CV files từ Lark storage. Tác vụ này sử dụng external_record_id để tracking, tự động tạo Application records, và extract portfolio URL từ nested JSON.
+               ETL Pipeline thực hiện 3 tác vụ song song để tối ưu hiệu suất: đồng bộ dữ liệu chấm công từ Lark Suite API (bao gồm thông tin check-in/out, GPS, ảnh chấm công), đồng bộ vị trí tuyển dụng từ Lark Base (mapping thông tin công việc, phòng ban, lương), và đồng bộ ứng viên kèm tự động download CV files. Hệ thống tự động xử lý timezone, tạo/cập nhật records và sử dụng unique identifier để tránh trùng lặp dữ liệu.
               </p>
             </div>
           </div>

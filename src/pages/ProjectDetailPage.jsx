@@ -17,6 +17,8 @@ import ERD_DaoTao from '../assets/images/ERD-Đào tạo.png';
 import ERD_TuyenDung from '../assets/images/ERD-Tuyển dụng.png';
 import ERD_NhanVien from '../assets/images/ERD-Hồ sơ nhân viên.png';
 import ERD_Luong from '../assets/images/ERD-Lương.png';
+import CB1 from '../assets/images/chatbot1.png';
+import CB2 from '../assets/images/chatbot2.png';
 
 const ProjectDetailPage = () => {
   const projectData = {
@@ -131,11 +133,6 @@ const ProjectDetailPage = () => {
             <p className="text-xl text-blue-400 mb-6 font-medium">
               {projectData.subtitle}
             </p>
-            
-            {/* Overview */}
-            <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto" style={{color: '#e0e0ff'}}>
-              {projectData.overview}
-            </p>
           </div>
         </div>
 
@@ -146,7 +143,7 @@ const ProjectDetailPage = () => {
           
           {/* Database ERD */}
             <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
-              <h3 className="text-xl font-bold text-white mb-4">Database cho hệ thống quản lý nhân sự</h3>
+              <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Thiết kế database cho hệ thống quản lý nhân sự</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. 
                 Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.
@@ -210,8 +207,8 @@ const ProjectDetailPage = () => {
                 </div>
               </div>
             </div>
-          
-<div className="mb-12">
+          {/* Back end */}
+        <div className="mb-12">
           <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Back-end</h3>
           
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
@@ -256,8 +253,7 @@ const ProjectDetailPage = () => {
           </div>
         </div>
 
-
-          {/* Web App Interface Screenshots */}
+          {/* front end */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Front-end</h3>
             <div className="grid grid-cols-1 gap-6">
@@ -330,9 +326,49 @@ const ProjectDetailPage = () => {
             </div>
           </div>
         </section>
+                <div className="mb-12">
+          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Xây dựng chatbot hỗ trợ sử dụng regex </h3>
+          
+          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Ảnh 1 */}
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                  <img 
+                    src={CB1} 
+                    alt="Giao diện đăng nhập"
+                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Ảnh 2 */}
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                  <img 
+                    src={CB2} 
+                    alt="backend"
+                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                  />
+                </div>
+              </div>
+
+            </div>
+
+            {/* Mô tả ngắn */}
+            <div className="mt-6 text-center">
+              <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
+Chatbot quản lý nhân sự được xây dựng bằng Django Channels với WebSocket để hỗ trợ chat real-time, tích hợp cơ sở dữ liệu để lưu trữ lịch sử tin nhắn và thông tin người dùng. Hệ thống sử dụng regex pattern matching để nhận diện câu hỏi và tự động trả lời các thông tin về nhân viên, lương, lịch làm việc từ database. Bot có khả năng xử lý đồng thời nhiều người dùng thông qua async/await và channel layers của Django Channels.
+              </p>
+            </div>
+
+          </div>
+        </div>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Triển Khai Hệ Thống</h2>
+          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Triển khai hệ thống</h3>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               

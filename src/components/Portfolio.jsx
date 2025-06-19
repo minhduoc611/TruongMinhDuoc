@@ -5,37 +5,37 @@ const Portfolio = () => {
   const portfolioProjects = [
     {
       id: 1,
-      title: "Hệ thống Thu thập Dữ liệu Web, Kiến trúc Cơ sở Dữ liệu và Đường ống ETL",
-      description: "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế kiến trúc cơ sở dữ liệu hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch.",
-      tags: ["Thu thập Web", "Thiết kế Cơ sở dữ liệu", "Đường ống ETL", "PostgreSQL", "Xử lý Dữ liệu"],
+      title: "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
+      description: "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế databse hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch.",
+      tags: ["Web Crawling", "Thiết kế Database", "ETL pipeline", "PostgreSQL", "Selenium", "Python"],
       image: "https://tse3.mm.bing.net/th/id/OIP.xiNoT9eRGm2XuO2ndZrzwwHaD5?r=0&w=1140&h=600&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/web-crawling",
-      highlights: ["Trích xuất dữ liệu đa nền tảng", "Thiết kế kiến trúc cơ sở dữ liệu", "Quy trình ETL tự động"],
+      highlights: ["Web Crawling","Selenium WebDriver", "Thiết kế database", "Xây dựng ETL pipeline", "Celery", "Lark Suite API"],
       status: "",
       gradient: "from-emerald-500/20 to-cyan-500/20",
       accentColor: "emerald"
     },
     {
       id: 2,
-      title: "Công cụ Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
-      description: "Nền tảng phân tích dữ liệu toàn diện với SQL Query Engine mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp.",
-      tags: ["Công cụ Truy vấn SQL", "Xử lý Dữ liệu", "Trực quan hóa Dữ liệu", "Phân tích Python", "Thông tin Kinh doanh"],
+      title: "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+      description: "Nền tảng phân tích dữ liệu với SQL Query , hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp.",
+      tags: ["SQL", "Data Processing", "Data Cleaning", "Pandas", "Numpy", "Tableau", 'Matplotlib','Seaborn'],
       image: "https://tse3.mm.bing.net/th/id/OIP.0wrLYUfpiTr9SIDHeHdZRAHaEO?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/data-visualization",
       highlights: ["Công cụ Truy vấn SQL tiên tiến với tối ưu hóa hiệu suất", "Đường ống xử lý dữ liệu thời gian thực sử dụng Python", "Dashboard trực quan tương tác với nhiều loại biểu đồ"],
-      status: "Hoạt động",
+      status: "",
       gradient: "from-purple-500/20 to-pink-500/20",
       accentColor: "purple"
     },
     {
       id: 3,
-      title: "Hệ thống Trợ lý AI với RAG",
+      title: "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
       description: "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng.",
-      tags: ["RAG", "Vector Embeddings", "Học máy", "Xử lý ngôn ngữ tự nhiên", "Trợ lý AI"],
+      tags: ["RAG", "Vector Embeddings", "Machine Learning", "Xử lý ngôn ngữ tự nhiên"],
       image: "https://tse1.mm.bing.net/th/id/OIP.SvokklbDo1pUdDijtMrc2QHaEO?rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611",
       demo: "#",
@@ -47,9 +47,9 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Hệ thống Tự động hóa Tác vụ",
+      title: "Xây dựng hệ thống Tự động hóa Tác vụ",
       description: "Giải pháp tự động hóa toàn diện sử dụng Python để tối ưu hóa các quy trình kinh doanh. Tính năng quản lý tệp, thu thập dữ liệu web, xử lý dữ liệu với pandas/numpy, và tích hợp API để tối ưu hóa quy trình làm việc.",
-      tags: ["Tự động hóa Tác vụ", "Python", "Tối ưu hóa Quy trình", "Tích hợp API", "Quy trình Làm việc"],
+      tags: ["Tự động hóa Tác vụ", "Python", "Window Task Scheduler", "Google sheet API", "Google Drive API", "Web Scraping"],
       image: "https://tse2.mm.bing.net/th/id/OIP.mQSTnOrPTZddnGb5WwSDFQHaEO?r=0&rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611",
       demo: "#",
@@ -61,14 +61,14 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      title: "Ứng dụng Web Django Full-Stack",
+      title: "Xây dựng ứng dụng Web-app Full-stack",
       description: "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện.",
-      tags: ["Ứng dụng Web Django", "Full-Stack", "PostgreSQL", "Phát triển Web", "Backend"],
+      tags: ["Web-app Django", "Full-Stack", "PostgreSQL", "Web Development", "Frontend", "Backend"],
       image: "https://tse1.mm.bing.net/th/id/OIP.8Gr2pMDdhQVf89D6TLuVagHaEK?r=0&rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611/hrms",
       demo: "#",
       detailLink: "/project/hrms",
-      highlights: ["Kiến trúc web hiện đại", "Tối ưu hóa cơ sở dữ liệu", "Thiết kế responsive"],
+      highlights: ["Web Development", "Backend", "Frontend", "Database", "UI-UX"],
       status: "",
       gradient: "from-teal-500/20 to-green-500/20",
       accentColor: "teal"
@@ -237,26 +237,10 @@ const Portfolio = () => {
                       
                       <p className="text-gray-300 text-sm leading-relaxed font-light group-hover:text-gray-200 transition-colors duration-300 line-clamp-2">
                         {project.description}
-                      </p>
-                      
-                      {/* Compact Highlights */}
-                      <div className="space-y-1.5">
-                        <h4 className={`text-xs font-bold ${colors.text} flex items-center`}>
-                          <span className="w-1 h-1 bg-current rounded-full mr-1.5"></span>
-                          Tính năng
-                        </h4>
-                        <div className="flex flex-wrap gap-1.5">
-                          {project.highlights.slice(0, 2).map((highlight, idx) => (
-                            <span key={idx} className={`${colors.bg} ${colors.border} border rounded-md px-2 py-0.5 text-xs text-gray-300 font-medium`}>
-                              {highlight}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      
+                      </p>                      
                       {/* Compact Tech Stack */}
                       <div className="flex flex-wrap gap-1.5">
-                        {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                        {project.tags.slice(0,7).map((tag, tagIndex) => (
                           <span 
                             key={tagIndex} 
                             className={`${colors.bg} ${colors.text} text-xs font-semibold px-2 py-0.5 rounded-full border ${colors.border} group-hover:scale-105 transition-all duration-300 backdrop-blur-sm`}

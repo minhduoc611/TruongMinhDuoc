@@ -5,8 +5,8 @@ import RFM from '../assets/images/RFM_DB.png';
 
 const DataVisualizationDetail = () => {
   const projectData = {
-    title: "Công Cụ Truy Vấn SQL, Xử Lý Dữ Liệu và Trực Quan Hóa Dữ Liệu",
-    subtitle: "Nền Tảng Phân Tích Dữ Liệu Toàn Diện",
+    title: "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+    subtitle: "Nền Tảng Phân Tích Dữ Liệu ",
     overview: "Nền tảng phân tích dữ liệu toàn diện với công cụ truy vấn SQL mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và bảng điều khiển trực quan tương tác cho phép phân tích sâu và ra quyết định dựa trên dữ liệu."
   };
 
@@ -86,17 +86,9 @@ const DataVisualizationDetail = () => {
 
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             {projectData.title}
           </h1>
-          
-          <p className="text-xl text-blue-400 mb-6 font-medium">
-            {projectData.subtitle}
-          </p>
-          
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto" style={{color: '#e0e0ff'}}>
-            {projectData.overview}
-          </p>
         </div>
 
         {/* Main Content Sections */}

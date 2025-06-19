@@ -159,15 +159,14 @@ const CourseraProjectDetail = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Quy trình hoạt động</h2>
           
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 max-w-5xl mx-auto">
-            <div className="bg-gray-900/50 rounded-lg p-4 border border-gray-600/20">
+            <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/20 max-w-2xl mx-auto">
               <img 
-              src={AutoImage} 
-              alt="Task Automation System Architecture"
-              className="w-1/2 h-auto rounded-lg object-cover mx-auto"
-            />
-
-
+                src={AutoImage} 
+                alt="Task Automation System Architecture"
+                className="w-full h-auto rounded-lg object-contain"
+              />
             </div>
+            
             <div className="mt-6">
               <p className="text-gray-300 text-center leading-relaxed">
                 Hệ thống hoạt động hoàn toàn tự động thông qua Windows Task Scheduler, khởi động automation.bat script để crawl dữ liệu từ Coursera, xử lý và làm sạch thông tin, sau đó upload lên Google Sheets. Dữ liệu được đọc từ Google Sheets vào database và tự động refresh dashboard Tableau, đảm bảo người dùng luôn nhìn thấy insights mới nhất mà không cần bất kỳ can thiệp thủ công nào.
@@ -175,7 +174,6 @@ const CourseraProjectDetail = () => {
             </div>
           </div>
         </section>
-
         {/* 24/7 Automation Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Vận hành tự động 24/7</h2>
