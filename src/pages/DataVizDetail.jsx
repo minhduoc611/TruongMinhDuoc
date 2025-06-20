@@ -13,14 +13,14 @@ const DataVisualizationDetail = () => {
   const dashboards = [
     {
       id: "hrm-dashboard",
-      title: "Bảng Điều Khiển Quản Lý Nhân Sự",
+      title: "Dashboard báo cáo Quản Lý Nhân Sự",
       description: "Bảng điều khiển phân tích HR toàn diện với các chỉ số hiệu suất nhân viên, thông tin chi tiết theo phòng ban và phân tích lực lượng lao động.",
       image: HRDB,
       link: "https://public.tableau.com/views/HRMS_17479281067570/HRMDB?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     },
     {
       id: "rfm-dashboard",
-      title: "Phân Tích Khách Hàng RFM",
+      title: "Dashboard Phân Tích Khách Hàng RFM",
       description: "Bảng điều khiển phân khúc khách hàng nâng cao sử dụng phân tích RFM để xác định các mô hình hành vi khách hàng và cơ hội kinh doanh.",
       image: RFM,
       link: "https://public.tableau.com/views/RFMAnalyst/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
