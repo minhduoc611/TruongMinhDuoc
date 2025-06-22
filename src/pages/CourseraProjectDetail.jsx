@@ -1,11 +1,16 @@
 import React from 'react';
 import { ArrowLeft, Github, ExternalLink, Calendar, Database, Code, Target, BarChart3, Award, CheckCircle, Clock, FileText, Zap, Settings, Download, Upload, GitBranch, Filter, Globe, Table, Server, Image, RefreshCw, Cloud, Eye } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import AutoImage from '../assets/images/task-automation.png';
+
 const CourseraProjectDetail = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   const projectData = {
-    title: "Hệ thống tự động hóa tác vụ thu thập và phân tích dữ liệu giáo dục Coursera",
-    subtitle: "Pipeline thông minh với Windows Task Scheduler và Tableau Dashboard",
-    overview: "Hệ thống tự động hóa này được thiết kế để tạo ra một pipeline thông minh thu thập và phân tích dữ liệu giáo dục trực tuyến. Bằng cách sử dụng Windows Task Scheduler làm trung tâm điều phối, hệ thống tự động kích hoạt chuỗi quy trình crawl dữ liệu từ Coursera mỗi ngày, thu thập thông tin chi tiết về hàng nghìn khóa học miễn phí bao gồm tiêu đề, mô tả, rating, số lượng học viên, và thông tin giảng viên.",
+    titleKey: "courseraProjectDetail.hero.title",
+    subtitleKey: "courseraProjectDetail.hero.subtitle", 
+    overviewKey: "courseraProjectDetail.hero.overview",
     
     tags: ["Python", "Selenium", "Windows Task Scheduler", "Tableau Public", "Google Sheets API", "Google Drive API", "Data Pipeline", "Automation", "Web Scraping", "Data Visualization"],
     
@@ -84,33 +89,29 @@ const CourseraProjectDetail = () => {
           className="flex items-center bg-gray-800/30 hover:bg-gray-700/50 text-gray-300 hover:text-white px-6 py-3 rounded-xl border border-gray-600/30 hover:border-blue-400/50 transition-all duration-300 mb-8 group backdrop-blur-sm"
         >
           <ArrowLeft className="w-5 h-5 mr-3 group-hover:-translate-x-2 transition-transform duration-300" />
-          <span className="font-medium">Back to Portfolio</span>
+          <span className="font-medium">{t('courseraProjectDetail.backButton')}</span>
         </button>
 
         {/* Hero Section */}
         <div className="mb-16">
           <div className="space-y-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              {projectData.title}
+              {t(projectData.titleKey)}
             </h1>
             
             <p className="text-xl text-blue-400 mb-6 font-medium">
-              {projectData.subtitle}
+              {t(projectData.subtitleKey)}
             </p>
             
             <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto" style={{color: '#e0e0ff'}}>
-              {projectData.overview}
+              {t(projectData.overviewKey)}
             </p>
-
-
           </div>
         </div>
 
-
-
         {/* Complete Workflow Overview */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Quy trình tự động hóa 4 nhóm task chính</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('courseraProjectDetail.workflow.title')}</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
             {/* Step 1 */}
@@ -118,8 +119,8 @@ const CourseraProjectDetail = () => {
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-500/30">
                 <Globe className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-3">1. Crawl dữ liệu</h3>
-              <p className="text-gray-400 text-sm">Thu thập dữ liệu từ trang web Coursera bao gồm thông tin khóa học, rating, và giảng viên</p>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('courseraProjectDetail.workflow.steps.step1.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('courseraProjectDetail.workflow.steps.step1.description')}</p>
             </div>
 
             {/* Step 2 */}
@@ -127,8 +128,8 @@ const CourseraProjectDetail = () => {
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/30">
                 <Filter className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-3">2. Xử lý dữ liệu</h3>
-              <p className="text-gray-400 text-sm">Làm sạch, trích xuất và chuẩn hóa dữ liệu để đảm bảo chất lượng</p>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('courseraProjectDetail.workflow.steps.step2.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('courseraProjectDetail.workflow.steps.step2.description')}</p>
             </div>
 
             {/* Step 3 */}
@@ -136,8 +137,8 @@ const CourseraProjectDetail = () => {
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-purple-500/30">
                 <Cloud className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-3">3. Upload Data Lake</h3>
-              <p className="text-gray-400 text-sm">Upload dữ liệu lên data lake (Google Drive) và đồng bộ với Google Sheets</p>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('courseraProjectDetail.workflow.steps.step3.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('courseraProjectDetail.workflow.steps.step3.description')}</p>
             </div>
 
             {/* Step 4 */}
@@ -145,38 +146,36 @@ const CourseraProjectDetail = () => {
               <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-orange-500/30">
                 <BarChart3 className="w-8 h-8 text-orange-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-3">4. Báo cáo Tableau</h3>
-              <p className="text-gray-400 text-sm">Truy xuất dữ liệu vào hệ thống báo cáo (Tableau) với tự động refresh dashboard</p>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('courseraProjectDetail.workflow.steps.step4.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('courseraProjectDetail.workflow.steps.step4.description')}</p>
             </div>
           </div>
         </section>
 
-
-
         {/* System Architecture Image */}
-
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Quy trình hoạt động</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('courseraProjectDetail.architecture.title')}</h2>
           
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/40 max-w-5xl mx-auto">
             <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/20 max-w-2xl mx-auto">
               <img 
                 src={AutoImage} 
-                alt="Task Automation System Architecture"
+                alt={t('courseraProjectDetail.architecture.altText')}
                 className="w-full h-auto rounded-lg object-contain"
               />
             </div>
             
             <div className="mt-6">
               <p className="text-gray-300 text-center leading-relaxed">
-                Hệ thống hoạt động hoàn toàn tự động thông qua Windows Task Scheduler, khởi động automation.bat script để crawl dữ liệu từ Coursera, xử lý và làm sạch thông tin, sau đó upload lên Google Sheets. Dữ liệu được đọc từ Google Sheets vào database và tự động refresh dashboard Tableau, đảm bảo người dùng luôn nhìn thấy insights mới nhất mà không cần bất kỳ can thiệp thủ công nào.
+                {t('courseraProjectDetail.architecture.description')}
               </p>
             </div>
           </div>
         </section>
+
         {/* 24/7 Automation Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Vận hành tự động 24/7</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('courseraProjectDetail.automation.title')}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Automated Operation */}
@@ -184,9 +183,9 @@ const CourseraProjectDetail = () => {
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 border border-blue-500/30">
                 <Clock className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Hoạt động liên tục</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">{t('courseraProjectDetail.automation.features.continuous.title')}</h3>
               <p className="text-gray-300 leading-relaxed">
-                Hệ thống được vận hành tự động liên tục 24/7 với Windows Task Scheduler, đảm bảo thu thập dữ liệu không gián đoạn và cập nhật thông tin theo thời gian thực.
+                {t('courseraProjectDetail.automation.features.continuous.description')}
               </p>
             </div>
 
@@ -195,9 +194,9 @@ const CourseraProjectDetail = () => {
               <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 border border-green-500/30">
                 <FileText className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Logging & Monitoring</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">{t('courseraProjectDetail.automation.features.logging.title')}</h3>
               <p className="text-gray-300 leading-relaxed">
-                Được logging và report real-time với hệ thống giám sát toàn diện, theo dõi trạng thái hoạt động và phát hiện lỗi kịp thời.
+                {t('courseraProjectDetail.automation.features.logging.description')}
               </p>
             </div>
 
@@ -206,15 +205,13 @@ const CourseraProjectDetail = () => {
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 border border-purple-500/30">
                 <RefreshCw className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Đồng bộ Google Sheets</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">{t('courseraProjectDetail.automation.features.sync.title')}</h3>
               <p className="text-gray-300 leading-relaxed">
-                Đồng bộ tự động với Google Sheets cho phép truy cập dữ liệu real-time từ mọi nơi và tích hợp seamless với các công cụ báo cáo khác.
+                {t('courseraProjectDetail.automation.features.sync.description')}
               </p>
             </div>
           </div>
         </section>
-
-
       </div>
     </div>
   );

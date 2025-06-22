@@ -1,69 +1,73 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   const portfolioProjects = [
     {
       id: 1,
-      title: "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
-      description: "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế databse hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch.",
-      tags: ["Web Crawling", "Thiết kế Database", "ETL pipeline", "PostgreSQL", "Selenium", "Python"],
+      titleKey: "portfolioSection.projects.webCrawling.title",
+      descriptionKey: "portfolioSection.projects.webCrawling.description",
+      tags: ["Web Crawling", "Database Design", "ETL pipeline", "PostgreSQL", "Selenium", "Python"],
       image: "https://tse3.mm.bing.net/th/id/OIP.xiNoT9eRGm2XuO2ndZrzwwHaD5?r=0&w=1140&h=600&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/web-crawling",
-      highlights: ["Web Crawling","Selenium WebDriver", "Thiết kế database", "Xây dựng ETL pipeline", "Celery", "Lark Suite API"],
+      highlights: ["Web Crawling","Selenium WebDriver", "Database Design", "ETL pipeline", "Celery", "Lark Suite API"],
       status: "",
       gradient: "from-emerald-500/20 to-cyan-500/20",
       accentColor: "emerald"
     },
     {
       id: 2,
-      title: "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
-      description: "Nền tảng phân tích dữ liệu với SQL Query , hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp.",
+      titleKey: "portfolioSection.projects.dataVisualization.title",
+      descriptionKey: "portfolioSection.projects.dataVisualization.description",
       tags: ["SQL", "Data Processing", "Data Cleaning", "Pandas", "Numpy", "Tableau", 'Matplotlib','Seaborn'],
       image: "https://tse3.mm.bing.net/th/id/OIP.0wrLYUfpiTr9SIDHeHdZRAHaEO?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc1",
       github: "#",
       demo: "#",
       detailLink: "/project/data-visualization",
-      highlights: ["Công cụ Truy vấn SQL tiên tiến với tối ưu hóa hiệu suất", "Đường ống xử lý dữ liệu thời gian thực sử dụng Python", "Dashboard trực quan tương tác với nhiều loại biểu đồ"],
+      highlights: ["Advanced SQL Query Tool", "Real-time Data Processing Pipeline", "Interactive Visualization Dashboard"],
       status: "",
       gradient: "from-purple-500/20 to-pink-500/20",
       accentColor: "purple"
     },
     {
       id: 3,
-      title: "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
-      description: "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng.",
-      tags: ["RAG", "Vector Embeddings", "Machine Learning", "Xử lý ngôn ngữ tự nhiên"],
+      titleKey: "portfolioSection.projects.rag.title",
+      descriptionKey: "portfolioSection.projects.rag.description",
+      tags: ["RAG", "Vector Embeddings", "Machine Learning", "NLP"],
       image: "https://tse1.mm.bing.net/th/id/OIP.SvokklbDo1pUdDijtMrc2QHaEO?rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611",
       demo: "#",
       detailLink: "/project/rag",
-      highlights: ["Tìm kiếm độ tương đồng ngữ nghĩa", "Phản hồi nhận biết ngữ cảnh", "Xử lý NLP tiên tiến"],
+      highlights: ["Semantic Similarity Search", "Context-aware Responses", "Advanced NLP Processing"],
       status: "",
       gradient: "from-orange-500/20 to-red-500/20",
       accentColor: "orange"
     },
     {
       id: 4,
-      title: "Xây dựng hệ thống Tự động hóa Tác vụ",
-      description: "Giải pháp tự động hóa toàn diện sử dụng Python để tối ưu hóa các quy trình kinh doanh. Tính năng quản lý tệp, thu thập dữ liệu web, xử lý dữ liệu với pandas/numpy, và tích hợp API để tối ưu hóa quy trình làm việc.",
-      tags: ["Tự động hóa Tác vụ", "Python", "Window Task Scheduler", "Google sheet API", "Google Drive API", "Web Scraping"],
+      titleKey: "portfolioSection.projects.automation.title",
+      descriptionKey: "portfolioSection.projects.automation.description",
+      tags: ["Task Automation", "Python", "Windows Task Scheduler", "Google Sheets API", "Google Drive API", "Web Scraping"],
       image: "https://tse2.mm.bing.net/th/id/OIP.mQSTnOrPTZddnGb5WwSDFQHaEO?r=0&rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611",
       demo: "#",
       detailLink: "/project/coursera",
-      highlights: ["Quy trình kinh doanh tự động", "Tích hợp đa nền tảng", "Giám sát hiệu suất"],
+      highlights: ["Business Process Automation", "Multi-platform Integration", "Performance Monitoring"],
       status: "",
       gradient: "from-indigo-500/20 to-blue-500/20",
       accentColor: "indigo"
     },
     {
       id: 5,
-      title: "Xây dựng ứng dụng Web-app Full-stack",
-      description: "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện.",
-      tags: ["Web-app Django", "Full-Stack", "PostgreSQL", "Web Development", "Frontend", "Backend"],
+      titleKey: "portfolioSection.projects.webApp.title",
+      descriptionKey: "portfolioSection.projects.webApp.description",
+      tags: ["Django Web-app", "Full-Stack", "PostgreSQL", "Web Development", "Frontend", "Backend"],
       image: "https://tse1.mm.bing.net/th/id/OIP.8Gr2pMDdhQVf89D6TLuVagHaEK?r=0&rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611/hrms",
       demo: "#",
@@ -161,9 +165,9 @@ const Portfolio = () => {
         {/* Enhanced Header */}
         <div className="text-center mb-20 w-full">
           <div className="relative inline-block">
-                  <h2 className="text-3xl font-bold text-white mb-12 text-center reveal">
-          Portfolio 
-        </h2>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center reveal">
+              {t('portfolioSection.title')} 
+            </h2>
           </div>
         </div>
         
@@ -194,16 +198,18 @@ const Portfolio = () => {
                       <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-transparent z-10"></div>
                       <img 
                         src={project.image} 
-                        alt={project.title} 
+                        alt={t(project.titleKey)} 
                         className="w-full h-40 lg:h-full object-cover transform group-hover:scale-110 transition duration-700"
                       />
                       
                       {/* Floating status badge */}
-                      <div className="absolute top-3 left-3 z-20">
-                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${getStatusColor(project.status)} transform group-hover:scale-110 transition-transform duration-300`}>
-                          {project.status}
-                        </span>
-                      </div>
+                      {project.status && (
+                        <div className="absolute top-3 left-3 z-20">
+                          <span className={`px-2 py-1 text-xs font-bold rounded-full ${getStatusColor(project.status)} transform group-hover:scale-110 transition-transform duration-300`}>
+                            {project.status}
+                          </span>
+                        </div>
+                      )}
 
                       {/* Project number */}
                       <div className="absolute bottom-3 right-3 z-20">
@@ -218,7 +224,7 @@ const Portfolio = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500 flex items-center justify-center z-10">
                         <div className="transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                           <span className="text-white font-medium text-xs bg-gradient-to-r from-blue-500 to-purple-500 px-3 py-1.5 rounded-full shadow-lg">
-                            Xem →
+                            {t('portfolioSection.viewProject')} →
                           </span>
                         </div>
                       </div>
@@ -230,13 +236,13 @@ const Portfolio = () => {
                       {/* Title with animated underline */}
                       <div className="relative">
                         <h3 className="text-lg lg:text-xl font-bold text-white mb-1 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
-                          {project.title}
+                          {t(project.titleKey)}
                         </h3>
                         <div className={`h-0.5 bg-gradient-to-r ${project.gradient} w-0 group-hover:w-16 transition-all duration-500 rounded-full`}></div>
                       </div>
                       
                       <p className="text-gray-300 text-sm leading-relaxed font-light group-hover:text-gray-200 transition-colors duration-300 line-clamp-2">
-                        {project.description}
+                        {t(project.descriptionKey)}
                       </p>                      
                       {/* Compact Tech Stack */}
                       <div className="flex flex-wrap gap-1.5">
@@ -276,21 +282,21 @@ const Portfolio = () => {
                       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/30 to-transparent z-10"></div>
                       <img 
                         src={project.image} 
-                        alt={project.title} 
+                        alt={t(project.titleKey)} 
                         className="w-full h-40 lg:h-full object-cover transform group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
                       />
                       
                       {/* Coming Soon badge */}
                       <div className="absolute top-3 left-3 z-20">
                         <span className="px-2 py-1 text-xs font-bold rounded-full bg-gradient-to-r from-gray-500 to-gray-600 text-white shadow-lg">
-                          Sắp ra mắt
+                          {t('portfolioSection.comingSoon')}
                         </span>
                       </div>
 
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-500/20 to-gray-600/20 flex items-center justify-center z-10">
                         <div className="text-white font-medium text-xs bg-gray-500/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                          Đang phát triển
+                          {t('portfolioSection.inDevelopment')}
                         </div>
                       </div>
                     </div>
@@ -299,12 +305,12 @@ const Portfolio = () => {
                     <div className="lg:w-3/5 p-4 lg:p-6 flex flex-col justify-center space-y-3">
                       <div className="relative">
                         <h3 className="text-lg lg:text-xl font-bold text-gray-300 mb-1 leading-tight">
-                          {project.title}
+                          {t(project.titleKey)}
                         </h3>
                       </div>
                       
                       <p className="text-gray-400 text-sm leading-relaxed font-light line-clamp-2">
-                        {project.description}
+                        {t(project.descriptionKey)}
                       </p>
                       
                       <div className="flex flex-wrap gap-1.5">

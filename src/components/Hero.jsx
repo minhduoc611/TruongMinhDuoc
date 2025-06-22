@@ -1,11 +1,15 @@
 import portfolio1 from '../assets/portfolio1.jpg';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useTranslation } from 'react-i18next';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollToPlugin);
 
 const Hero = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   // Scroll to contact section function
   const scrollToSection = (sectionId) => {
     gsap.to(window, {
@@ -37,14 +41,16 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-2 animate-fadeInLeft">
               <span className="text-white">Minh</span> <span className="text-secondary">Duoc</span>
             </h1>
-            <p className="text-text text-xl mb-8 animate-fadeInLeft delay-100">Analytics Engineer</p>
+            <p className="text-text text-xl mb-8 animate-fadeInLeft delay-100">
+              {t('hero.role')}
+            </p>
             
             {/* Enhanced Get Connected Button */}
             <button 
               onClick={() => scrollToSection('contact')}
               className="bg-secondary hover:bg-blue-500 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fadeInLeft delay-200"
             >
-              Get Connected
+              {t('hero.getConnected')}
             </button>
           </div>
           

@@ -1,16 +1,21 @@
+import { useTranslation } from 'react-i18next';
+
 const Contact = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute w-96 h-96 rounded-full bg-blue-500 opacity-5 blur-3xl -top-40 -left-40 z-0"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl font-bold text-white mb-12 text-center reveal">
-          Get In <span className="text-secondary">Touch</span>
+          {t('contactSection.title')} <span className="text-secondary">{t('contactSection.titleHighlight')}</span>
         </h2>
         
         <div className="max-w-xl mx-auto">
           <p className="text-text text-center mb-12 reveal">
-            I'm currently looking for new opportunities. Feel free to reach out through any of these channels!
+            {t('contactSection.description')}
           </p>
           
           <div className="space-y-6">
@@ -69,7 +74,7 @@ const Contact = () => {
 
           <div className="text-center mt-12 reveal" style={{ animationDelay: '0.4s' }}>
             <p className="text-text">
-              Let's connect and discuss opportunities!
+              {t('contactSection.callToAction')}
             </p>
           </div>
         </div>

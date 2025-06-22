@@ -1,0 +1,490 @@
+{
+  "home": "Trang chủ",
+  "about": "Giới thiệu", 
+  "portfolio": "Portfolio",
+  "skills": "Kỹ năng",
+  "contact": "Liên hệ",
+  "hero": {
+    "role": "Analytics Engineer",
+    "getConnected": "Kết nối ngay"
+  },
+  "aboutSection": {
+    "title": "Giới thiệu",
+    "titleHighlight": "",
+    "description": "Tôi là một người có tinh thần chủ động và đam mê học hỏi, luôn hứng thú với việc giải quyết các thách thức kỹ thuật phức tạp. Với khả năng làm việc nhóm tốt và tinh thần hỗ trợ đồng đội, tôi không ngừng nâng cao kỹ năng chuyên môn với mục tiêu đạt Middle level trong 2-3 năm tới.",
+    "viewCV": "Xem CV"
+  },
+  "portfolioSection": {
+    "title": "Portfolio",
+    "viewProject": "Xem",
+    "comingSoon": "Sắp ra mắt",
+    "inDevelopment": "Đang phát triển",
+    "projects": {
+      "webCrawling": {
+        "title": "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
+        "description": "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế database hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch."
+      },
+      "dataVisualization": {
+        "title": "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+        "description": "Nền tảng phân tích dữ liệu với SQL Query, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp."
+      },
+      "rag": {
+        "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
+        "description": "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng."
+      },
+      "automation": {
+        "title": "Xây dựng hệ thống Tự động hóa Tác vụ",
+        "description": "Giải pháp tự động hóa toàn diện sử dụng Python để tối ưu hóa các quy trình kinh doanh. Tính năng quản lý tệp, thu thập dữ liệu web, xử lý dữ liệu với pandas/numpy, và tích hợp API để tối ưu hóa quy trình làm việc."
+      },
+      "webApp": {
+        "title": "Xây dựng ứng dụng Web-app Full-stack",
+        "description": "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện."
+      }
+    }
+  },
+  "skillsSection": {
+    "title": "Kỹ năng",
+    "titleHighlight":"",
+    "categories": {
+      "programming": "Lập trình",
+      "frontend": "Frontend",
+      "backend": "Backend", 
+      "dataVisualization": "Trực quan hóa dữ liệu",
+      "webScraping": "Web Scraping",
+      "databases": "Database"
+    }
+  },
+  "contactSection": {
+    "title": "Liên hệ",
+    "titleHighlight": "với tôi",
+    "description": "Hãy liên hệ với tôi qua bất kỳ kênh nào dưới đây!",
+    "callToAction": "Hãy kết nối và thảo luận về các cơ hội!"
+  },
+  "webCrawlingDetail": {
+    "backButton": "Quay lại",
+    "hero": {
+      "title": "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
+      "subtitle": "Thu thập dữ liệu web, xây dựng database, ETL pipeline",
+      "overview": "Hệ thống tích hợp hoàn chỉnh bao gồm thu thập dữ liệu web từ Coursera, thiết kế database cho hệ thống quản lý nhân sự, và xây dựng ETL pipeline tự động đồng bộ dữ liệu từ Lark Suite."
+    },
+    "webScraping": {
+      "title": "1.1 Thu thập dữ liệu web",
+      "subtitle": "Thu thập dữ liệu web Coursera",
+      "workflowTitle": "Quy trình hoạt động hệ thống",
+      "systemTitle": "Hệ thống Thu thập Dữ liệu Coursera",
+      "listingModule": "Module Thu thập",
+      "courseList": "Danh sách Khóa học",
+      "categoriesSearch": "(Danh mục, Kết quả Tìm kiếm)",
+      "urlStorage": "URL khóa học (lưu trữ cục bộ)",
+      "localFiles": "File JSON/CSV chứa URL khóa học",
+      "readFiles": "Đọc file URL",
+      "readCheckpoint": "Đọc điểm checkpoint",
+      "detailModule": "Module Thu thập",
+      "detailInfo": "Thông tin Chi tiết",
+      "courseDetails": "Khóa học",
+      "programReviews": "(Chương trình, Đánh giá, Giảng viên)",
+      "courseData": "Dữ liệu Chi tiết Khóa học",
+      "completeInfo": "Thông tin khóa học hoàn chỉnh",
+      "outputFormats": "(JSON/CSV/Cơ sở dữ liệu)",
+      "saveFiles": "Lưu file URL",
+      "saveCheckpoint": "Lưu điểm checkpoint",
+      "systemComponents": "Các Thành phần Hệ thống",
+      "legend": {
+        "listingDesc": "Module Danh sách: Thu thập danh sách khóa học từ danh mục, tìm kiếm",
+        "storageDesc": "Lưu trữ URL: Lưu trữ cục bộ danh sách URL cần thu thập chi tiết",
+        "detailDesc": "Thu thập Chi tiết: Thu thập thông tin chi tiết (giảng viên, chương trình, đánh giá)",
+        "checkpointDesc": "Hệ thống Checkpoint: Lưu/đọc tiến độ để tránh mất dữ liệu khi gián đoạn",
+        "outputDesc": "Kết quả: File JSON/CSV chứa dữ liệu khóa học hoàn chỉnh"
+      },
+      "introduction": {
+        "title": "Giới thiệu",
+        "description": "Hệ thống được xây dựng để thu thập dữ liệu khóa học free từ trang web Coursera một cách tự động và hoạt động liên tục. Giúp cập nhật được các khoá học mới từ Coursera. Và bài viết dưới đây sẽ mô tả tổng quan về cách hoạt động của hệ thống.",
+        "language": "Ngôn ngữ lập trình",
+        "tools": "Công cụ"
+      },
+      "components": {
+        "title": "Thành phần chính",
+        "listingModule": "Module thu thập danh sách",
+        "listingDesc": "Thu thập các liên kết đến các khóa học",
+        "detailModule": "Module thu thập dữ liệu chi tiết",
+        "detailDesc": "Thu thập thông tin chi tiết từ các khóa học"
+      },
+      "detailedDescription": {
+        "title": "Mô tả chi tiết",
+        "content": "Đây là chương trình tự động thu thập thông tin các khóa học miễn phí từ Coursera bằng cách giả lập hành vi duyệt web, thu thập dữ liệu tổng quan và chi tiết của từng khóa học. Hệ thống có khả năng tự động chuyển trang, tránh trùng lặp dữ liệu và tích hợp các biện pháp an toàn để tránh bị phát hiện. Kết quả là cơ sở dữ liệu hoàn chỉnh được xuất ra file CSV, hữu ích cho nghiên cứu thị trường giáo dục trực tuyến và phân tích xu hướng học tập."
+      }
+    },
+    "database": {
+      "title": "1.2 Xây dựng Database",
+      "hrmsTitle": "Database cho hệ thống quản lý nhân sự",
+      "description": "Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.",
+      "erdEmployeeProfile": "ERD Hồ sơ Nhân viên",
+      "erdAttendance": "ERD Chấm công",
+      "erdRecruitment": "ERD Tuyển dụng",
+      "erdPayroll": "ERD Lương",
+      "erdTraining": "ERD Đào tạo"
+    },
+    "etlPipeline": {
+      "title": "1.3 ETL Pipeline",
+      "subtitle": "Tự động hóa tích hợp dữ liệu Chấm công, tuyển dụng từ Lark Suite sang hệ thống quản lý nhân sự",
+      "architectureTitle": "ETL Pipeline Architecture",
+      "overview": {
+        "title": "Tổng quan hệ thống ETL",
+        "description": "Đây là một hệ thống ETL (Extract, Transform, Load) được thiết kế để tự động đồng bộ dữ liệu từ platform Lark Suite vào hệ thống quản lý nhân sự nội bộ. Pipeline này sử dụng Celery tasks để xử lý bất đồng bộ và đảm bảo hiệu suất cao."
+      },
+      "tasks": {
+        "title": "Chi tiết các tác vụ ETL",
+        "description": "ETL Pipeline thực hiện 3 tác vụ song song để tối ưu hiệu suất: đồng bộ dữ liệu chấm công từ Lark Suite API (bao gồm thông tin check-in/out, GPS, ảnh chấm công), đồng bộ vị trí tuyển dụng từ Lark Base (mapping thông tin công việc, phòng ban, lương), và đồng bộ ứng viên kèm tự động download CV files. Hệ thống tự động xử lý timezone, tạo/cập nhật records và sử dụng unique identifier để tránh trùng lặp dữ liệu."
+      }
+    }
+  },
+  "dataVisualizationDetail": {
+    "backButton": "Quay lại Portfolio",
+    "hero": {
+      "title": "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+      "subtitle": "Nền Tảng Phân Tích Dữ Liệu",
+      "overview": "Nền tảng phân tích dữ liệu toàn diện với công cụ truy vấn SQL mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và bảng điều khiển trực quan tương tác cho phép phân tích sâu và ra quyết định dựa trên dữ liệu."
+    },
+    "sqlEngine": {
+      "title": "1. Công Cụ Truy Vấn SQL",
+      "description": "Hệ thống truy vấn SQL mạnh mẽ hỗ trợ đa nguồn dữ liệu, tối ưu hóa hiệu suất và cung cấp giao diện trực quan cho việc phân tích dữ liệu phức tạp.",
+      "features": {
+        "multiSource": {
+          "title": "Đa Nguồn Dữ Liệu",
+          "description": "Kết nối MySQL, PostgreSQL, SQL Server, Oracle"
+        },
+        "optimization": {
+          "title": "Tối Ưu Hiệu Suất",
+          "description": "Query optimization, indexing strategy"
+        },
+        "advanced": {
+          "title": "Phân Tích Nâng Cao",
+          "description": "Window functions, CTE, stored procedures"
+        }
+      },
+      "codeExample": {
+        "comment": "-- Query Example"
+      }
+    },
+    "dataProcessing": {
+      "title": "2. Xử Lý Dữ Liệu",
+      "description": "Quy trình xử lý dữ liệu chuyên nghiệp từ làm sạch, chuyển đổi đến chuẩn hóa và tối ưu hóa dữ liệu cho phân tích và machine learning.",
+      "modules": {
+        "cleaning": {
+          "title": "Làm sạch dữ liệu",
+          "subtitle": "Làm sạch và xử lý dữ liệu thô",
+          "features": {
+            "missingValues": "Xử lý missing values và dữ liệu null",
+            "outliers": "Phát hiện và loại bỏ các outliers",
+            "duplicates": "Xóa bản ghi trùng lặp",
+            "validation": "Kiểm tra tính hợp lệ và định dạng"
+          }
+        },
+        "transformation": {
+          "title": "Chuyển đổi dữ liệu",
+          "subtitle": "Chuyển đổi dữ liệu theo yêu cầu",
+          "features": {
+            "encoding": "Mã hóa categorical (Label, One-hot)",
+            "datetime": "Phân tích và định dạng thời gian",
+            "text": "Xử lý văn bản và tokenization",
+            "feature": "Trích xuất đặc trưng và tổng hợp dữ liệu"
+          }
+        },
+        "normalization": {
+          "title": "Chuẩn Hóa Dữ Liệu",
+          "subtitle": "Standardization và chuẩn hóa dữ liệu",
+          "features": {
+            "minmax": "Chuẩn hóa Min-Max (khoảng 0-1)",
+            "zscore": "Chuẩn hóa Z-score",
+            "robust": "Robust scaling cho outliers",
+            "unit": "Chuẩn hóa vector đơn vị"
+          }
+        },
+        "dimensionality": {
+          "title": "Giảm Chiều Dữ Liệu",
+          "subtitle": "Kỹ thuật giảm chiều dữ liệu",
+          "features": {
+            "selection": "Thuật toán lựa chọn đặc trưng",
+            "correlation": "Phân tích tương quan",
+            "variance": "Lọc theo ngưỡng phương sai"
+          }
+        }
+      },
+      "technologies": "Công Nghệ & Thư Viện"
+    },
+    "visualization": {
+      "title": "3. Trực Quan Hóa Dữ Liệu",
+      "viewDashboard": "Xem Dashboard Trực Tiếp"
+    },
+    "dashboards": {
+      "hrm": {
+        "title": "Dashboard báo cáo Quản Lý Nhân Sự",
+        "description": "Bảng điều khiển phân tích HR toàn diện với các chỉ số hiệu suất nhân viên, thông tin chi tiết theo phòng ban và phân tích lực lượng lao động."
+      },
+      "rfm": {
+        "title": "Dashboard Phân Tích Khách Hàng RFM",
+        "description": "Bảng điều khiển phân khúc khách hàng nâng cao sử dụng phân tích RFM để xác định các mô hình hành vi khách hàng và cơ hội kinh doanh."
+      }
+    }
+  },
+  "ragDetail": {
+    "backButton": "Quay lại Portfolio",
+    "hero": {
+      "title": "Hệ thống Trợ lý AI với RAG",
+      "subtitle": "Trợ lý HR thông minh sử dụng Retrieval-Augmented Generation",
+      "overview": "Hệ thống trò chuyện AI tiên tiến sử dụng công nghệ Retrieval-Augmented Generation (RAG) để cung cấp hỗ trợ HR thông minh. Được xây dựng với Google Gemini AI và Django, hệ thống kết hợp vector embeddings với tìm kiếm độ tương đồng ngữ nghĩa để đưa ra các phản hồi chính xác về dữ liệu nhân viên, bảng chấm công và chính sách HR."
+    },
+    "architecture": {
+      "title": "Kiến trúc hệ thống",
+      "overview": {
+        "title": "Kiến trúc tổng thể của hệ thống",
+        "description": "Hệ thống hoạt động theo mô hình đơn giản: User gửi câu hỏi → Query Processor xử lý và tìm kiếm dữ liệu liên quan → Kết hợp với Google Gemini 2.0 để tạo ra câu trả lời chính xác dựa trên ngữ cảnh và dữ liệu thực tế."
+      },
+      "embedding": {
+        "title": "Quy trình Vector Embedding",
+        "description": "Quá trình chuyển đổi text thành vector: Câu hỏi được tokenize → Embedding Model Google tạo vector 768 chiều → So sánh với database để tìm những câu hỏi tương tự đã được hỏi trước đó, giúp AI hiểu ngữ cảnh tốt hơn."
+      }
+    },
+    "workflow": {
+      "title": "Luồng hoạt động chi tiết",
+      "steps": {
+        "userQuery": {
+          "title": "1. Câu hỏi của người dùng",
+          "example": "Tôi làm bao nhiêu giờ tháng này?"
+        },
+        "embedding": {
+          "title": "2. Embedding",
+          "description": "Chuyển câu hỏi thành vector số học"
+        },
+        "vectorSearch": {
+          "title": "3. Vector Search",
+          "description": "Tìm dữ liệu liên quan nhất trong cơ sở dữ liệu"
+        },
+        "generation": {
+          "title": "4. Generation",
+          "description": "AI tạo câu trả lời dựa trên dữ liệu tìm được"
+        }
+      },
+      "details": {
+        "embedding": {
+          "title": "Chi tiết Embedding",
+          "features": {
+            "nlp": "Phân tích ngôn ngữ tự nhiên",
+            "timeRecognition": "Nhận diện thời gian (tháng, năm)",
+            "vectorConversion": "Chuyển đổi thành vector 768 chiều",
+            "normalization": "Chuẩn hóa để so sánh"
+          }
+        },
+        "dataRetrieval": {
+          "title": "Truy xuất dữ liệu",
+          "features": {
+            "employeeInfo": "Lấy thông tin nhân viên",
+            "attendanceData": "Dữ liệu chấm công",
+            "conversationHistory": "Lịch sử hội thoại",
+            "contextFilter": "Lọc theo ngữ cảnh"
+          }
+        },
+        "vectorSearch": {
+          "title": "Tìm kiếm Vector",
+          "features": {
+            "cosine": "Tính độ tương đồng cosine",
+            "similarQuestions": "So khớp câu hỏi tương tự",
+            "ranking": "Xếp hạng kết quả",
+            "topResults": "Lấy top 5 kết quả tốt nhất"
+          }
+        },
+        "aiGeneration": {
+          "title": "Tạo phản hồi AI",
+          "features": {
+            "geminiProcessing": "Google Gemini xử lý",
+            "contextCombination": "Kết hợp ngữ cảnh",
+            "naturalResponse": "Tạo câu trả lời tự nhiên",
+            "historyStorage": "Lưu lịch sử hội thoại"
+          }
+        }
+      }
+    },
+    "technologies": {
+      "title": "Công nghệ sử dụng",
+      "vectorDatabase": {
+        "title": "Vector Database",
+        "description": "Lưu trữ embeddings và metadata",
+        "features": {
+          "vectors": "768-dimensional vectors",
+          "similarity": "Cosine similarity search",
+          "indexing": "Conversation history indexing"
+        }
+      },
+      "aiModel": {
+        "title": "Model AI",
+        "description": "Large Language Model cho generation",
+        "features": {
+          "textConversation": "Text-based conversation",
+          "contextAware": "Context-aware responses",
+          "vietnameseSupport": "Vietnamese language support"
+        }
+      },
+      "promptEngineering": {
+        "title": "Kỹ thuật Prompt",
+        "description": "Tối ưu hóa câu lệnh cho AI",
+        "features": {
+          "contextInjection": "Context injection",
+          "roleBased": "Role-based prompting",
+          "fewShot": "Few-shot learning examples"
+        }
+      }
+    }
+  },
+  "courseraProjectDetail": {
+  "backButton": "Quay lại Portfolio",
+  "hero": {
+    "title": "Hệ thống tự động hóa tác vụ thu thập và phân tích dữ liệu giáo dục Coursera",
+    "subtitle": "Pipeline thông minh với Windows Task Scheduler và Tableau Dashboard",
+    "overview": "Hệ thống tự động hóa này được thiết kế để tạo ra một pipeline thông minh thu thập và phân tích dữ liệu giáo dục trực tuyến. Bằng cách sử dụng Windows Task Scheduler làm trung tâm điều phối, hệ thống tự động kích hoạt chuỗi quy trình crawl dữ liệu từ Coursera mỗi ngày, thu thập thông tin chi tiết về hàng nghìn khóa học miễn phí bao gồm tiêu đề, mô tả, rating, số lượng học viên, và thông tin giảng viên."
+  },
+  "workflow": {
+    "title": "Quy trình tự động hóa 4 nhóm task chính",
+    "steps": {
+      "step1": {
+        "title": "1. Crawl dữ liệu",
+        "description": "Thu thập dữ liệu từ trang web Coursera bao gồm thông tin khóa học, rating, và giảng viên"
+      },
+      "step2": {
+        "title": "2. Xử lý dữ liệu",
+        "description": "Làm sạch, trích xuất và chuẩn hóa dữ liệu để đảm bảo chất lượng"
+      },
+      "step3": {
+        "title": "3. Upload Data Lake",
+        "description": "Upload dữ liệu lên data lake (Google Drive) và đồng bộ với Google Sheets"
+      },
+      "step4": {
+        "title": "4. Báo cáo Tableau",
+        "description": "Truy xuất dữ liệu vào hệ thống báo cáo (Tableau) với tự động refresh dashboard"
+      }
+    }
+  },
+  "architecture": {
+    "title": "Quy trình hoạt động",
+    "altText": "Kiến trúc Hệ thống Tự động hóa Task",
+    "description": "Hệ thống hoạt động hoàn toàn tự động thông qua Windows Task Scheduler, khởi động automation.bat script để crawl dữ liệu từ Coursera, xử lý và làm sạch thông tin, sau đó upload lên Google Sheets. Dữ liệu được đọc từ Google Sheets vào database và tự động refresh dashboard Tableau, đảm bảo người dùng luôn nhìn thấy insights mới nhất mà không cần bất kỳ can thiệp thủ công nào."
+  },
+  "automation": {
+    "title": "Vận hành tự động 24/7",
+    "features": {
+      "continuous": {
+        "title": "Hoạt động liên tục",
+        "description": "Hệ thống được vận hành tự động liên tục 24/7 với Windows Task Scheduler, đảm bảo thu thập dữ liệu không gián đoạn và cập nhật thông tin theo thời gian thực."
+      },
+      "logging": {
+        "title": "Logging & Monitoring",
+        "description": "Được logging và report real-time với hệ thống giám sát toàn diện, theo dõi trạng thái hoạt động và phát hiện lỗi kịp thời."
+      },
+      "sync": {
+        "title": "Đồng bộ Google Sheets",
+        "description": "Đồng bộ tự động với Google Sheets cho phép truy cập dữ liệu real-time từ mọi nơi và tích hợp seamless với các công cụ báo cáo khác."
+          }
+        }
+      }
+    }
+    ,
+"hrmsDetail": {
+  "backButton": "Quay lại Portfolio",
+  "hero": {
+    "title": "Hệ Thống Quản Lý Nhân Sự",
+    "subtitle": "HRMS Doanh Nghiệp cho Công Ty SHEA",
+    "overview": "Hệ thống quản lý nhân sự cấp doanh nghiệp này được phát triển để chuyển đổi hoạt động HR của Công ty SHEA từ quy trình thủ công sang phương pháp tự động hóa hoàn toàn, dựa trên dữ liệu. Hệ thống tích hợp nhiều chức năng HR vào một nền tảng thống nhất, cung cấp phân tích và thông tin chi tiết theo thời gian thực để hỗ trợ ra quyết định chiến lược trên tất cả các lĩnh vực HR."
+  },
+  "database": {
+    "title": "Thiết kế database cho hệ thống quản lý nhân sự",
+    "description": "Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.",
+    "erdEmployeeProfile": "ERD Hồ sơ Nhân viên",
+    "erdAttendance": "ERD Chấm công",
+    "erdRecruitment": "ERD Tuyển dụng",
+    "erdPayroll": "ERD Lương",
+    "erdTraining": "ERD Đào tạo"
+  },
+  "backend": {
+    "title": "Back-end",
+    "viewDjango": "View Django",
+    "urlDjango": "URL Django",
+    "description": "Backend được xây dựng với Django framework, sử dụng các view functions để xử lý logic nghiệp vụ và URL patterns để định tuyến các request. Hệ thống quản lý nhân viên với đầy đủ chức năng CRUD, xử lý dữ liệu JSON và tích hợp với cơ sở dữ liệu thông qua Django ORM."
+  },
+  "frontend": {
+    "title": "Front-end",
+    "loginInterface": {
+      "title": "Giao Diện Xác Thực",
+      "description": "Hệ thống đăng nhập bảo mật với phân quyền theo vai trò"
+    },
+    "attendanceModule": {
+      "title": "Quản Lý Chấm Công",
+      "description": "Bản ghi check-in/out và quản lý lịch làm việc"
+    },
+    "payrollSystem": {
+      "title": "Hệ Thống Bảng Lương",
+      "description": "Tính toán lương và xử lý thanh toán"
+    },
+    "chatbot": {
+      "title": "Chatbot hỗ trợ sử dụng Regex",
+      "description": "Chatbot hỗ trợ nhân viên tra cứu"
+    },
+    "dataForm": {
+      "title": "Form nhập dữ liệu",
+      "description": "Nhập dữ liệu thêm khoá đào tạo nhân viên mới"
+    }
+  },
+  "chatbotSection": {
+    "title": "Xây dựng chatbot hỗ trợ sử dụng regex",
+    "image1Alt": "Giao diện chatbot 1",
+    "image2Alt": "Giao diện chatbot 2",
+    "description": "Chatbot quản lý nhân sự được xây dựng bằng Django Channels với WebSocket để hỗ trợ chat real-time, tích hợp cơ sở dữ liệu để lưu trữ lịch sử tin nhắn và thông tin người dùng. Hệ thống sử dụng regex pattern matching để nhận diện câu hỏi và tự động trả lời các thông tin về nhân viên, lương, lịch làm việc từ database. Bot có khả năng xử lý đồng thời nhiều người dùng thông qua async/await và channel layers của Django Channels."
+  },
+  "deployment": {
+    "title": "Triển khai hệ thống",
+    "lempStack": {
+      "title": "LEMP Stack Deployment",
+      "linux": {
+        "title": "Linux (Ubuntu 20.04 LTS)",
+        "description": "Hệ điều hành server với tính ổn định cao và bảo mật tốt"
+      },
+      "nginx": {
+        "title": "Nginx (Web Server)",
+        "description": "Reverse proxy và load balancer cho ứng dụng Django"
+      },
+      "postgresql": {
+        "title": "PostgreSQL",
+        "description": "Cơ sở dữ liệu chính lưu trữ toàn bộ dữ liệu HR"
+      },
+      "python": {
+        "title": "Python (Django + Gunicorn)",
+        "description": "Ứng dụng Django chạy với Gunicorn WSGI server"
+      }
+    },
+    "configuration": {
+      "title": "Cấu Hình Triển Khai",
+      "appServer": {
+        "title": "Application Server",
+        "gunicorn": "Gunicorn với 4 worker processes",
+        "supervisor": "Supervisor để quản lý process",
+        "systemd": "Systemd service cho auto-restart"
+      },
+      "backgroundServices": {
+        "title": "Background Services",
+        "redis": "Redis server cho cache và queue",
+        "celeryWorker": "Celery worker cho background tasks",
+        "celeryBeat": "Celery beat cho scheduled tasks"
+      },
+      "security": {
+        "title": "Security & Performance",
+        "ssl": "SSL/TLS với Let's Encrypt",
+        "gzip": "Nginx gzip compression",
+        "staticFiles": "Static files caching",
+        "dbPooling": "Database connection pooling"
+      }
+    },
+    "flow": {
+      "title": "Quy Trình Triển Khai",
+      "altText": "LEMP Stack Deployment Flow"
+    }
+  }
+}
+}

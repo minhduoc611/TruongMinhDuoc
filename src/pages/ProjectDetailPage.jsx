@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowLeft, Github, ExternalLink, Calendar, Users, Code, Database, Target, BarChart3, Award, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import LoginImage from '../assets/images/login.png';
 import ERDImage from '../assets/images/ERD.webp';
 import TDImage from '../assets/images/tuyendung.png';
@@ -21,12 +22,13 @@ import CB1 from '../assets/images/chatbot1.png';
 import CB2 from '../assets/images/chatbot2.png';
 
 const ProjectDetailPage = () => {
-  const projectData = {
-    title: "Hệ Thống Quản Lý Nhân Sự",
-    subtitle: "HRMS Doanh Nghiệp cho Công Ty SHEA",
-    overview: "Hệ thống quản lý nhân sự cấp doanh nghiệp này được phát triển để chuyển đổi hoạt động HR của Công ty SHEA từ quy trình thủ công sang phương pháp tự động hóa hoàn toàn, dựa trên dữ liệu. Hệ thống tích hợp nhiều chức năng HR vào một nền tảng thống nhất, cung cấp phân tích và thông tin chi tiết theo thời gian thực để hỗ trợ ra quyết định chiến lược trên tất cả các lĩnh vực HR.",
-    
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
 
+  const projectData = {
+    titleKey: "hrmsDetail.hero.title",
+    subtitleKey: "hrmsDetail.hero.subtitle",
+    overviewKey: "hrmsDetail.hero.overview",
     
     tags: ["Django", "PostgreSQL", "Tableau", "Lark Suite API", "Phân tích dữ liệu", "Redis", "Celery"],
     
@@ -36,15 +38,8 @@ const ProjectDetailPage = () => {
     },
     
     architecture: {
-      description: "Hệ thống tuân theo kiến trúc modular, có thể mở rộng với sự phân tách rõ ràng các mối quan tâm, cho phép bảo trì dễ dàng và nâng cấp trong tương lai.",
-      components: [
-        "Backend Django",
-        "PostgreSQL cho lưu trữ dữ liệu quan hệ",
-        "Redis cho cache và quản lý session", 
-        "Celery cho xử lý tác vụ nền",
-        "Tableau cho phân tích nâng cao và báo cáo",
-        "Tích hợp Lark Suite cho chấm công và giao tiếp"
-      ]
+      descriptionKey: "hrmsDetail.architecture.description",
+      componentsKey: "hrmsDetail.architecture.components"
     }
   };
 
@@ -118,144 +113,139 @@ const ProjectDetailPage = () => {
           className="flex items-center bg-gray-800/30 hover:bg-gray-700/50 text-gray-300 hover:text-white px-6 py-3 rounded-xl border border-gray-600/30 hover:border-blue-400/50 transition-all duration-300 mb-8 group backdrop-blur-sm"
         >
           <ArrowLeft className="w-5 h-5 mr-3 group-hover:-translate-x-2 transition-transform duration-300" />
-          <span className="font-medium">Quay lại Portfolio</span>
+          <span className="font-medium">{t('hrmsDetail.backButton')}</span>
         </button>
 
-        {/* Hero Section - Removed Image */}
+        {/* Hero Section */}
         <div className="mb-16">
           <div className="space-y-6 text-center">
             {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              {projectData.title}
+              {t(projectData.titleKey)}
             </h1>
             
             {/* Subtitle */}
             <p className="text-xl text-blue-400 mb-6 font-medium">
-              {projectData.subtitle}
+              {t(projectData.subtitleKey)}
             </p>
           </div>
         </div>
 
-
         {/* System Design & Interface */}
         <section className="mb-16">
-
-          
           {/* Database ERD */}
-            <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
-              <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Thiết kế database cho hệ thống quản lý nhân sự</h3>
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. 
-                Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.
-              </p>
+          <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
+            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">{t('hrmsDetail.database.title')}</h3>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              {t('hrmsDetail.database.description')}
+            </p>
 
-              {/* ERD Images - 1 cột dọc */}
-              <div className="space-y-6">
-                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Hồ sơ Nhân viên</h4>
-                  <div className="bg-white rounded-lg p-4 flex justify-center">
-                    <img 
-                      src={ERD_NhanVien} 
-                      alt="ERD Hồ sơ Nhân viên" 
-                      className="w-[400px] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Chấm công</h4>
-                  <div className="bg-white rounded-lg p-4 flex justify-center">
-                    <img 
-                      src={ERD_ChamCong} 
-                      alt="ERD Chấm công" 
-                      className="w-[400px] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Tuyển dụng</h4>
-                  <div className="bg-white rounded-lg p-4 flex justify-center">
-                    <img 
-                      src={ERD_TuyenDung} 
-                      alt="ERD Tuyển dụng" 
-                      className="w-[400px] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Lương</h4>
-                  <div className="bg-white rounded-lg p-4 flex justify-center">
-                    <img 
-                      src={ERD_Luong} 
-                      alt="ERD Lương" 
-                      className="w-[400px] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Đào tạo</h4>
-                  <div className="bg-white rounded-lg p-4 flex justify-center">
-                    <img 
-                      src={ERD_DaoTao} 
-                      alt="ERD Đào tạo" 
-                      className="w-[400px] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          {/* Back end */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Back-end</h3>
-          
-          <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Ảnh 1 */}
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
-                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+            {/* ERD Images - 1 cột dọc */}
+            <div className="space-y-6">
+              <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('hrmsDetail.database.erdEmployeeProfile')}</h4>
+                <div className="bg-white rounded-lg p-4 flex justify-center">
                   <img 
-                    src={BE1} 
-                    alt="Giao diện đăng nhập"
-                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                    src={ERD_NhanVien} 
+                    alt={t('hrmsDetail.database.erdEmployeeProfile')} 
+                    className="w-[400px] h-auto rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2 text-center">View Django</h4>
               </div>
 
-              {/* Ảnh 2 */}
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
-                <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+              <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('hrmsDetail.database.erdAttendance')}</h4>
+                <div className="bg-white rounded-lg p-4 flex justify-center">
                   <img 
-                    src={BE2} 
-                    alt="backend"
-                    className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                    src={ERD_ChamCong} 
+                    alt={t('hrmsDetail.database.erdAttendance')} 
+                    className="w-[400px] h-auto rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2 text-center">URL Django</h4>
               </div>
 
-            </div>
+              <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('hrmsDetail.database.erdRecruitment')}</h4>
+                <div className="bg-white rounded-lg p-4 flex justify-center">
+                  <img 
+                    src={ERD_TuyenDung} 
+                    alt={t('hrmsDetail.database.erdRecruitment')} 
+                    className="w-[400px] h-auto rounded-lg"
+                  />
+                </div>
+              </div>
 
-            {/* Mô tả ngắn */}
-            <div className="mt-6 text-center">
-              <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
-                Backend được xây dựng với Django framework, sử dụng các view functions để xử lý logic nghiệp vụ 
-                và URL patterns để định tuyến các request. Hệ thống quản lý nhân viên với đầy đủ chức năng CRUD, 
-                xử lý dữ liệu JSON và tích hợp với cơ sở dữ liệu thông qua Django ORM.
-              </p>
-            </div>
+              <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('hrmsDetail.database.erdPayroll')}</h4>
+                <div className="bg-white rounded-lg p-4 flex justify-center">
+                  <img 
+                    src={ERD_Luong} 
+                    alt={t('hrmsDetail.database.erdPayroll')} 
+                    className="w-[400px] h-auto rounded-lg"
+                  />
+                </div>
+              </div>
 
+              <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
+                <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('hrmsDetail.database.erdTraining')}</h4>
+                <div className="bg-white rounded-lg p-4 flex justify-center">
+                  <img 
+                    src={ERD_DaoTao} 
+                    alt={t('hrmsDetail.database.erdTraining')} 
+                    className="w-[400px] h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-          {/* front end */}
+          {/* Backend */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Front-end</h3>
+            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">{t('hrmsDetail.backend.title')}</h3>
+            
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Ảnh 1 */}
+                <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                  <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                    <img 
+                      src={BE1} 
+                      alt={t('hrmsDetail.backend.viewDjango')}
+                      className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                    />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2 text-center">{t('hrmsDetail.backend.viewDjango')}</h4>
+                </div>
+
+                {/* Ảnh 2 */}
+                <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
+                  <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
+                    <img 
+                      src={BE2} 
+                      alt={t('hrmsDetail.backend.urlDjango')}
+                      className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
+                    />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2 text-center">{t('hrmsDetail.backend.urlDjango')}</h4>
+                </div>
+
+              </div>
+
+              {/* Mô tả ngắn */}
+              <div className="mt-6 text-center">
+                <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
+                  {t('hrmsDetail.backend.description')}
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Frontend */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">{t('hrmsDetail.frontend.title')}</h3>
             <div className="grid grid-cols-1 gap-6">
               
               {/* Login Interface */}
@@ -263,71 +253,73 @@ const ProjectDetailPage = () => {
                 <div className="bg-gray-700/30 rounded-lg h-100 flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
                   <img 
                     src={LoginImage} 
-                    alt="Giao diện đăng nhập"
+                    alt={t('hrmsDetail.frontend.loginInterface.title')}
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Giao Diện Xác Thực</h4>
-                <p className="text-gray-400 text-xs">Hệ thống đăng nhập bảo mật với phân quyền theo vai trò</p>
+                <h4 className="text-white font-semibold mb-2">{t('hrmsDetail.frontend.loginInterface.title')}</h4>
+                <p className="text-gray-400 text-xs">{t('hrmsDetail.frontend.loginInterface.description')}</p>
               </div>
-
-
 
               {/* Attendance Module */}
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
                 <div className="bg-gray-700/30 rounded-lg h-100 flex items-center justify-center border border-gray-600 mb-3">
                   <img 
                     src={CCImage} 
-                    alt="Giao diện danh sách chấm công"
+                    alt={t('hrmsDetail.frontend.attendanceModule.title')}
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Quản Lý Chấm Công</h4>
-                <p className="text-gray-400 text-xs">Bản ghi check-in/out và quản lý lịch làm việc</p>
+                <h4 className="text-white font-semibold mb-2">{t('hrmsDetail.frontend.attendanceModule.title')}</h4>
+                <p className="text-gray-400 text-xs">{t('hrmsDetail.frontend.attendanceModule.description')}</p>
               </div>
 
-
-
-            
+              {/* Payroll System */}
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
                 <div className="bg-gray-700/30 rounded-lg h-100 flex items-center justify-center border border-gray-600 mb-3">
                   <img 
                     src={LImage} 
-                    alt="Giao diện lương"
+                    alt={t('hrmsDetail.frontend.payrollSystem.title')}
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Hệ Thống Bảng Lương</h4>
-                <p className="text-gray-400 text-xs">Tính toán lương và xử lý thanh toán</p>
+                <h4 className="text-white font-semibold mb-2">{t('hrmsDetail.frontend.payrollSystem.title')}</h4>
+                <p className="text-gray-400 text-xs">{t('hrmsDetail.frontend.payrollSystem.description')}</p>
               </div>
+
+              {/* Chatbot */}
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
                 <div className="bg-gray-700/30 rounded-lg h-100 flex items-center justify-center border border-gray-600 mb-3">
                   <img 
                     src={RGImage} 
-                    alt="Giao diện lương"
+                    alt={t('hrmsDetail.frontend.chatbot.title')}
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Chatbot hỗ trợ sử dụng Regex</h4>
-                <p className="text-gray-400 text-xs">Chatbot hỗ trợ nhân viên tra cứu </p>
+                <h4 className="text-white font-semibold mb-2">{t('hrmsDetail.frontend.chatbot.title')}</h4>
+                <p className="text-gray-400 text-xs">{t('hrmsDetail.frontend.chatbot.description')}</p>
               </div>
+
+              {/* Data Entry Form */}
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/40">
                 <div className="bg-gray-700/30 rounded-lg h-100 flex items-center justify-center border border-gray-600 mb-3">
                   <img 
                     src={FormIgmage} 
-                    alt="Giao diện lương"
+                    alt={t('hrmsDetail.frontend.dataForm.title')}
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Form nhập dữ liệu</h4>
-                <p className="text-gray-400 text-xs">Nhập dữ liệu thêm khoá đào tạo nhân viên mới </p>
+                <h4 className="text-white font-semibold mb-2">{t('hrmsDetail.frontend.dataForm.title')}</h4>
+                <p className="text-gray-400 text-xs">{t('hrmsDetail.frontend.dataForm.description')}</p>
               </div>
 
             </div>
           </div>
         </section>
-                <div className="mb-12">
-          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Xây dựng chatbot hỗ trợ sử dụng regex </h3>
+
+        {/* Chatbot Section */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">{t('hrmsDetail.chatbotSection.title')}</h3>
           
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
             
@@ -338,7 +330,7 @@ const ProjectDetailPage = () => {
                 <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
                   <img 
                     src={CB1} 
-                    alt="Giao diện đăng nhập"
+                    alt={t('hrmsDetail.chatbotSection.image1Alt')}
                     className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
                   />
                 </div>
@@ -349,7 +341,7 @@ const ProjectDetailPage = () => {
                 <div className="bg-gray-700/30 rounded-lg flex items-center justify-center border border-gray-600 mb-3 overflow-hidden">
                   <img 
                     src={CB2} 
-                    alt="backend"
+                    alt={t('hrmsDetail.chatbotSection.image2Alt')}
                     className="w-full max-w-[500px] h-auto object-cover rounded-lg mx-auto"
                   />
                 </div>
@@ -360,95 +352,96 @@ const ProjectDetailPage = () => {
             {/* Mô tả ngắn */}
             <div className="mt-6 text-center">
               <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
-Chatbot quản lý nhân sự được xây dựng bằng Django Channels với WebSocket để hỗ trợ chat real-time, tích hợp cơ sở dữ liệu để lưu trữ lịch sử tin nhắn và thông tin người dùng. Hệ thống sử dụng regex pattern matching để nhận diện câu hỏi và tự động trả lời các thông tin về nhân viên, lương, lịch làm việc từ database. Bot có khả năng xử lý đồng thời nhiều người dùng thông qua async/await và channel layers của Django Channels.
+                {t('hrmsDetail.chatbotSection.description')}
               </p>
             </div>
 
           </div>
         </div>
 
+        {/* Deployment Section */}
         <section className="mb-16">
-          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">Triển khai hệ thống</h3>
+          <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">{t('hrmsDetail.deployment.title')}</h3>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700/40">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               
               {/* LEMP Stack */}
               <div>
-                <h3 className="text-2xl font-bold text-blue-400 mb-6">LEMP Stack Deployment</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-6">{t('hrmsDetail.deployment.lempStack.title')}</h3>
                 <div className="space-y-4">
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">L</div>
-                      <h4 className="text-white font-semibold">Linux (Ubuntu 20.04 LTS)</h4>
+                      <h4 className="text-white font-semibold">{t('hrmsDetail.deployment.lempStack.linux.title')}</h4>
                     </div>
-                    <p className="text-gray-400 text-sm">Hệ điều hành server với tính ổn định cao và bảo mật tốt</p>
+                    <p className="text-gray-400 text-sm">{t('hrmsDetail.deployment.lempStack.linux.description')}</p>
                   </div>
                   
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">E</div>
-                      <h4 className="text-white font-semibold">Nginx (Web Server)</h4>
+                      <h4 className="text-white font-semibold">{t('hrmsDetail.deployment.lempStack.nginx.title')}</h4>
                     </div>
-                    <p className="text-gray-400 text-sm">Reverse proxy và load balancer cho ứng dụng Django</p>
+                    <p className="text-gray-400 text-sm">{t('hrmsDetail.deployment.lempStack.nginx.description')}</p>
                   </div>
                   
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">M</div>
-                      <h4 className="text-white font-semibold">PostgreSQL</h4>
+                      <h4 className="text-white font-semibold">{t('hrmsDetail.deployment.lempStack.postgresql.title')}</h4>
                     </div>
-                    <p className="text-gray-400 text-sm">Cơ sở dữ liệu chính lưu trữ toàn bộ dữ liệu HR</p>
+                    <p className="text-gray-400 text-sm">{t('hrmsDetail.deployment.lempStack.postgresql.description')}</p>
                   </div>
                   
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <div className="flex items-center mb-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">P</div>
-                      <h4 className="text-white font-semibold">Python (Django + Gunicorn)</h4>
+                      <h4 className="text-white font-semibold">{t('hrmsDetail.deployment.lempStack.python.title')}</h4>
                     </div>
-                    <p className="text-gray-400 text-sm">Ứng dụng Django chạy với Gunicorn WSGI server</p>
+                    <p className="text-gray-400 text-sm">{t('hrmsDetail.deployment.lempStack.python.description')}</p>
                   </div>
                 </div>
               </div>
 
               {/* Deployment Configuration */}
               <div>
-                <h3 className="text-2xl font-bold text-blue-400 mb-6">Cấu Hình Triển Khai</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-6">{t('hrmsDetail.deployment.configuration.title')}</h3>
                 <div className="space-y-4">
                   
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-3 flex items-center">
                       <Code className="w-5 h-5 mr-2 text-blue-400" />
-                      Application Server
+                      {t('hrmsDetail.deployment.configuration.appServer.title')}
                     </h4>
                     <div className="space-y-2 text-sm text-gray-400">
-                      <p>• Gunicorn với 4 worker processes</p>
-                      <p>• Supervisor để quản lý process</p>
-                      <p>• Systemd service cho auto-restart</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.appServer.gunicorn')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.appServer.supervisor')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.appServer.systemd')}</p>
                     </div>
                   </div>
 
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-3 flex items-center">
                       <Database className="w-5 h-5 mr-2 text-blue-400" />
-                      Background Services
+                      {t('hrmsDetail.deployment.configuration.backgroundServices.title')}
                     </h4>
                     <div className="space-y-2 text-sm text-gray-400">
-                      <p>• Redis server cho cache và queue</p>
-                      <p>• Celery worker cho background tasks</p>
-                      <p>• Celery beat cho scheduled tasks</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.backgroundServices.redis')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.backgroundServices.celeryWorker')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.backgroundServices.celeryBeat')}</p>
                     </div>
                   </div>
 
                   <div className="bg-gray-700/30 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-3 flex items-center">
                       <CheckCircle className="w-5 h-5 mr-2 text-blue-400" />
-                      Security & Performance
+                      {t('hrmsDetail.deployment.configuration.security.title')}
                     </h4>
                     <div className="space-y-2 text-sm text-gray-400">
-                      <p>• SSL/TLS với Let's Encrypt</p>
-                      <p>• Nginx gzip compression</p>
-                      <p>• Static files caching</p>
-                      <p>• Database connection pooling</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.security.ssl')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.security.gzip')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.security.staticFiles')}</p>
+                      <p>• {t('hrmsDetail.deployment.configuration.security.dbPooling')}</p>
                     </div>
                   </div>
 
@@ -459,11 +452,11 @@ Chatbot quản lý nhân sự được xây dựng bằng Django Channels với 
 
             {/* Deployment Flow */}
             <div className="mt-8 pt-8 border-t border-gray-600/30">
-              <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">Quy Trình Triển Khai</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">{t('hrmsDetail.deployment.flow.title')}</h3>
               <div className="flex justify-center">
                 <img 
                   src={LEMP} 
-                  alt="LEMP Stack Deployment Flow"
+                  alt={t('hrmsDetail.deployment.flow.altText')}
                   className="max-w-full h-auto rounded-lg shadow-lg"
                 />
               </div>

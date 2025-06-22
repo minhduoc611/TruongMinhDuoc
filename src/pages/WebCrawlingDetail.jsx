@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Github, ExternalLink, Database, Globe, Search, FileText, Code, Server, Workflow } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import CouseraERD from '../assets/images/coursera_erd.png';
 import ETLImage from '../assets/images/ETL - Lark -WebApp.png';
 import ERD_ChamCong from '../assets/images/ERD-Chấm công.png';
@@ -9,6 +10,8 @@ import ERD_NhanVien from '../assets/images/ERD-Hồ sơ nhân viên.png';
 import ERD_Luong from '../assets/images/ERD-Lương.png';
 
 const WebCrawlerDetail = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,11 +19,11 @@ const WebCrawlerDetail = () => {
   }, []);
 
   const projectData = {
-    title: "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
-    subtitle: "Thu thập dữ liệu web, xây dựng database, ETL pipeline",
-    overview: "Hệ thống tích hợp hoàn chỉnh bao gồm thu thập dữ liệu web từ Coursera, thiết kế database cho hệ thống quản lý nhân sự, và xây dựng ETL pipeline tự động đồng bộ dữ liệu từ Lark Suite.",
+    titleKey: "webCrawlingDetail.hero.title",
+    subtitleKey: "webCrawlingDetail.hero.subtitle",
+    overviewKey: "webCrawlingDetail.hero.overview",
     
-    tags: ["Web Crawling","Selenium WebDriver", "Thiết kế database", "Xây dựng ETL pipeline", "Celery", "Lark Suite API"],
+    tags: ["Web Crawling","Selenium WebDriver", "Database Design", "ETL pipeline", "Celery", "Lark Suite API"],
     
     heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     
@@ -85,17 +88,17 @@ const WebCrawlerDetail = () => {
           className="flex items-center bg-gray-800/30 hover:bg-gray-700/50 text-gray-300 hover:text-white px-6 py-3 rounded-xl border border-gray-600/30 hover:border-emerald-400/50 transition-all duration-300 mb-8 group backdrop-blur-sm"
         >
           <ArrowLeft className="w-5 h-5 mr-3 group-hover:-translate-x-2 transition-transform duration-300" />
-          <span className="font-medium">Back to Portfolio</span>
+          <span className="font-medium">{t('webCrawlingDetail.backButton')}</span>
         </button>
 
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-4xl font-bold mb-4 text-white">
-            {projectData.title}
+            {t(projectData.titleKey)}
           </h1>
           
           <p className="text-xl text-emerald-400 mb-6 font-medium">
-            {projectData.subtitle}
+            {t(projectData.subtitleKey)}
           </p>
         </div>
 
@@ -121,14 +124,14 @@ const WebCrawlerDetail = () => {
                 <Globe className="w-8 h-8 text-emerald-400" />
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white mb-2">1.1 Thu thập dữ liệu web</h2>
-                <p className="text-emerald-400 text-xl font-medium">Thu thập dữ liệu web Coursera</p>
+                <h2 className="text-3xl font-bold text-white mb-2">{t('webCrawlingDetail.webScraping.title')}</h2>
+                <p className="text-emerald-400 text-xl font-medium">{t('webCrawlingDetail.webScraping.subtitle')}</p>
               </div>
             </div>
 
             {/* Quy trình hoạt động - Ảnh nhỏ hơn và tối ưu không gian */}
             <div className="bg-gray-800/40 rounded-xl p-6 border border-emerald-400/20 mb-8">
-              <h3 className="text-xl font-bold text-white mb-4 text-center">Quy trình hoạt động hệ thống</h3>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">{t('webCrawlingDetail.webScraping.workflowTitle')}</h3>
               <div className="bg-white rounded-lg p-4 flex justify-center">
                 <svg width="100%" height="500" viewBox="50 0 500 700" xmlns="http://www.w3.org/2000/svg" className="max-w-2xl">
                   {/* Background */}
@@ -136,19 +139,19 @@ const WebCrawlerDetail = () => {
                   
                   {/* Title */}
                   <text x="300" y="30" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold" fill="#333">
-                    Hệ thống Thu thập Dữ liệu Coursera
+                    {t('webCrawlingDetail.webScraping.systemTitle')}
                   </text>
                   
                   {/* Box 1: Course Listings Scraping Module */}
                   <rect x="200" y="60" width="200" height="80" fill="white" stroke="#333" strokeWidth="2"/>
                   <text x="300" y="85" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Module Thu thập
+                    {t('webCrawlingDetail.webScraping.listingModule')}
                   </text>
                   <text x="300" y="100" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Danh sách Khóa học
+                    {t('webCrawlingDetail.webScraping.courseList')}
                   </text>
                   <text x="300" y="115" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    (Danh mục, Kết quả Tìm kiếm)
+                    {t('webCrawlingDetail.webScraping.categoriesSearch')}
                   </text>
                   
                   {/* Arrow 1 */}
@@ -157,19 +160,19 @@ const WebCrawlerDetail = () => {
                   {/* Box 2: Course URLs Storage */}
                   <rect x="200" y="180" width="200" height="80" fill="white" stroke="#333" strokeWidth="2"/>
                   <text x="300" y="205" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    URL khóa học (lưu trữ cục bộ)
+                    {t('webCrawlingDetail.webScraping.urlStorage')}
                   </text>
                   <text x="300" y="220" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    File JSON/CSV chứa URL khóa học
+                    {t('webCrawlingDetail.webScraping.localFiles')}
                   </text>
                   
                   {/* Checkpoint box 1 (dotted) */}
                   <rect x="420" y="200" width="140" height="50" fill="none" stroke="#666" strokeWidth="1" strokeDasharray="5,5"/>
                   <text x="490" y="218" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    Đọc file URL
+                    {t('webCrawlingDetail.webScraping.readFiles')}
                   </text>
                   <text x="490" y="232" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    Đọc điểm checkpoint
+                    {t('webCrawlingDetail.webScraping.readCheckpoint')}
                   </text>
                   
                   {/* Arrow from checkpoint to storage */}
@@ -181,16 +184,16 @@ const WebCrawlerDetail = () => {
                   {/* Box 3: Detailed Course Information Scraping */}
                   <rect x="200" y="300" width="200" height="80" fill="white" stroke="#333" strokeWidth="2"/>
                   <text x="300" y="320" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Module Thu thập
+                    {t('webCrawlingDetail.webScraping.detailModule')}
                   </text>
                   <text x="300" y="335" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Thông tin Chi tiết
+                    {t('webCrawlingDetail.webScraping.detailInfo')}
                   </text>
                   <text x="300" y="350" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Khóa học
+                    {t('webCrawlingDetail.webScraping.courseDetails')}
                   </text>
                   <text x="300" y="365" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    (Chương trình, Đánh giá, Giảng viên)
+                    {t('webCrawlingDetail.webScraping.programReviews')}
                   </text>
                   
                   {/* Arrow from checkpoint to detailed scraping */}
@@ -203,22 +206,22 @@ const WebCrawlerDetail = () => {
                   {/* Box 4: Course Data Output */}
                   <rect x="200" y="420" width="200" height="80" fill="white" stroke="#333" strokeWidth="2"/>
                   <text x="300" y="445" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="#333">
-                    Dữ liệu Chi tiết Khóa học
+                    {t('webCrawlingDetail.webScraping.courseData')}
                   </text>
                   <text x="300" y="460" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    Thông tin khóa học hoàn chỉnh
+                    {t('webCrawlingDetail.webScraping.completeInfo')}
                   </text>
                   <text x="300" y="475" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    (JSON/CSV/Cơ sở dữ liệu)
+                    {t('webCrawlingDetail.webScraping.outputFormats')}
                   </text>
                   
                   {/* Checkpoint box 2 (dotted) */}
                   <rect x="60" y="315" width="120" height="50" fill="none" stroke="#666" strokeWidth="1" strokeDasharray="5,5"/>
                   <text x="120" y="333" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    Lưu file URL
+                    {t('webCrawlingDetail.webScraping.saveFiles')}
                   </text>
                   <text x="120" y="347" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="10" fill="#666">
-                    Lưu điểm checkpoint
+                    {t('webCrawlingDetail.webScraping.saveCheckpoint')}
                   </text>
                   
                   {/* Arrow from detailed scraping to checkpoint */}
@@ -236,24 +239,24 @@ const WebCrawlerDetail = () => {
                   {/* Legend */}
                   <rect x="50" y="550" width="500" height="120" fill="#f0f8ff" stroke="#333" strokeWidth="1"/>
                   <text x="300" y="570" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#333">
-                    Các Thành phần Hệ thống
+                    {t('webCrawlingDetail.webScraping.systemComponents')}
                   </text>
                   
                   {/* Legend items */}
                   <text x="70" y="590" fontFamily="Arial, sans-serif" fontSize="11" fill="#333">
-                    • Module Danh sách: Thu thập danh sách khóa học từ danh mục, tìm kiếm
+                    • {t('webCrawlingDetail.webScraping.legend.listingDesc')}
                   </text>
                   <text x="70" y="605" fontFamily="Arial, sans-serif" fontSize="11" fill="#333">
-                    • Lưu trữ URL: Lưu trữ cục bộ danh sách URL cần thu thập chi tiết
+                    • {t('webCrawlingDetail.webScraping.legend.storageDesc')}
                   </text>
                   <text x="70" y="620" fontFamily="Arial, sans-serif" fontSize="11" fill="#333">
-                    • Thu thập Chi tiết: Thu thập thông tin chi tiết (giảng viên, chương trình, đánh giá)
+                    • {t('webCrawlingDetail.webScraping.legend.detailDesc')}
                   </text>
                   <text x="70" y="635" fontFamily="Arial, sans-serif" fontSize="11" fill="#333">
-                    • Hệ thống Checkpoint: Lưu/đọc tiến độ để tránh mất dữ liệu khi gián đoạn
+                    • {t('webCrawlingDetail.webScraping.legend.checkpointDesc')}
                   </text>
                   <text x="70" y="650" fontFamily="Arial, sans-serif" fontSize="11" fill="#333">
-                    • Kết quả: File JSON/CSV chứa dữ liệu khóa học hoàn chỉnh
+                    • {t('webCrawlingDetail.webScraping.legend.outputDesc')}
                   </text>
                   
                   {/* Arrow marker definition */}
@@ -270,39 +273,38 @@ const WebCrawlerDetail = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <div className="space-y-6">
                 <div className="bg-gray-800/40 rounded-xl p-6 border border-emerald-400/20">
-                  <h3 className="text-xl font-bold text-white mb-4">Giới thiệu</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.webScraping.introduction.title')}</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Hệ thống được xây dựng để thu thập dữ liệu khóa học free từ trang web Coursera một cách tự động và hoạt động liên tục. 
-                    Giúp cập nhật được các khoá học mới từ Coursera. Và bài viết dưới đây sẽ mô tả tổng quan về cách hoạt động của hệ thống.
+                    {t('webCrawlingDetail.webScraping.introduction.description')}
                   </p>
                   
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center">
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                      <span className="text-gray-300"><strong className="text-emerald-400">Ngôn ngữ lập trình:</strong> Python</span>
+                      <span className="text-gray-300"><strong className="text-emerald-400">{t('webCrawlingDetail.webScraping.introduction.language')}:</strong> Python</span>
                     </div>
                     <div className="flex items-center">
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                      <span className="text-gray-300"><strong className="text-emerald-400">Công cụ:</strong> Selenium (Selenium Webdriver)</span>
+                      <span className="text-gray-300"><strong className="text-emerald-400">{t('webCrawlingDetail.webScraping.introduction.tools')}:</strong> Selenium (Selenium Webdriver)</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-gray-800/40 rounded-xl p-6 border border-emerald-400/20">
-                  <h3 className="text-xl font-bold text-white mb-4">Thành phần chính</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.webScraping.components.title')}</h3>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       <div>
-                        <p className="text-emerald-400 font-semibold">Module thu thập danh sách</p>
-                        <p className="text-gray-300 text-sm">Thu thập các liên kết đến các khóa học</p>
+                        <p className="text-emerald-400 font-semibold">{t('webCrawlingDetail.webScraping.components.listingModule')}</p>
+                        <p className="text-gray-300 text-sm">{t('webCrawlingDetail.webScraping.components.listingDesc')}</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       <div>
-                        <p className="text-emerald-400 font-semibold">Module thu thập dữ liệu chi tiết</p>
-                        <p className="text-gray-300 text-sm">Thu thập thông tin chi tiết từ các khóa học</p>
+                        <p className="text-emerald-400 font-semibold">{t('webCrawlingDetail.webScraping.components.detailModule')}</p>
+                        <p className="text-gray-300 text-sm">{t('webCrawlingDetail.webScraping.components.detailDesc')}</p>
                       </div>
                     </div>
                   </div>
@@ -310,9 +312,9 @@ const WebCrawlerDetail = () => {
               </div>
 
               <div className="bg-gray-800/40 rounded-xl p-6 border border-emerald-400/20">
-                <h3 className="text-xl font-bold text-white mb-4">Mô tả chi tiết</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.webScraping.detailedDescription.title')}</h3>
                 <p className="text-gray-300 leading-relaxed text-sm">
-                  Đây là chương trình tự động thu thập thông tin các khóa học miễn phí từ Coursera bằng cách giả lập hành vi duyệt web, thu thập dữ liệu tổng quan và chi tiết của từng khóa học. Hệ thống có khả năng tự động chuyển trang, tránh trùng lặp dữ liệu và tích hợp các biện pháp an toàn để tránh bị phát hiện. Kết quả là cơ sở dữ liệu hoàn chỉnh được xuất ra file CSV, hữu ích cho nghiên cứu thị trường giáo dục trực tuyến và phân tích xu hướng học tập.
+                  {t('webCrawlingDetail.webScraping.detailedDescription.content')}
                 </p>
               </div>
             </div>
@@ -327,70 +329,68 @@ const WebCrawlerDetail = () => {
                 <Database className="w-8 h-8 text-blue-400" />
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white mb-2">1.2 Xây dựng Database</h2>
+                <h2 className="text-3xl font-bold text-white mb-2">{t('webCrawlingDetail.database.title')}</h2>
               </div>
             </div>
 
-
             <div className="bg-gray-800/40 rounded-xl p-6 border border-blue-400/20">
-              <h3 className="text-xl font-bold text-white mb-4">Database cho hệ thống quản lý nhân sự</h3>
+              <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.database.hrmsTitle')}</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Hệ thống HRMS này được thiết kế để quản lý toàn bộ quy trình nhân sự của doanh nghiệp, từ tuyển dụng đến quản lý hàng ngày và phát triển nhân viên. 
-                Database được cấu trúc thành các module chức năng riêng biệt nhưng có mối liên kết chặt chẽ với nhau.
+                {t('webCrawlingDetail.database.description')}
               </p>
 
               {/* ERD Images - 1 cột dọc */}
               <div className="space-y-6">
                 <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Hồ sơ Nhân viên</h4>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('webCrawlingDetail.database.erdEmployeeProfile')}</h4>
                   <div className="bg-white rounded-lg p-4 flex justify-center">
                     <img 
                       src={ERD_NhanVien} 
-                      alt="ERD Hồ sơ Nhân viên" 
+                      alt={t('webCrawlingDetail.database.erdEmployeeProfile')} 
                       className="w-[400px] h-auto rounded-lg"
                     />
                   </div>
                 </div>
 
                 <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Chấm công</h4>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('webCrawlingDetail.database.erdAttendance')}</h4>
                   <div className="bg-white rounded-lg p-4 flex justify-center">
                     <img 
                       src={ERD_ChamCong} 
-                      alt="ERD Chấm công" 
+                      alt={t('webCrawlingDetail.database.erdAttendance')} 
                       className="w-[400px] h-auto rounded-lg"
                     />
                   </div>
                 </div>
 
                 <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Tuyển dụng</h4>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('webCrawlingDetail.database.erdRecruitment')}</h4>
                   <div className="bg-white rounded-lg p-4 flex justify-center">
                     <img 
                       src={ERD_TuyenDung} 
-                      alt="ERD Tuyển dụng" 
+                      alt={t('webCrawlingDetail.database.erdRecruitment')} 
                       className="w-[400px] h-auto rounded-lg"
                     />
                   </div>
                 </div>
 
                 <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Lương</h4>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('webCrawlingDetail.database.erdPayroll')}</h4>
                   <div className="bg-white rounded-lg p-4 flex justify-center">
                     <img 
                       src={ERD_Luong} 
-                      alt="ERD Lương" 
+                      alt={t('webCrawlingDetail.database.erdPayroll')} 
                       className="w-[400px] h-auto rounded-lg"
                     />
                   </div>
                 </div>
 
                 <div className="bg-blue-500/10 rounded-lg p-4 border border-blue-400/20">
-                  <h4 className="text-blue-400 font-semibold mb-3 text-center">ERD Đào tạo</h4>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-center">{t('webCrawlingDetail.database.erdTraining')}</h4>
                   <div className="bg-white rounded-lg p-4 flex justify-center">
                     <img 
                       src={ERD_DaoTao} 
-                      alt="ERD Đào tạo" 
+                      alt={t('webCrawlingDetail.database.erdTraining')} 
                       className="w-[400px] h-auto rounded-lg"
                     />
                   </div>
@@ -408,37 +408,33 @@ const WebCrawlerDetail = () => {
                 <Workflow className="w-8 h-8 text-purple-400" />
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white mb-2">1.3 ETL Pipeline</h2>
-                <p className="text-purple-400 text-xl font-medium">Tự động hóa tích hợp dữ liệu Chấm công, tuyển dụng từ Lark Suite sang hệ thống quản lý nhân sự</p>
+                <h2 className="text-3xl font-bold text-white mb-2">{t('webCrawlingDetail.etlPipeline.title')}</h2>
+                <p className="text-purple-400 text-xl font-medium">{t('webCrawlingDetail.etlPipeline.subtitle')}</p>
               </div>
             </div>
 
             <div className="bg-gray-800/40 rounded-xl p-6 border border-purple-400/20 mb-8">
-              <h3 className="text-xl font-bold text-white mb-4 text-center">ETL Pipeline Architecture</h3>
+              <h3 className="text-xl font-bold text-white mb-4 text-center">{t('webCrawlingDetail.etlPipeline.architectureTitle')}</h3>
               <div className="bg-white rounded-lg p-4 flex justify-center">
                 <img 
                   src={ETLImage} 
-                  alt="ETL Pipeline Architecture" 
+                  alt={t('webCrawlingDetail.etlPipeline.architectureTitle')} 
                   className="w-[350px] h-auto rounded-lg"
-
                 />
               </div>
             </div>
 
             <div className="bg-gray-800/40 rounded-xl p-6 border border-purple-400/20 mb-8">
-              <h3 className="text-xl font-bold text-white mb-4">Tổng quan hệ thống ETL</h3>
+              <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.etlPipeline.overview.title')}</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Đây là một hệ thống ETL (Extract, Transform, Load) được thiết kế để tự động đồng bộ dữ liệu từ platform Lark Suite vào hệ thống quản lý nhân sự nội bộ. 
-                Pipeline này sử dụng Celery tasks để xử lý bất đồng bộ và đảm bảo hiệu suất cao.
+                {t('webCrawlingDetail.etlPipeline.overview.description')}
               </p>
-              
-
             </div>
 
             <div className="bg-gray-800/40 rounded-xl p-6 border border-purple-400/20">
-              <h3 className="text-xl font-bold text-white mb-4">Chi tiết các tác vụ ETL</h3>
+              <h3 className="text-xl font-bold text-white mb-4">{t('webCrawlingDetail.etlPipeline.tasks.title')}</h3>
               <p className="text-gray-300 leading-relaxed">
-               ETL Pipeline thực hiện 3 tác vụ song song để tối ưu hiệu suất: đồng bộ dữ liệu chấm công từ Lark Suite API (bao gồm thông tin check-in/out, GPS, ảnh chấm công), đồng bộ vị trí tuyển dụng từ Lark Base (mapping thông tin công việc, phòng ban, lương), và đồng bộ ứng viên kèm tự động download CV files. Hệ thống tự động xử lý timezone, tạo/cập nhật records và sử dụng unique identifier để tránh trùng lặp dữ liệu.
+                {t('webCrawlingDetail.etlPipeline.tasks.description')}
               </p>
             </div>
           </div>

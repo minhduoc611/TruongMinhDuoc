@@ -1,0 +1,490 @@
+{
+  "home": "Home",
+  "about": "About",
+  "portfolio": "Portfolio", 
+  "skills": "Skills",
+  "contact": "Contact",
+  "hero": {
+    "role": "Analytics Engineer",
+    "getConnected": "Get Connected"
+  },
+  "aboutSection": {
+    "title": "About",
+    "titleHighlight": "Me", 
+    "description": "I am a proactive and passionate learner who is always excited about solving complex technical challenges. With strong teamwork skills and a supportive spirit for colleagues, I continuously improve my professional skills with the goal of reaching Middle level in the next 2-3 years.",
+    "viewCV": "View CV"
+  },
+  "portfolioSection": {
+    "title": "Portfolio",
+    "viewProject": "View",
+    "comingSoon": "Coming Soon",
+    "inDevelopment": "In Development",
+    "projects": {
+      "webCrawling": {
+        "title": "Web Crawling, Database Design & ETL Pipeline Development",
+        "description": "Advanced web data collection system with automated ETL pipelines for extracting, transforming, and loading data. Features comprehensive database design and PostgreSQL integration for seamless data management and processing."
+      },
+      "dataVisualization": {
+        "title": "SQL Querying, Data Processing & Data Visualization",
+        "description": "Comprehensive data analytics platform with SQL Query tools, integrated Python data processing systems, and interactive visualization dashboards. Supports big data analysis, query optimization, and professional business intelligence reporting."
+      },
+      "rag": {
+        "title": "Retrieval-Augmented Generation (RAG) AI Assistant Application",
+        "description": "Intelligent assistant using Retrieval-Augmented Generation with vector embeddings for semantic similarity search. Integrates advanced natural language processing capabilities and contextual understanding to enhance user interaction experiences."
+      },
+      "automation": {
+        "title": "Building Task Automation Systems",
+        "description": "Comprehensive automation solution using Python to optimize business processes. Features file management, web data collection, data processing with pandas/numpy, and API integration to streamline workflows."
+      },
+      "webApp": {
+        "title": "Building Full-stack Web Application",
+        "description": "Modern web application built with Django framework, featuring robust backend architecture, PostgreSQL integration, and responsive frontend design for comprehensive business management solutions."
+      }
+    }
+  },
+  "skillsSection": {
+    "title": "My",
+    "titleHighlight": "Skills",
+    "categories": {
+      "programming": "Programming",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "dataVisualization": "Data Visualization",
+      "webScraping": "Web Scraping",
+      "databases": "Databases"
+    }
+  },
+  "contactSection": {
+    "title": "Get In",
+    "titleHighlight": "Touch",
+    "description": "I'm currently looking for new opportunities. Feel free to reach out through any of these channels!",
+    "callToAction": "Let's connect and discuss opportunities!"
+  },
+  "webCrawlingDetail": {
+    "backButton": "Back to Portfolio",
+    "hero": {
+      "title": "Web Crawling, Database Design & ETL Pipeline Development",
+      "subtitle": "Web data collection, database construction, ETL pipeline",
+      "overview": "Complete integrated system including web data collection from Coursera, database design for HR management systems, and building automated ETL pipelines to sync data from Lark Suite."
+    },
+    "webScraping": {
+      "title": "1.1 Web Data Collection",
+      "subtitle": "Coursera web data collection",
+      "workflowTitle": "System workflow process",
+      "systemTitle": "Coursera Data Collection System",
+      "listingModule": "Collection Module",
+      "courseList": "Course List",
+      "categoriesSearch": "(Categories, Search Results)",
+      "urlStorage": "Course URLs (local storage)",
+      "localFiles": "JSON/CSV files containing course URLs",
+      "readFiles": "Read URL files",
+      "readCheckpoint": "Read checkpoint",
+      "detailModule": "Collection Module",
+      "detailInfo": "Detailed Information",
+      "courseDetails": "Course Details",
+      "programReviews": "(Program, Reviews, Instructors)",
+      "courseData": "Detailed Course Data",
+      "completeInfo": "Complete course information",
+      "outputFormats": "(JSON/CSV/Database)",
+      "saveFiles": "Save URL files",
+      "saveCheckpoint": "Save checkpoint",
+      "systemComponents": "System Components",
+      "legend": {
+        "listingDesc": "Listing Module: Collect course lists from categories, search",
+        "storageDesc": "URL Storage: Local storage of URLs list for detailed collection",
+        "detailDesc": "Detail Collection: Collect detailed information (instructors, program, reviews)",
+        "checkpointDesc": "Checkpoint System: Save/read progress to avoid data loss during interruption",
+        "outputDesc": "Results: JSON/CSV files containing complete course data"
+      },
+      "introduction": {
+        "title": "Introduction",
+        "description": "The system is built to automatically and continuously collect free course data from Coursera website. Helps update new courses from Coursera. And the article below will describe an overview of how the system works.",
+        "language": "Programming language",
+        "tools": "Tools"
+      },
+      "components": {
+        "title": "Main components",
+        "listingModule": "Listing collection module",
+        "listingDesc": "Collect links to courses",
+        "detailModule": "Detail data collection module", 
+        "detailDesc": "Collect detailed information from courses"
+      },
+      "detailedDescription": {
+        "title": "Detailed description",
+        "content": "This is an automated program that collects information on free courses from Coursera by simulating web browsing behavior, collecting overview and detailed data of each course. The system has the ability to automatically navigate pages, avoid data duplication and integrate security measures to avoid detection. The result is a complete database exported to CSV files, useful for online education market research and learning trend analysis."
+      }
+    },
+    "database": {
+      "title": "1.2 Database Development",
+      "hrmsTitle": "Database for human resource management system",
+      "description": "This HRMS system is designed to manage the entire HR process of the enterprise, from recruitment to daily management and employee development. The database is structured into separate functional modules but closely linked to each other.",
+      "erdEmployeeProfile": "ERD Employee Profile",
+      "erdAttendance": "ERD Attendance",
+      "erdRecruitment": "ERD Recruitment", 
+      "erdPayroll": "ERD Payroll",
+      "erdTraining": "ERD Training"
+    },
+    "etlPipeline": {
+      "title": "1.3 ETL Pipeline",
+      "subtitle": "Automated integration of attendance and recruitment data from Lark Suite to HR management system",
+      "architectureTitle": "ETL Pipeline Architecture",
+      "overview": {
+        "title": "ETL system overview",
+        "description": "This is an ETL (Extract, Transform, Load) system designed to automatically sync data from Lark Suite platform to internal HR management system. This pipeline uses Celery tasks for asynchronous processing and ensures high performance."
+      },
+      "tasks": {
+        "title": "ETL task details",
+        "description": "ETL Pipeline performs 3 parallel tasks to optimize performance: sync attendance data from Lark Suite API (including check-in/out information, GPS, attendance photos), sync recruitment positions from Lark Base (mapping job information, departments, salary), and sync candidates with automatic CV file downloads. The system automatically handles timezone, creates/updates records and uses unique identifiers to avoid data duplication."
+      }
+    }
+  },
+  "dataVisualizationDetail": {
+    "backButton": "Back to Portfolio",
+    "hero": {
+      "title": "SQL Querying, Data Processing & Data Visualization",
+      "subtitle": "Data Analytics Platform",
+      "overview": "Comprehensive data analytics platform with powerful SQL query tools, integrated Python data processing systems, and interactive visualization dashboards that enable deep analysis and data-driven decision making."
+    },
+    "sqlEngine": {
+      "title": "1. SQL Query Engine",
+      "description": "Powerful SQL query system with multi-source data support, performance optimization, and intuitive interface for complex data analysis.",
+      "features": {
+        "multiSource": {
+          "title": "Multi-Source Data",
+          "description": "Connect to MySQL, PostgreSQL, SQL Server, Oracle"
+        },
+        "optimization": {
+          "title": "Performance Optimization",
+          "description": "Query optimization, indexing strategy"
+        },
+        "advanced": {
+          "title": "Advanced Analytics",
+          "description": "Window functions, CTE, stored procedures"
+        }
+      },
+      "codeExample": {
+        "comment": "-- Query Example"
+      }
+    },
+    "dataProcessing": {
+      "title": "2. Data Processing",
+      "description": "Professional data processing workflow from cleaning, transformation to normalization and optimization for analysis and machine learning.",
+      "modules": {
+        "cleaning": {
+          "title": "Data Cleaning",
+          "subtitle": "Clean and process raw data",
+          "features": {
+            "missingValues": "Handle missing values and null data",
+            "outliers": "Detect and remove outliers",
+            "duplicates": "Remove duplicate records", 
+            "validation": "Validation and format checking"
+          }
+        },
+        "transformation": {
+          "title": "Data Transformation",
+          "subtitle": "Transform data as required",
+          "features": {
+            "encoding": "Categorical encoding (Label, One-hot)",
+            "datetime": "Date/time parsing and formatting",
+            "text": "Text processing and tokenization",
+            "feature": "Feature extraction and data aggregation"
+          }
+        },
+        "normalization": {
+          "title": "Data Normalization",
+          "subtitle": "Standardization and normalization",
+          "features": {
+            "minmax": "Min-Max scaling (0-1 range)",
+            "zscore": "Z-score standardization",
+            "robust": "Robust scaling for outliers",
+            "unit": "Unit vector scaling"
+          }
+        },
+        "dimensionality": {
+          "title": "Dimensionality Reduction",
+          "subtitle": "Dimensionality reduction techniques",
+          "features": {
+            "selection": "Feature selection algorithms",
+            "correlation": "Correlation analysis",
+            "variance": "Variance threshold filtering"
+          }
+        }
+      },
+      "technologies": "Technologies & Libraries"
+    },
+    "visualization": {
+      "title": "3. Data Visualization",
+      "viewDashboard": "View Live Dashboard"
+    },
+    "dashboards": {
+      "hrm": {
+        "title": "HR Management Dashboard",
+        "description": "Comprehensive HR analytics dashboard with employee performance metrics, departmental insights, and workforce analytics."
+      },
+      "rfm": {
+        "title": "RFM Customer Analysis Dashboard", 
+        "description": "Advanced customer segmentation dashboard using RFM analysis to identify customer behavior patterns and business opportunities."
+      }
+    }
+  },
+  "ragDetail": {
+    "backButton": "Back to Portfolio",
+    "hero": {
+      "title": "AI Assistant System with RAG",
+      "subtitle": "Intelligent HR assistant using Retrieval-Augmented Generation",
+      "overview": "Advanced AI conversation system using Retrieval-Augmented Generation (RAG) technology to provide intelligent HR support. Built with Google Gemini AI and Django, the system combines vector embeddings with semantic similarity search to deliver accurate responses about employee data, attendance records, and HR policies."
+    },
+    "architecture": {
+      "title": "System Architecture",
+      "overview": {
+        "title": "Overall system architecture",
+        "description": "The system operates on a simple model: User sends question → Query Processor processes and searches relevant data → Combines with Google Gemini 2.0 to generate accurate answers based on context and real data."
+      },
+      "embedding": {
+        "title": "Vector Embedding Process",
+        "description": "Text to vector conversion process: Question is tokenized → Google Embedding Model creates 768-dimensional vector → Compares with database to find similar questions asked before, helping AI understand context better."
+      }
+    },
+    "workflow": {
+      "title": "Detailed workflow",
+      "steps": {
+        "userQuery": {
+          "title": "1. User Question",
+          "example": "How many hours did I work this month?"
+        },
+        "embedding": {
+          "title": "2. Embedding",
+          "description": "Convert question to mathematical vector"
+        },
+        "vectorSearch": {
+          "title": "3. Vector Search",
+          "description": "Find most relevant data in database"
+        },
+        "generation": {
+          "title": "4. Generation",
+          "description": "AI generates answer based on found data"
+        }
+      },
+      "details": {
+        "embedding": {
+          "title": "Embedding Details",
+          "features": {
+            "nlp": "Natural language processing",
+            "timeRecognition": "Time recognition (month, year)",
+            "vectorConversion": "Convert to 768-dimensional vector",
+            "normalization": "Normalize for comparison"
+          }
+        },
+        "dataRetrieval": {
+          "title": "Data Retrieval",
+          "features": {
+            "employeeInfo": "Get employee information",
+            "attendanceData": "Attendance data",
+            "conversationHistory": "Conversation history",
+            "contextFilter": "Filter by context"
+          }
+        },
+        "vectorSearch": {
+          "title": "Vector Search",
+          "features": {
+            "cosine": "Calculate cosine similarity",
+            "similarQuestions": "Match similar questions",
+            "ranking": "Rank results",
+            "topResults": "Get top 5 best results"
+          }
+        },
+        "aiGeneration": {
+          "title": "AI Response Generation",
+          "features": {
+            "geminiProcessing": "Google Gemini processing",
+            "contextCombination": "Combine context",
+            "naturalResponse": "Generate natural answer",
+            "historyStorage": "Save conversation history"
+          }
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies Used",
+      "vectorDatabase": {
+        "title": "Vector Database",
+        "description": "Store embeddings and metadata",
+        "features": {
+          "vectors": "768-dimensional vectors",
+          "similarity": "Cosine similarity search",
+          "indexing": "Conversation history indexing"
+        }
+      },
+      "aiModel": {
+        "title": "AI Model",
+        "description": "Large Language Model for generation",
+        "features": {
+          "textConversation": "Text-based conversation",
+          "contextAware": "Context-aware responses",
+          "vietnameseSupport": "Vietnamese language support"
+        }
+      },
+      "promptEngineering": {
+        "title": "Prompt Engineering",
+        "description": "Optimize AI commands",
+        "features": {
+          "contextInjection": "Context injection",
+          "roleBased": "Role-based prompting",
+          "fewShot": "Few-shot learning examples"
+        }
+      }
+    }
+  },
+"courseraProjectDetail": {
+  "backButton": "Back to Portfolio",
+  "hero": {
+    "title": "Automated Coursera Education Data Collection and Analysis System",
+    "subtitle": "Smart Pipeline with Windows Task Scheduler and Tableau Dashboard",
+    "overview": "This automation system is designed to create an intelligent pipeline for collecting and analyzing online education data. Using Windows Task Scheduler as the coordination hub, the system automatically triggers a daily data crawling process from Coursera, collecting detailed information about thousands of free courses including titles, descriptions, ratings, student numbers, and instructor information."
+  },
+  "workflow": {
+    "title": "4 Main Automated Task Groups",
+    "steps": {
+      "step1": {
+        "title": "1. Data Crawling",
+        "description": "Collect data from Coursera website including course information, ratings, and instructors"
+      },
+      "step2": {
+        "title": "2. Data Processing",
+        "description": "Clean, extract and standardize data to ensure quality"
+      },
+      "step3": {
+        "title": "3. Upload Data Lake",
+        "description": "Upload data to data lake (Google Drive) and sync with Google Sheets"
+      },
+      "step4": {
+        "title": "4. Tableau Reports",
+        "description": "Extract data into reporting system (Tableau) with automatic dashboard refresh"
+      }
+    }
+  },
+  "architecture": {
+    "title": "System Workflow",
+    "altText": "Task Automation System Architecture",
+    "description": "The system operates completely automatically through Windows Task Scheduler, starting the automation.bat script to crawl data from Coursera, process and clean information, then upload to Google Sheets. Data is read from Google Sheets into the database and automatically refreshes Tableau dashboards, ensuring users always see the latest insights without any manual intervention."
+  },
+  "automation": {
+    "title": "24/7 Automated Operation",
+    "features": {
+      "continuous": {
+        "title": "Continuous Operation",
+        "description": "The system operates automatically 24/7 with Windows Task Scheduler, ensuring uninterrupted data collection and real-time information updates."
+      },
+      "logging": {
+        "title": "Logging & Monitoring",
+        "description": "Real-time logging and reporting with comprehensive monitoring system, tracking operational status and detecting errors promptly."
+      },
+      "sync": {
+        "title": "Google Sheets Sync",
+        "description": "Automatic synchronization with Google Sheets allows real-time data access from anywhere and seamless integration with other reporting tools."
+        }
+      }
+    }
+  }
+,
+"hrmsDetail": {
+  "backButton": "Back to Portfolio",
+  "hero": {
+    "title": "Human Resource Management System",
+    "subtitle": "Enterprise HRMS for SHEA Company",
+    "overview": "This enterprise-grade human resource management system was developed to transform SHEA Company's HR operations from manual processes to fully automated, data-driven methodologies. The system integrates multiple HR functions into a unified platform, providing real-time analytics and insights to support strategic decision-making across all HR domains."
+  },
+  "database": {
+    "title": "Database design for human resource management system",
+    "description": "This HRMS system is designed to manage the entire HR process of the enterprise, from recruitment to daily management and employee development. The database is structured into separate functional modules but closely linked to each other.",
+    "erdEmployeeProfile": "ERD Employee Profile",
+    "erdAttendance": "ERD Attendance",
+    "erdRecruitment": "ERD Recruitment",
+    "erdPayroll": "ERD Payroll",
+    "erdTraining": "ERD Training"
+  },
+  "backend": {
+    "title": "Back-end",
+    "viewDjango": "Django View",
+    "urlDjango": "Django URL",
+    "description": "Backend built with Django framework, using view functions to handle business logic and URL patterns to route requests. Employee management system with full CRUD functionality, JSON data processing and database integration through Django ORM."
+  },
+  "frontend": {
+    "title": "Front-end",
+    "loginInterface": {
+      "title": "Authentication Interface",
+      "description": "Secure login system with role-based authorization"
+    },
+    "attendanceModule": {
+      "title": "Attendance Management",
+      "description": "Check-in/out records and work schedule management"
+    },
+    "payrollSystem": {
+      "title": "Payroll System",
+      "description": "Salary calculation and payment processing"
+    },
+    "chatbot": {
+      "title": "Support Chatbot using Regex",
+      "description": "Chatbot supporting employee inquiries"
+    },
+    "dataForm": {
+      "title": "Data Entry Form",
+      "description": "Data input for adding new employee training courses"
+    }
+  },
+  "chatbotSection": {
+    "title": "Building support chatbot using regex",
+    "image1Alt": "Chatbot interface 1",
+    "image2Alt": "Chatbot interface 2",
+    "description": "HR management chatbot built with Django Channels using WebSocket for real-time chat support, integrated with database to store message history and user information. The system uses regex pattern matching to recognize questions and automatically answer employee information, salary, work schedule from database. Bot can handle multiple users simultaneously through async/await and Django Channels layer."
+  },
+  "deployment": {
+    "title": "System Deployment",
+    "lempStack": {
+      "title": "LEMP Stack Deployment",
+      "linux": {
+        "title": "Linux (Ubuntu 20.04 LTS)",
+        "description": "Server operating system with high stability and good security"
+      },
+      "nginx": {
+        "title": "Nginx (Web Server)",
+        "description": "Reverse proxy and load balancer for Django application"
+      },
+      "postgresql": {
+        "title": "PostgreSQL",
+        "description": "Main database storing all HR data"
+      },
+      "python": {
+        "title": "Python (Django + Gunicorn)",
+        "description": "Django application running with Gunicorn WSGI server"
+      }
+    },
+    "configuration": {
+      "title": "Deployment Configuration",
+      "appServer": {
+        "title": "Application Server",
+        "gunicorn": "Gunicorn with 4 worker processes",
+        "supervisor": "Supervisor for process management",
+        "systemd": "Systemd service for auto-restart"
+      },
+      "backgroundServices": {
+        "title": "Background Services",
+        "redis": "Redis server for cache and queue",
+        "celeryWorker": "Celery worker for background tasks",
+        "celeryBeat": "Celery beat for scheduled tasks"
+      },
+      "security": {
+        "title": "Security & Performance",
+        "ssl": "SSL/TLS with Let's Encrypt",
+        "gzip": "Nginx gzip compression",
+        "staticFiles": "Static files caching",
+        "dbPooling": "Database connection pooling"
+      }
+    },
+    "flow": {
+      "title": "Deployment Process",
+      "altText": "LEMP Stack Deployment Flow"
+    }
+  }
+}
+}

@@ -1,27 +1,31 @@
 import React from 'react';
 import { ArrowLeft, Database, Zap, BarChart3, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import HRDB from '../assets/images/HRM DB.png';
 import RFM from '../assets/images/RFM_DB.png';
 
 const DataVisualizationDetail = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   const projectData = {
-    title: "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
-    subtitle: "Nền Tảng Phân Tích Dữ Liệu ",
-    overview: "Nền tảng phân tích dữ liệu toàn diện với công cụ truy vấn SQL mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và bảng điều khiển trực quan tương tác cho phép phân tích sâu và ra quyết định dựa trên dữ liệu."
+    titleKey: "dataVisualizationDetail.hero.title",
+    subtitleKey: "dataVisualizationDetail.hero.subtitle",
+    overviewKey: "dataVisualizationDetail.hero.overview"
   };
 
   const dashboards = [
     {
       id: "hrm-dashboard",
-      title: "Dashboard báo cáo Quản Lý Nhân Sự",
-      description: "Bảng điều khiển phân tích HR toàn diện với các chỉ số hiệu suất nhân viên, thông tin chi tiết theo phòng ban và phân tích lực lượng lao động.",
+      titleKey: "dataVisualizationDetail.dashboards.hrm.title",
+      descriptionKey: "dataVisualizationDetail.dashboards.hrm.description",
       image: HRDB,
       link: "https://public.tableau.com/views/HRMS_17479281067570/HRMDB?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     },
     {
       id: "rfm-dashboard",
-      title: "Dashboard Phân Tích Khách Hàng RFM",
-      description: "Bảng điều khiển phân khúc khách hàng nâng cao sử dụng phân tích RFM để xác định các mô hình hành vi khách hàng và cơ hội kinh doanh.",
+      titleKey: "dataVisualizationDetail.dashboards.rfm.title",
+      descriptionKey: "dataVisualizationDetail.dashboards.rfm.description",
       image: RFM,
       link: "https://public.tableau.com/views/RFMAnalyst/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     }
@@ -81,13 +85,13 @@ const DataVisualizationDetail = () => {
           className="flex items-center bg-gray-800/30 hover:bg-gray-700/50 text-gray-300 hover:text-white px-6 py-3 rounded-xl border border-gray-600/30 hover:border-blue-400/50 transition-all duration-300 mb-8 group backdrop-blur-sm"
         >
           <ArrowLeft className="w-5 h-5 mr-3 group-hover:-translate-x-2 transition-transform duration-300" />
-          <span className="font-medium">Quay lại Portfolio</span>
+          <span className="font-medium">{t('dataVisualizationDetail.backButton')}</span>
         </button>
 
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            {projectData.title}
+            {t(projectData.titleKey)}
           </h1>
         </div>
 
@@ -100,7 +104,65 @@ const DataVisualizationDetail = () => {
               <div className="bg-blue-500/20 p-3 rounded-lg mr-4">
                 <Database className="w-8 h-8 text-blue-400" />
               </div>
-              <h2 className="text-3xl font-bold text-blue-400">1. Công Cụ Truy Vấn SQL</h2>
+              <h2 className="text-3xl font-bold text-blue-400">{t('dataVisualizationDetail.sqlEngine.title')}</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {t('dataVisualizationDetail.sqlEngine.description')}
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-blue-500/20 p-1.5 rounded-lg mt-1">
+                      <Database className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-blue-300 font-semibold">{t('dataVisualizationDetail.sqlEngine.features.multiSource.title')}</h4>
+                      <p className="text-gray-400 text-sm">{t('dataVisualizationDetail.sqlEngine.features.multiSource.description')}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-blue-500/20 p-1.5 rounded-lg mt-1">
+                      <Zap className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-blue-300 font-semibold">{t('dataVisualizationDetail.sqlEngine.features.optimization.title')}</h4>
+                      <p className="text-gray-400 text-sm">{t('dataVisualizationDetail.sqlEngine.features.optimization.description')}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-blue-500/20 p-1.5 rounded-lg mt-1">
+                      <BarChart3 className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-blue-300 font-semibold">{t('dataVisualizationDetail.sqlEngine.features.advanced.title')}</h4>
+                      <p className="text-gray-400 text-sm">{t('dataVisualizationDetail.sqlEngine.features.advanced.description')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                <div className="bg-black/50 rounded-lg p-4 font-mono text-sm">
+                  <div className="text-blue-400 mb-2">{t('dataVisualizationDetail.sqlEngine.codeExample.comment')}</div>
+                  <div className="text-green-400">SELECT</div>
+                  <div className="text-gray-300 ml-4">customer_id,</div>
+                  <div className="text-gray-300 ml-4">COUNT(*) as orders,</div>
+                  <div className="text-gray-300 ml-4">SUM(amount) as revenue</div>
+                  <div className="text-green-400">FROM</div>
+                  <div className="text-gray-300 ml-4">sales_data</div>
+                  <div className="text-green-400">WHERE</div>
+                  <div className="text-gray-300 ml-4">date &gt;= '2024-01-01'</div>
+                  <div className="text-green-400">GROUP BY</div>
+                  <div className="text-gray-300 ml-4">customer_id</div>
+                  <div className="text-green-400">ORDER BY</div>
+                  <div className="text-gray-300 ml-4">revenue DESC;</div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -110,7 +172,82 @@ const DataVisualizationDetail = () => {
               <div className="bg-purple-500/20 p-3 rounded-lg mr-4">
                 <Zap className="w-8 h-8 text-purple-400" />
               </div>
-              <h2 className="text-3xl font-bold text-purple-400">2. Xử Lý Dữ Liệu</h2>
+              <h2 className="text-3xl font-bold text-purple-400">{t('dataVisualizationDetail.dataProcessing.title')}</h2>
+            </div>
+            
+            <div className="space-y-6">
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {t('dataVisualizationDetail.dataProcessing.description')}
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                  <div className="bg-purple-500/20 p-3 rounded-lg w-fit mb-4">
+                    <Database className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h4 className="text-purple-300 font-bold text-xl mb-3">{t('dataVisualizationDetail.dataProcessing.modules.cleaning.title')}</h4>
+                  <p className="text-gray-400 mb-4">{t('dataVisualizationDetail.dataProcessing.modules.cleaning.subtitle')}</p>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.cleaning.features.missingValues')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.cleaning.features.outliers')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.cleaning.features.duplicates')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.cleaning.features.validation')}</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                  <div className="bg-purple-500/20 p-3 rounded-lg w-fit mb-4">
+                    <Zap className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h4 className="text-purple-300 font-bold text-xl mb-3">{t('dataVisualizationDetail.dataProcessing.modules.transformation.title')}</h4>
+                  <p className="text-gray-400 mb-4">{t('dataVisualizationDetail.dataProcessing.modules.transformation.subtitle')}</p>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.transformation.features.encoding')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.transformation.features.datetime')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.transformation.features.text')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.transformation.features.feature')}</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                  <div className="bg-purple-500/20 p-3 rounded-lg w-fit mb-4">
+                    <BarChart3 className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h4 className="text-purple-300 font-bold text-xl mb-3">{t('dataVisualizationDetail.dataProcessing.modules.normalization.title')}</h4>
+                  <p className="text-gray-400 mb-4">{t('dataVisualizationDetail.dataProcessing.modules.normalization.subtitle')}</p>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.normalization.features.minmax')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.normalization.features.zscore')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.normalization.features.robust')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.normalization.features.unit')}</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                  <div className="bg-purple-500/20 p-3 rounded-lg w-fit mb-4">
+                    <ExternalLink className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h4 className="text-purple-300 font-bold text-xl mb-3">{t('dataVisualizationDetail.dataProcessing.modules.dimensionality.title')}</h4>
+                  <p className="text-gray-400 mb-4">{t('dataVisualizationDetail.dataProcessing.modules.dimensionality.subtitle')}</p>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• PCA (Principal Component Analysis)</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.dimensionality.features.selection')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.dimensionality.features.correlation')}</li>
+                    <li>• {t('dataVisualizationDetail.dataProcessing.modules.dimensionality.features.variance')}</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
+                <h4 className="text-purple-300 font-semibold mb-4">{t('dataVisualizationDetail.dataProcessing.technologies')}</h4>
+                <div className="flex flex-wrap gap-3">
+                  {['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Seaborn'].map((tech) => (
+                    <span key={tech} className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm border border-purple-500/30 font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
@@ -120,15 +257,15 @@ const DataVisualizationDetail = () => {
               <div className="bg-green-500/20 p-3 rounded-lg mr-4">
                 <BarChart3 className="w-8 h-8 text-green-400" />
               </div>
-              <h2 className="text-3xl font-bold text-green-400">3. Trực Quan Hóa Dữ Liệu</h2>
+              <h2 className="text-3xl font-bold text-green-400">{t('dataVisualizationDetail.visualization.title')}</h2>
             </div>
             
             <div className="space-y-12">
               {dashboards.map((dashboard, index) => (
                 <div key={dashboard.id} className="bg-gray-900/50 rounded-lg p-6 border border-gray-600/30">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-green-400 mb-3">{dashboard.title}</h3>
-                    <p className="text-gray-300 text-lg mb-4">{dashboard.description}</p>
+                    <h3 className="text-2xl font-bold text-green-400 mb-3">{t(dashboard.titleKey)}</h3>
+                    <p className="text-gray-300 text-lg mb-4">{t(dashboard.descriptionKey)}</p>
                   </div>
                   
                   {/* Dashboard Image with Link */}
@@ -136,7 +273,7 @@ const DataVisualizationDetail = () => {
                     <div className="bg-white rounded-lg p-4 overflow-hidden">
                       <img 
                         src={dashboard.image} 
-                        alt={dashboard.title}
+                        alt={t(dashboard.titleKey)}
                         className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -150,7 +287,7 @@ const DataVisualizationDetail = () => {
                         className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl border border-blue-500 hover:border-blue-400 transition-all duration-300 font-medium group/btn"
                       >
                         <BarChart3 className="w-5 h-5 mr-2 group-hover/btn:scale-110 transition-transform duration-300" />
-                        <span>Xem Dashboard Trực Tiếp</span>
+                        <span>{t('dataVisualizationDetail.visualization.viewDashboard')}</span>
                         <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </a>
                     </div>

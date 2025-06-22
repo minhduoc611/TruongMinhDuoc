@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from './LanguageToggle';
 
 // Đăng ký plugin
 gsap.registerPlugin(ScrollToPlugin);
@@ -11,13 +13,8 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   
-  const translations = {
-    home: 'Home',
-    about: 'About',
-    portfolio: 'Portfolio',
-    skills: 'Skills',
-    contact: 'Contact'
-  };
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
   
   useEffect(() => {
     const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
@@ -102,7 +99,7 @@ const Navbar = () => {
             className={getNavItemClass('home')}
             style={{ animationDelay: '0.1s' }}
           >
-            {translations.home}
+            {t('home')}
           </Link>
           <Link 
             to="/#about"
@@ -113,7 +110,7 @@ const Navbar = () => {
             className={getNavItemClass('about')}
             style={{ animationDelay: '0.2s' }}
           >
-            {translations.about}
+            {t('about')}
           </Link>
           <Link 
             to="/#Portfolio"
@@ -124,7 +121,7 @@ const Navbar = () => {
             className={getNavItemClass('portfolio')}
             style={{ animationDelay: '0.3s' }}
           >
-            {translations.portfolio}
+            {t('portfolio')}
           </Link>
           <Link 
             to="/#skills"
@@ -135,7 +132,7 @@ const Navbar = () => {
             className={getNavItemClass('skills')}
             style={{ animationDelay: '0.4s' }}
           >
-            {translations.skills}
+            {t('skills')}
           </Link>
           <Link 
             to="/#contact"
@@ -146,13 +143,19 @@ const Navbar = () => {
             className={getNavItemClass('contact')}
             style={{ animationDelay: '0.5s' }}
           >
-            {translations.contact}
+            {t('contact')}
           </Link>
         </div>
 
-        {/* Social Icons */}
+        {/* Desktop: Language Toggle + Social Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="https://www.facebook.com/truong.minh.uoc.710276" className="text-white hover:text-secondary transition duration-300 animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+          {/* Neon Language Toggle */}
+          <LanguageToggle 
+            variant="compact"
+            className="animate-fadeIn"
+          />
+          
+          <a href="https://www.facebook.com/truong.minh.uoc.710276" className="text-white hover:text-secondary transition duration-300 animate-fadeIn" style={{ animationDelay: '0.7s' }}>
             <i className="fab fa-facebook-f"></i>
           </a>
           <a href="https://www.linkedin.com/in/minh-%C4%91%C6%B0%E1%BB%A3c-tr%C6%B0%C6%A1ng-849376233/" className="text-white hover:text-secondary transition duration-300 animate-fadeIn" style={{ animationDelay: '0.8s' }}>
@@ -163,8 +166,13 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile: Language Toggle + Menu Button */}
+        <div className="md:hidden flex items-center space-x-3">
+          {/* Mini Language Toggle - siêu nhỏ gọn */}
+          <LanguageToggle 
+            variant="mini"
+          />
+          
           <button 
             className="text-white focus:outline-none border-0 bg-transparent"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -189,6 +197,13 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden fixed top-16 left-0 right-0 bg-primary bg-opacity-95 backdrop-blur-md shadow-lg animate-fadeIn z-40 max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="flex flex-col py-4">
+            {/* Mobile Language Toggle đẹp trong menu */}
+            <div className="px-6 mb-4 flex justify-center">
+              <LanguageToggle 
+                variant="full"
+              />
+            </div>
+            
             <Link 
               to="/"
               onClick={(e) => {
@@ -199,7 +214,7 @@ const Navbar = () => {
             >
               <div className="flex items-center px-6">
                 <i className="fas fa-home mr-3"></i>
-                {translations.home}
+                {t('home')}
               </div>
             </Link>
             <Link 
@@ -212,20 +227,20 @@ const Navbar = () => {
             >
               <div className="flex items-center px-6">
                 <i className="fas fa-user mr-3"></i>
-                {translations.about}
+                {t('about')}
               </div>
             </Link>
             <Link 
               to="/#Portfolio"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('Portfolio');
+                scrollToSection('portfolio');
               }}
-              className={getMobileNavItemClass('Portfolio')}
+              className={getMobileNavItemClass('portfolio')}
             >
               <div className="flex items-center px-6">
                 <i className="fas fa-briefcase mr-3"></i>
-                {translations.portfolio}
+                {t('portfolio')}
               </div>
             </Link>
             <Link 
@@ -238,7 +253,7 @@ const Navbar = () => {
             >
               <div className="flex items-center px-6">
                 <i className="fas fa-cogs mr-3"></i>
-                {translations.skills}
+                {t('skills')}
               </div>
             </Link>
             <Link 
@@ -251,7 +266,7 @@ const Navbar = () => {
             >
               <div className="flex items-center px-6">
                 <i className="fas fa-envelope mr-3"></i>
-                {translations.contact}
+                {t('contact')}
               </div>
             </Link>
             

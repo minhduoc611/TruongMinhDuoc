@@ -1,18 +1,23 @@
 import portfolio1 from '../assets/portfolio1.jpg';
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+  // Hook i18next để lấy translation
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       <div className="absolute w-80 h-80 rounded-full bg-secondary opacity-5 blur-3xl -bottom-40 -left-40 z-0"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl font-bold text-white mb-12 text-center reveal">
-          About <span className="text-secondary">Me</span>
+          {t('aboutSection.title')} <span className="text-secondary">{t('aboutSection.titleHighlight')}</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-text mb-4 reveal">
-             Tôi là một người có tinh thần chủ động và đam mê học hỏi, luôn hứng thú với việc giải quyết các thách thức kỹ thuật phức tạp. Với khả năng làm việc nhóm tốt và tinh thần hỗ trợ đồng đội, tôi không ngừng nâng cao kỹ năng chuyên môn với mục tiêu đạt Middle level trong 2-3 năm tới. 
+              {t('aboutSection.description')}
             </p>
             
             {/* Download CV Button */}
@@ -23,7 +28,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center border-2 border-secondary text-secondary py-3 px-8 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300 shadow-lg hover:shadow-secondary/50"
               >
-                <span>Xem CV</span>
+                <span>{t('aboutSection.viewCV')}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
