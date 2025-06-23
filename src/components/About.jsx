@@ -23,7 +23,7 @@ const About = () => {
             {/* Download CV Button */}
             <div className="reveal animate-fadeIn delay-300">
               <a 
-                href="https://drive.google.com/file/d/1G7K5EjJNMkfZyYqaJ9yD7Zy1qW7-aQQN/view?usp=sharing" 
+                href="https://drive.google.com/drive/folders/13zQQ30PjDrTQldtrwaIORcGTZ_5j6nHQ?hl=vi" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center border-2 border-secondary text-secondary py-3 px-8 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300 shadow-lg hover:shadow-secondary/50"
