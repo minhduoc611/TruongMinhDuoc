@@ -461,10 +461,8 @@ const ProjectDetailPage = () => {
                 />
               </div>
             </div>
-
           </div>
         </section>
-
       </div>
     </div>
   );
