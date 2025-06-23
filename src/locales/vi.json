@@ -68,7 +68,7 @@
       "overview": "Hệ thống tích hợp hoàn chỉnh bao gồm thu thập dữ liệu web từ Coursera, thiết kế database cho hệ thống quản lý nhân sự, và xây dựng ETL pipeline tự động đồng bộ dữ liệu từ Lark Suite."
     },
     "webScraping": {
-      "title": "1.1 Thu thập dữ liệu web",
+      "title": "1.1 Web Crawling",
       "subtitle": "Thu thập dữ liệu web Coursera",
       "workflowTitle": "Quy trình hoạt động hệ thống",
       "systemTitle": "Hệ thống Thu thập Dữ liệu Coursera",
