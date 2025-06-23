@@ -64,7 +64,7 @@
     "backButton": "Quay lại",
     "hero": {
       "title": "Web Crawling, Thiết kế Database và Xây dựng ETL pipeline",
-      "subtitle": "Thu thập dữ liệu web, xây dựng database, ETL pipeline",
+      "subtitle": "Web Crawling, xây dựng database, ETL pipeline",
       "overview": "Hệ thống tích hợp hoàn chỉnh bao gồm thu thập dữ liệu web từ Coursera, thiết kế database cho hệ thống quản lý nhân sự, và xây dựng ETL pipeline tự động đồng bộ dữ liệu từ Lark Suite."
     },
     "webScraping": {
