@@ -30,7 +30,7 @@
         "description": "Nền tảng phân tích dữ liệu với SQL Query, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp."
       },
       "rag": {
-        "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
+        "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí chatbot AI",
         "description": "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng."
       },
       "automation": {
@@ -231,7 +231,7 @@
   "ragDetail": {
     "backButton": "Quay lại",
     "hero": {
-      "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
+      "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI chatbot",
       "subtitle": "Trợ lý HR thông minh sử dụng Retrieval-Augmented Generation",
       "overview": "Hệ thống trò chuyện AI tiên tiến sử dụng công nghệ Retrieval-Augmented Generation (RAG) để cung cấp hỗ trợ HR thông minh. Được xây dựng với Google Gemini AI và Django, hệ thống kết hợp vector embeddings với tìm kiếm độ tương đồng ngữ nghĩa để đưa ra các phản hồi chính xác về dữ liệu nhân viên, bảng chấm công và chính sách HR."
     },
