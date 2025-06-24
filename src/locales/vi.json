@@ -139,14 +139,14 @@
     }
   },
   "dataVisualizationDetail": {
-    "backButton": "Quay lại Portfolio",
+    "backButton": "Quay lại",
     "hero": {
       "title": "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
       "subtitle": "Nền Tảng Phân Tích Dữ Liệu",
-      "overview": "Nền tảng phân tích dữ liệu toàn diện với công cụ truy vấn SQL mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và bảng điều khiển trực quan tương tác cho phép phân tích sâu và ra quyết định dựa trên dữ liệu."
+      "overview": "Nền tảng phân tích dữ liệu toàn diện với truy vấn SQL mạnh mẽ, hệ thống xử lý dữ liệu Python tích hợp, và bảng điều khiển trực quan tương tác cho phép phân tích sâu và ra quyết định dựa trên dữ liệu."
     },
     "sqlEngine": {
-      "title": "1. Công Cụ Truy Vấn SQL",
+      "title": "1. Truy Vấn SQL",
       "description": "Hệ thống truy vấn SQL mạnh mẽ hỗ trợ đa nguồn dữ liệu, tối ưu hóa hiệu suất và cung cấp giao diện trực quan cho việc phân tích dữ liệu phức tạp.",
       "features": {
         "multiSource": {
@@ -228,9 +228,9 @@
     }
   },
   "ragDetail": {
-    "backButton": "Quay lại Portfolio",
+    "backButton": "Quay lại",
     "hero": {
-      "title": "Hệ thống Trợ lý AI với RAG",
+      "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí AI",
       "subtitle": "Trợ lý HR thông minh sử dụng Retrieval-Augmented Generation",
       "overview": "Hệ thống trò chuyện AI tiên tiến sử dụng công nghệ Retrieval-Augmented Generation (RAG) để cung cấp hỗ trợ HR thông minh. Được xây dựng với Google Gemini AI và Django, hệ thống kết hợp vector embeddings với tìm kiếm độ tương đồng ngữ nghĩa để đưa ra các phản hồi chính xác về dữ liệu nhân viên, bảng chấm công và chính sách HR."
     },
@@ -336,7 +336,7 @@
     }
   },
   "courseraProjectDetail": {
-  "backButton": "Quay lại Portfolio",
+  "backButton": "Quay lại",
   "hero": {
     "title": "Hệ thống tự động hóa tác vụ thu thập và phân tích dữ liệu giáo dục Coursera",
     "subtitle": "Pipeline thông minh với Windows Task Scheduler và Tableau Dashboard",
@@ -388,7 +388,7 @@
     }
     ,
 "hrmsDetail": {
-  "backButton": "Quay lại Portfolio",
+  "backButton": "Quay lại",
   "hero": {
     "title": "Hệ Thống Quản Lý Nhân Sự",
     "subtitle": "HRMS Doanh Nghiệp cho Công Ty SHEA",

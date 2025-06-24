@@ -74,7 +74,7 @@ const Contact = () => {
 
           <div className="text-center mt-12 reveal" style={{ animationDelay: '0.4s' }}>
             <p className="text-text">
-              {t('contactSection.callToAction')}
+
             </p>
           </div>
         </div>

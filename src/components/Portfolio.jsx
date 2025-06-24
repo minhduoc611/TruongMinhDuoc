@@ -67,7 +67,7 @@ const Portfolio = () => {
       id: 5,
       titleKey: "portfolioSection.projects.webApp.title",
       descriptionKey: "portfolioSection.projects.webApp.description",
-      tags: ["Django Web-app", "Full-Stack", "PostgreSQL", "Web Development", "Frontend", "Backend"],
+      tags: ["Django", "PostgreSQL", "Database design", "HTML", "Tailwind CSS","JavaScript", "Chatbot","Celery"],
       image: "https://tse1.mm.bing.net/th/id/OIP.8Gr2pMDdhQVf89D6TLuVagHaEK?r=0&rs=1&pid=ImgDetMain",
       github: "https://github.com/minhduoc611/hrms",
       demo: "#",
@@ -244,9 +244,9 @@ const Portfolio = () => {
                       <p className="text-gray-300 text-sm leading-relaxed font-light group-hover:text-gray-200 transition-colors duration-300 line-clamp-2">
                         {t(project.descriptionKey)}
                       </p>                      
-                      {/* Compact Tech Stack */}
+                      {/* Show All Tech Stack Tags */}
                       <div className="flex flex-wrap gap-1.5">
-                        {project.tags.slice(0,7).map((tag, tagIndex) => (
+                        {project.tags.map((tag, tagIndex) => (
                           <span 
                             key={tagIndex} 
                             className={`${colors.bg} ${colors.text} text-xs font-semibold px-2 py-0.5 rounded-full border ${colors.border} group-hover:scale-105 transition-all duration-300 backdrop-blur-sm`}
@@ -254,11 +254,6 @@ const Portfolio = () => {
                             {tag}
                           </span>
                         ))}
-                        {project.tags.length > 4 && (
-                          <span className="text-xs text-gray-400 px-2 py-0.5">
-                            +{project.tags.length - 4}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -313,8 +308,9 @@ const Portfolio = () => {
                         {t(project.descriptionKey)}
                       </p>
                       
+                      {/* Show All Tags for Coming Soon Projects Too */}
                       <div className="flex flex-wrap gap-1.5">
-                        {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                        {project.tags.map((tag, tagIndex) => (
                           <span 
                             key={tagIndex} 
                             className="bg-gray-500/20 text-gray-400 text-xs font-semibold px-2 py-0.5 rounded-full border border-gray-500/30"
@@ -322,11 +318,6 @@ const Portfolio = () => {
                             {tag}
                           </span>
                         ))}
-                        {project.tags.length > 4 && (
-                          <span className="text-xs text-gray-500 px-2 py-0.5">
-                            +{project.tags.length - 4}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>

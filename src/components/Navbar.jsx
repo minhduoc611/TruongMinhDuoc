@@ -17,7 +17,7 @@ const Navbar = () => {
   const { t } = useTranslation();
   
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
+    const sections = ['home', 'portfolio', 'contact'];
     
     const updateActiveSection = () => {
       // Thiết lập trạng thái scrolled để thay đổi hiệu ứng navbar
@@ -83,72 +83,49 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full py-4 z-50 ${isScrolled ? 'bg-primary bg-opacity-95' : 'bg-primary bg-opacity-80'} backdrop-blur-sm transition-all duration-300`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center text-white text-2xl font-bold animate-fadeIn">
-          <span className="text-secondary">TruongMinhDuoc</span> 
-        </Link>
+      <div className="container mx-auto px-6 flex justify-center items-center relative">
         
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link 
-            to="/"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('home');
-            }}
-            className={getNavItemClass('home')}
-            style={{ animationDelay: '0.1s' }}
-          >
-            {t('home')}
-          </Link>
-          <Link 
-            to="/#about"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('about');
-            }}
-            className={getNavItemClass('about')}
-            style={{ animationDelay: '0.2s' }}
-          >
-            {t('about')}
-          </Link>
-          <Link 
-            to="/#Portfolio"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('portfolio');
-            }}
-            className={getNavItemClass('portfolio')}
-            style={{ animationDelay: '0.3s' }}
-          >
-            {t('portfolio')}
-          </Link>
-          <Link 
-            to="/#skills"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('skills');
-            }}
-            className={getNavItemClass('skills')}
-            style={{ animationDelay: '0.4s' }}
-          >
-            {t('skills')}
-          </Link>
-          <Link 
-            to="/#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('contact');
-            }}
-            className={getNavItemClass('contact')}
-            style={{ animationDelay: '0.5s' }}
-          >
-            {t('contact')}
-          </Link>
-        </div>
+        {/* Desktop Menu - Căn giữa */}
+<div className="hidden md:flex items-center space-x-8">
+  <Link 
+    to="/"
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToSection('home');
+    }}
+    className={getNavItemClass('home')}
+    style={{ animationDelay: '0.1s' }}
+  >
+    {t('home')}
+  </Link>
 
-        {/* Desktop: Language Toggle + Social Icons */}
-        <div className="hidden md:flex items-center space-x-4">
+  <Link 
+    to="/#Portfolio"
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToSection('portfolio');
+    }}
+    className={getNavItemClass('portfolio')}
+    style={{ animationDelay: '0.2s' }}
+  >
+    {t('portfolio')}
+  </Link>
+
+  <Link 
+    to="/#contact"
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToSection('contact');
+    }}
+    className={getNavItemClass('contact')}
+    style={{ animationDelay: '0.3s' }}
+  >
+    {t('contact')}
+  </Link>
+</div>
+
+        {/* Desktop: Language Toggle + Social Icons - Nằm bên phải */}
+        <div className="hidden md:flex items-center space-x-4 absolute right-6">
           {/* Neon Language Toggle */}
           <LanguageToggle 
             variant="compact"
@@ -166,8 +143,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile: Language Toggle + Menu Button */}
-        <div className="md:hidden flex items-center space-x-3">
+        {/* Mobile: Language Toggle + Menu Button - Nằm bên phải */}
+        <div className="md:hidden flex items-center space-x-3 absolute right-6">
           {/* Mini Language Toggle - siêu nhỏ gọn */}
           <LanguageToggle 
             variant="mini"
@@ -217,19 +194,7 @@ const Navbar = () => {
                 {t('home')}
               </div>
             </Link>
-            <Link 
-              to="/#about"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('about');
-              }}
-              className={getMobileNavItemClass('about')}
-            >
-              <div className="flex items-center px-6">
-                <i className="fas fa-user mr-3"></i>
-                {t('about')}
-              </div>
-            </Link>
+            
             <Link 
               to="/#Portfolio"
               onClick={(e) => {
@@ -243,19 +208,7 @@ const Navbar = () => {
                 {t('portfolio')}
               </div>
             </Link>
-            <Link 
-              to="/#skills"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('skills');
-              }}
-              className={getMobileNavItemClass('skills')}
-            >
-              <div className="flex items-center px-6">
-                <i className="fas fa-cogs mr-3"></i>
-                {t('skills')}
-              </div>
-            </Link>
+
             <Link 
               to="/#contact"
               onClick={(e) => {
