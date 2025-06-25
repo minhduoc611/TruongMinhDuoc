@@ -26,19 +26,19 @@
         "description": "Hệ thống thu thập dữ liệu web tiên tiến với đường ống ETL tự động để trích xuất, chuyển đổi và tải dữ liệu. Tính năng thiết kế database hoàn chỉnh và tích hợp PostgreSQL để quản lý và xử lý dữ liệu liền mạch."
       },
       "dataVisualization": {
-        "title": "Truy vấn SQL, Xử lý Dữ liệu và Trực quan hóa Dữ liệu",
+        "title": "Truy vấn SQL, Xử lý Dữ liệu với Python và Trực quan hóa Dữ liệu",
         "description": "Nền tảng phân tích dữ liệu với SQL Query, hệ thống xử lý dữ liệu Python tích hợp, và dashboard trực quan tương tác. Hỗ trợ phân tích dữ liệu lớn, tối ưu hóa truy vấn và tạo báo cáo business intelligence chuyên nghiệp."
       },
       "rag": {
-        "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng trợ lí chatbot AI",
+        "title": "Ứng dụng Retrieval-Augmented Generation (RAG) xây dựng Trợ lí Chatbot AI",
         "description": "Trợ lý thông minh sử dụng Retrieval-Augmented Generation với vector embeddings để tìm kiếm độ tương đồng ngữ nghĩa. Tích hợp khả năng xử lý ngôn ngữ tự nhiên tiên tiến và hiểu ngữ cảnh để nâng cao trải nghiệm tương tác người dùng."
       },
       "automation": {
-        "title": "Xây dựng hệ thống Tự động hóa Tác vụ",
+        "title": "Xây dựng Hệ thống Tự động hóa Tác vụ",
         "description": "Giải pháp tự động hóa toàn diện sử dụng Python để tối ưu hóa các quy trình kinh doanh. Tính năng quản lý tệp, thu thập dữ liệu web, xử lý dữ liệu với pandas/numpy, và tích hợp API để tối ưu hóa quy trình làm việc."
       },
       "webApp": {
-        "title": "Xây dựng ứng dụng Web-app Full-stack",
+        "title": "Xây dựng Ứng dụng Web-app Full-stack",
         "description": "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện."
       }
     }
