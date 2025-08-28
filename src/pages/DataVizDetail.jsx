@@ -37,21 +37,21 @@ const DataVisualizationDetail = () => {
       titleKey: "dataVisualizationDetail.dashboards.gamePerformance.title",
       descriptionKey: "dataVisualizationDetail.dashboards.gamePerformance.description",
       image: GPM,
-      link: "https://public.tableau.com/views/GamePerformanceDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+      link: "https://public.tableau.com/app/profile/tr.ng.c3079/viz/GAMEPERFOMANCEANALYSIS/Dashboard1"
     },
     {
       id: "game-ads-dashboard",
       titleKey: "dataVisualizationDetail.dashboards.gameAds.title",
       descriptionKey: "dataVisualizationDetail.dashboards.gameAds.description",
       image: GA,
-      link: "https://public.tableau.com/views/GameAdsAnalytics/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+      link: "https://public.tableau.com/app/profile/tr.ng.c3079/viz/Book1_17315556885640/ADVERTISINGEFFICIENCYINSIGHTS"
     },
     {
       id: "sales-analysis-dashboard",
       titleKey: "dataVisualizationDetail.dashboards.salesAnalysis.title",
       descriptionKey: "dataVisualizationDetail.dashboards.salesAnalysis.description",
       image: SA,
-      link: "https://public.tableau.com/views/SalesAnalyticsDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+      link: "https://public.tableau.com/app/profile/tr.ng.c3079/viz/DASHBOARDSALESANALYSIS_17534308973400/DASHBOARDSALESANALYSIS"
     }
   ];
 
