@@ -3,6 +3,9 @@ import { ArrowLeft, Database, Zap, BarChart3, ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 import HRDB from '../assets/images/HRM DB.png';
 import RFM from '../assets/images/RFM_DB.png';
+import GPM from '../assets/images/gameperfomance.png';
+import GA from '../assets/images/game_ads.png';
+import SA from '../assets/images/sales_analysis.png';
 
 const DataVisualizationDetail = () => {
   // Hook i18next để lấy translation
@@ -28,8 +31,30 @@ const DataVisualizationDetail = () => {
       descriptionKey: "dataVisualizationDetail.dashboards.rfm.description",
       image: RFM,
       link: "https://public.tableau.com/views/RFMAnalyst/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    },
+    {
+      id: "game-performance-dashboard",
+      titleKey: "dataVisualizationDetail.dashboards.gamePerformance.title",
+      descriptionKey: "dataVisualizationDetail.dashboards.gamePerformance.description",
+      image: GPM,
+      link: "https://public.tableau.com/views/GamePerformanceDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    },
+    {
+      id: "game-ads-dashboard",
+      titleKey: "dataVisualizationDetail.dashboards.gameAds.title",
+      descriptionKey: "dataVisualizationDetail.dashboards.gameAds.description",
+      image: GA,
+      link: "https://public.tableau.com/views/GameAdsAnalytics/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    },
+    {
+      id: "sales-analysis-dashboard",
+      titleKey: "dataVisualizationDetail.dashboards.salesAnalysis.title",
+      descriptionKey: "dataVisualizationDetail.dashboards.salesAnalysis.description",
+      image: SA,
+      link: "https://public.tableau.com/views/SalesAnalyticsDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     }
   ];
+
 
   return (
     <div className="fixed inset-0 z-50 min-h-screen overflow-y-auto" style={{

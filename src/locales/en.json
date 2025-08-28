@@ -225,7 +225,18 @@
       "rfm": {
         "title": "RFM Customer Analysis Dashboard", 
         "description": "Advanced customer segmentation dashboard using RFM analysis to identify customer behavior patterns and business opportunities."
-      }
+      },
+      "gamePerformance": {
+        "title": "Game Performance Dashboard",
+        "description": "Interactive dashboard analyzing game performance metrics, user engagement, and monetization strategies."
+      },
+      "gameAds": {
+        "title": "Game Advertising Analysis Dashboard",
+        "description": "Comprehensive dashboard for analyzing game advertising performance, ROI, and user acquisition strategies."
+      },
+      "salesAnalysis": {
+        "title": "Sales Analysis Dashboard",
+        "description": "Dynamic sales analytics dashboard providing insights into sales trends, product performance, and revenue growth strategies."
     }
   },
   "ragDetail": {
@@ -488,4 +499,5 @@
     }
   }
 }
+  }
 }

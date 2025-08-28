@@ -225,6 +225,18 @@
       "rfm": {
         "title": "Dashboard Phân Tích Khách Hàng RFM",
         "description": "Bảng điều khiển phân khúc khách hàng nâng cao sử dụng phân tích RFM để xác định các mô hình hành vi khách hàng và cơ hội kinh doanh."
+      },
+      "gamePerformance": {
+        "title": "Dashboard Phân Tích Hiệu Suất Game",
+        "description": "Bảng điều khiển phân tích hiệu suất game toàn diện với các chỉ số về doanh thu, người dùng hoạt động và hành vi người chơi."
+      },
+      "gameAds": {
+        "title": "Dashboard Phân Tích Quảng Cáo Game",
+        "description": "Bảng điều khiển phân tích chiến dịch quảng cáo game với các chỉ số về hiệu suất quảng cáo, ROI và hành vi người dùng."
+      },
+      "salesAnalysis": {
+        "title": "Dashboard Phân Tích Bán Hàng",
+        "description": "Bảng điều khiển phân tích bán hàng toàn diện với các chỉ số về doanh thu, hiệu suất sản phẩm và hành vi khách hàng."
       }
     }
   },
