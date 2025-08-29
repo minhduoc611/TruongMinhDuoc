@@ -227,7 +227,7 @@ const Navbar = () => {
               <a href="https://www.facebook.com/truong.minh.uoc.710276" className="text-white hover:text-secondary transition duration-300">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="www.linkedin.com/in/minh-duoc-truong-bb773936b" className="text-white hover:text-secondary transition duration-300">
+              <a href="https://www.linkedin.com/in/minh-%C4%91%C6%B0%E1%BB%A3c-tr%C6%B0%C6%A1ng-94a27136a/" className="text-white hover:text-secondary transition duration-300">
                 <i className="fab fa-linkedin"></i>
               </a>
               <a href="https://github.com/minhduoc611" className="text-white hover:text-secondary transition duration-300">

@@ -13,7 +13,7 @@ const Footer = () => {
               <i className="fab fa-github text-xl"></i>
             </a>
             <a 
-              href="https://www.facebook.com/truong.minh.uoc.710276" 
+              href="https://www.linkedin.com/in/minh-%C4%91%C6%B0%E1%BB%A3c-tr%C6%B0%C6%A1ng-94a27136a/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text hover:text-secondary transition duration-300 transform hover:scale-110"
