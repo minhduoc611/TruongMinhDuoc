@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Github, ExternalLink, Database, Globe, Search, FileText, Code, Server, Workflow } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CouseraERD from '../assets/images/coursera_erd.png';
+import WebCouseraHero from '../assets/images/web_cousera.png';
 import ETLImage from '../assets/images/ETL - Lark -WebApp.png';
 import ERD_ChamCong from '../assets/images/ERD-Chấm công.png';
 import ERD_DaoTao from '../assets/images/ERD-Đào tạo.png';
@@ -25,7 +26,7 @@ const WebCrawlerDetail = () => {
     
     tags: ["Web Crawling","Selenium WebDriver", "Database Design", "ETL pipeline", "Celery", "Lark Suite API"],
     
-    heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    heroImage: WebCouseraHero,
     
     links: {
       github: "https://github.com/minhduoc611",

@@ -14,7 +14,7 @@ const CourseraProjectDetail = () => {
     
     tags: ["Python", "Selenium", "Windows Task Scheduler", "Tableau Public", "Google Sheets API", "Google Drive API", "Data Pipeline", "Automation", "Web Scraping", "Data Visualization"],
     
-    heroImage: "https://tse2.mm.bing.net/th/id/OIP.mQSTnOrPTZddnGb5WwSDFQHaEO?r=0&rs=1&pid=ImgDetMain",
+    heroImage: AutoImage,
     
     links: {
       github: "https://github.com/minhduoc611/coursera-data-collection",

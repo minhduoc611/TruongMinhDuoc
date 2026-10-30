@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import webCrawlingImg from '../assets/images/web_cousera.png';
+import dataVizImg from '../assets/images/sales_analysis.png';
+import ragImg from '../assets/images/RAG.png';
+import automationImg from '../assets/images/task-automation.png';
+import webAppImg from '../assets/images/login.png';
+import livestreamImg from '../assets/images/atino/live-dashboard.png';
+import kocImg from '../assets/images/atino/koc-overview.png';
+import salesImg from '../assets/images/atino/sales-product.png';
 
 const Portfolio = () => {
   // Hook i18next để lấy translation
@@ -12,7 +20,7 @@ const Portfolio = () => {
       titleKey: "portfolioSection.projects.webCrawling.title",
       descriptionKey: "portfolioSection.projects.webCrawling.description",
       tags: ["Web Crawling", "Database Design", "ETL pipeline", "PostgreSQL", "Selenium", "Python"],
-      image: "https://tse3.mm.bing.net/th/id/OIP.xiNoT9eRGm2XuO2ndZrzwwHaD5?r=0&w=1140&h=600&rs=1&pid=ImgDetMain&cb=idpwebpc1",
+      image: webCrawlingImg,
       github: "#",
       demo: "#",
       detailLink: "/project/web-crawling",
@@ -26,7 +34,7 @@ const Portfolio = () => {
       titleKey: "portfolioSection.projects.dataVisualization.title",
       descriptionKey: "portfolioSection.projects.dataVisualization.description",
       tags: ["SQL", "Pandas", "Numpy", "Tableau","Power BI", 'Matplotlib','Seaborn', "Data Processing", "Data Cleaning"],
-      image: "https://tse3.mm.bing.net/th/id/OIP.0wrLYUfpiTr9SIDHeHdZRAHaEO?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc1",
+      image: dataVizImg,
       github: "#",
       demo: "#",
       detailLink: "/project/data-visualization",
@@ -40,7 +48,7 @@ const Portfolio = () => {
       titleKey: "portfolioSection.projects.rag.title",
       descriptionKey: "portfolioSection.projects.rag.description",
       tags: ["RAG", "Vector Embeddings", "Machine Learning", "NLP"],
-      image: "https://tse1.mm.bing.net/th/id/OIP.SvokklbDo1pUdDijtMrc2QHaEO?rs=1&pid=ImgDetMain",
+      image: ragImg,
       github: "https://github.com/minhduoc611",
       demo: "#",
       detailLink: "/project/rag",
@@ -54,7 +62,7 @@ const Portfolio = () => {
       titleKey: "portfolioSection.projects.automation.title",
       descriptionKey: "portfolioSection.projects.automation.description",
       tags: ["Task Automation", "Python", "Windows Task Scheduler", "Google Sheets API", "Google Drive API", "Web Scraping"],
-      image: "https://tse2.mm.bing.net/th/id/OIP.mQSTnOrPTZddnGb5WwSDFQHaEO?r=0&rs=1&pid=ImgDetMain",
+      image: automationImg,
       github: "https://github.com/minhduoc611",
       demo: "#",
       detailLink: "/project/coursera",
@@ -68,7 +76,7 @@ const Portfolio = () => {
       titleKey: "portfolioSection.projects.webApp.title",
       descriptionKey: "portfolioSection.projects.webApp.description",
       tags: ["Django", "PostgreSQL", "HTML", "Tailwind CSS","JavaScript", "Chatbot","Celery", "Redis", "WebSockets","Channel"],
-      image: "https://tse1.mm.bing.net/th/id/OIP.8Gr2pMDdhQVf89D6TLuVagHaEK?r=0&rs=1&pid=ImgDetMain",
+      image: webAppImg,
       github: "https://github.com/minhduoc611/hrms",
       demo: "#",
       detailLink: "/project/hrms",
@@ -76,6 +84,48 @@ const Portfolio = () => {
       status: "",
       gradient: "from-teal-500/20 to-green-500/20",
       accentColor: "teal"
+    },
+    {
+      id: 6,
+      titleKey: "portfolioSection.projects.livestream.title",
+      descriptionKey: "portfolioSection.projects.livestream.description",
+      tags: ["Livestream", "TikTok", "Selenium", "GMV Analytics", "Payroll Automation", "Dashboard", "Python"],
+      image: livestreamImg,
+      github: "#",
+      demo: "#",
+      detailLink: "/project/livestream",
+      highlights: ["Auto-collect live session data", "Payroll & commission engine", "Performance dashboard"],
+      status: "Đang vận hành",
+      gradient: "from-rose-500/20 to-orange-500/20",
+      accentColor: "rose"
+    },
+    {
+      id: 7,
+      titleKey: "portfolioSection.projects.koc.title",
+      descriptionKey: "portfolioSection.projects.koc.description",
+      tags: ["KOC/KOL", "Playwright", "Campaign Booking", "BigQuery", "ROI Analysis", "Lark Alerts", "GCS"],
+      image: kocImg,
+      github: "#",
+      demo: "#",
+      detailLink: "/project/koc",
+      highlights: ["Campaign & booking management", "Nightly metrics crawler", "ROI report by region"],
+      status: "Đang vận hành",
+      gradient: "from-violet-500/20 to-cyan-500/20",
+      accentColor: "violet"
+    },
+    {
+      id: 8,
+      titleKey: "portfolioSection.projects.sales.title",
+      descriptionKey: "portfolioSection.projects.sales.description",
+      tags: ["Sales Analytics", "RFM", "Supply Chain", "Inventory Allocation", "SQL", "Power BI", "Dashboard"],
+      image: salesImg,
+      github: "#",
+      demo: "#",
+      detailLink: "/project/sales",
+      highlights: ["Product & customer analytics", "Inventory allocation algorithm", "Production & purchasing planning"],
+      status: "Đang vận hành",
+      gradient: "from-emerald-500/20 to-sky-500/20",
+      accentColor: "cyan"
     }
   ];
 
@@ -123,6 +173,24 @@ const Portfolio = () => {
         text: 'text-teal-400',
         bg: 'bg-teal-500/10',
         shadow: 'shadow-teal-500/20'
+      },
+      rose: {
+        border: 'border-rose-400/50',
+        text: 'text-rose-400',
+        bg: 'bg-rose-500/10',
+        shadow: 'shadow-rose-500/20'
+      },
+      violet: {
+        border: 'border-violet-400/50',
+        text: 'text-violet-400',
+        bg: 'bg-violet-500/10',
+        shadow: 'shadow-violet-500/20'
+      },
+      cyan: {
+        border: 'border-cyan-400/50',
+        text: 'text-cyan-400',
+        bg: 'bg-cyan-500/10',
+        shadow: 'shadow-cyan-500/20'
       }
     };
     return colors[accentColor] || colors.emerald;

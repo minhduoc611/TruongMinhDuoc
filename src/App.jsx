@@ -11,6 +11,7 @@ import CourseraProjectDetail from './pages/CourseraProjectDetail';
 import RAGProjectDetail from './pages/RAGProjectDetail';
 import DataVizDetail from './pages/DataVizDetail';
 import WebCrawlingDetail from './pages/WebCrawlingDetail';
+import AtinoModuleDetail from './pages/AtinoModuleDetail';
 
 function App() {
   console.log('App component rendered with routing');
@@ -63,9 +64,21 @@ function App() {
             path="/project/data-visualization" 
             element={<DataVizDetail />} 
           />
-          <Route 
-            path="/project/web-crawling" 
-            element={<WebCrawlingDetail />} 
+          <Route
+            path="/project/web-crawling"
+            element={<WebCrawlingDetail />}
+          />
+          <Route
+            path="/project/livestream"
+            element={<AtinoModuleDetail module="livestream" />}
+          />
+          <Route
+            path="/project/koc"
+            element={<AtinoModuleDetail module="koc" />}
+          />
+          <Route
+            path="/project/sales"
+            element={<AtinoModuleDetail module="sales" />}
           />
         </Routes>
       </div>

@@ -13,7 +13,7 @@
     "titleHighlight": "",
     "description": "Tôi là một người có tinh thần chủ động và đam mê học hỏi, luôn hứng thú với việc giải quyết các thách thức kỹ thuật phức tạp. Với khả năng làm việc nhóm tốt và tinh thần hỗ trợ đồng đội, tôi không ngừng nâng cao kỹ năng chuyên môn với mục tiêu đạt Middle level trong 2-3 năm tới.",
     "viewCV": "Xem CV",
-    "linkCV":"https://drive.google.com/file/d/1RupRUoyeKFdChZJZmuR_LXrSRmG78ZIm/view?usp=drive_link"
+    "linkCV":"https://drive.google.com/file/d/1Gutrv970wLuJC9o407nIYGpHTt2UiX0D/view?usp=sharing"
   },
   "portfolioSection": {
     "title": "Portfolio",
@@ -40,6 +40,18 @@
       "webApp": {
         "title": "Xây dựng Ứng dụng Web-app Full-stack",
         "description": "Ứng dụng web hiện đại được xây dựng với framework Django, có kiến trúc backend mạnh mẽ, tích hợp PostgreSQL, và thiết kế frontend responsive cho các giải pháp quản lý kinh doanh toàn diện."
+      },
+      "livestream": {
+        "title": "Hệ thống Quản lý Livestream",
+        "description": "Hệ thống quản lý vận hành livestream: tự động thu thập dữ liệu phiên live, module tính lương & hoa hồng cho nhân viên, và dashboard phân tích hiệu suất hỗ trợ xếp ca và đánh giá."
+      },
+      "koc": {
+        "title": "Hệ thống Quản lý KOC/KOL & Đo lường Booking",
+        "description": "Hệ thống quản lý KOC/KOL và chiến dịch booking kèm crawler tự động đo lường hiệu quả video, hệ thống cảnh báo và báo cáo ROI theo chiến dịch, theo khu vực."
+      },
+      "sales": {
+        "title": "Phân tích Bán hàng & Hoạch định Chuỗi cung ứng",
+        "description": "Dashboard phân tích sản phẩm & khách hàng (RFM, retention), thuật toán chia hàng và điều phối tồn kho giữa các cửa hàng, cùng kế hoạch sản xuất và nhập hàng."
       }
     }
   },
@@ -347,6 +359,140 @@
         }
       }
     }
+  },
+  "livestreamDetail": {
+    "backButton": "Quay lại Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "Hệ thống Quản lý Livestream",
+      "subtitle": "Tự động hoá vận hành livestream từ thu thập dữ liệu đến tính lương",
+      "overview": "Hệ thống quản lý livestream end-to-end cho ATINO, bao gồm tự động thu thập dữ liệu phiên live từ TikTok, module tính lương & hoa hồng cho nhân viên livestream, và dashboard phân tích hiệu suất hỗ trợ quản lý xếp ca và đánh giá nhân sự."
+    },
+    "privacyNote": "* Ảnh chụp màn hình từ hệ thống thực tế do tôi xây dựng. Toàn bộ số liệu, tên nhân sự và thông tin nội bộ đã được làm mờ để bảo mật dữ liệu doanh nghiệp.",
+    "galleryTitle": "Giao diện hệ thống",
+    "sections": [
+      {
+        "title": "Thu thập dữ liệu phiên live tự động",
+        "description": "Tự động hoá việc thu thập dữ liệu phiên live, thay cho việc nhập liệu thủ công.",
+        "items": [
+          "Tự động thu thập dữ liệu phiên live từ nền tảng mạng xã hội bằng Selenium",
+          "Chuẩn hoá và lưu trữ dữ liệu phục vụ tính lương và phân tích",
+          "Giảm sai sót và thời gian nhập liệu thủ công cho đội vận hành"
+        ]
+      },
+      {
+        "title": "Module tính lương & hoa hồng",
+        "description": "Tự động hoá quy trình tính lương cho nhân viên livestream.",
+        "items": [
+          "Tính lương theo giờ kết hợp hoa hồng theo doanh số",
+          "Tự động áp dụng quy tắc thưởng / phạt theo lịch ca",
+          "Xuất bảng lương, rút ngắn thời gian xử lý hàng tháng"
+        ]
+      },
+      {
+        "title": "Dashboard phân tích hiệu suất",
+        "description": "Trực quan hoá hiệu suất để hỗ trợ ra quyết định xếp ca và đánh giá.",
+        "items": [
+          "Phân tích hiệu suất theo phiên, theo nhân sự và theo khung giờ",
+          "Hỗ trợ quản lý xếp ca và đánh giá hiệu quả nhân sự"
+        ]
+      }
+    ],
+    "techStack": ["Python", "Selenium", "Pandas", "Dashboard"],
+    "gallery": [
+      "Dashboard doanh thu live — tổng hợp phiên live, GMV, lượt xem và lọc theo kênh / nhân viên",
+      "Phân tích hiệu quả live — xếp hạng nhân viên, hiệu quả theo kênh và theo khung giờ",
+      "Báo cáo lương nhân viên live — lương theo giờ, hoa hồng, phạt muộn / lỗi ca và xuất Excel"
+    ]
+  },
+  "kocDetail": {
+    "backButton": "Quay lại Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "Hệ thống Quản lý KOC/KOL & Đo lường Hiệu quả Booking",
+      "subtitle": "Quản lý chiến dịch booking, crawler đo lường và báo cáo ROI theo khu vực",
+      "overview": "Hệ thống quản lý KOC/KOL và các chiến dịch booking cho ATINO: từ hồ sơ KOC, tạo đợt chiến dịch, duyệt demo, lưu chứng từ thanh toán, đến crawler tự động đo lường hiệu quả video hằng đêm, hệ thống cảnh báo Lark và báo cáo ROI kết hợp nhiều nguồn chi phí và doanh thu."
+    },
+    "privacyNote": "* Ảnh chụp màn hình từ hệ thống thực tế do tôi xây dựng. Toàn bộ số liệu, tên nhân sự và thông tin nội bộ đã được làm mờ để bảo mật dữ liệu doanh nghiệp.",
+    "galleryTitle": "Giao diện hệ thống",
+    "sections": [
+      {
+        "title": "Quản lý KOC & chiến dịch booking",
+        "description": "Nền tảng tập trung quản lý hồ sơ KOC và vòng đời chiến dịch booking.",
+        "items": [
+          "Quản lý hồ sơ KOC và quy trình chiến dịch: tạo đợt, booking, duyệt demo",
+          "Lưu trữ chứng từ trên cloud; import / export dữ liệu hàng loạt"
+        ]
+      },
+      {
+        "title": "Crawler đo lường hiệu quả tự động",
+        "description": "Thay thế việc kiểm tra thủ công từng link video bằng crawler chạy tự động định kỳ.",
+        "items": [
+          "Tự động thu thập chỉ số tương tác của video (lượt xem, like, share, comment) bằng Playwright",
+          "Chạy theo lịch định kỳ, loại bỏ công việc kiểm tra thủ công từng link"
+        ]
+      },
+      {
+        "title": "Cảnh báo tự động & báo cáo hiệu quả",
+        "description": "Hệ thống cảnh báo và báo cáo giúp giảm sai sót đối soát và hỗ trợ ra quyết định.",
+        "items": [
+          "Hệ thống cảnh báo tự động phát hiện bất thường trong khâu đăng bài và đối soát",
+          "Báo cáo ROI theo chiến dịch và theo khu vực, kết hợp chi phí và doanh thu"
+        ]
+      }
+    ],
+    "techStack": ["Python", "Playwright", "BigQuery", "Cloud Storage", "Automation"],
+    "gallery": [
+      "Tổng quan KOC — chi phí, lượt xem, tương tác, tỉ lệ đăng đúng lịch và danh sách cần chú ý",
+      "Quản lý chiến dịch booking — tạo, tìm kiếm và theo dõi từng đợt chiến dịch",
+      "Đánh giá theo tỉnh thành — lượt xem và CPM theo từng khu vực"
+    ]
+  },
+  "salesDetail": {
+    "backButton": "Quay lại Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "Hệ thống Phân tích Bán hàng & Hoạch định Chuỗi cung ứng",
+      "subtitle": "Từ phân tích sản phẩm – khách hàng đến chia hàng và kế hoạch sản xuất",
+      "overview": "Hệ thống phân tích bán hàng và hoạch định chuỗi cung ứng cho ATINO: dashboard phân tích sản phẩm và khách hàng (RFM, retention), thuật toán gợi ý chia hàng và điều phối tồn kho giữa các cửa hàng, cùng kế hoạch sản xuất và nhập hàng theo danh mục và tháng."
+    },
+    "privacyNote": "* Ảnh chụp màn hình từ hệ thống thực tế do tôi xây dựng. Toàn bộ số liệu, tên nhân sự và thông tin nội bộ đã được làm mờ để bảo mật dữ liệu doanh nghiệp.",
+    "galleryTitle": "Giao diện hệ thống",
+    "sections": [
+      {
+        "title": "Phân tích sản phẩm & khách hàng",
+        "description": "Dashboard phân tích đa chiều trên dữ liệu bán hàng với hiệu năng truy vấn cao.",
+        "items": [
+          "Dashboard sản phẩm: phân tích doanh thu và số lượng theo nhiều chiều (danh mục, thuộc tính, khu vực)",
+          "Dashboard khách hàng: phân khúc RFM, tỉ lệ giữ chân (retention) và phân tích hành vi mua",
+          "Mô hình dữ liệu tối ưu giúp dashboard truy vấn nhanh trên dữ liệu lớn"
+        ]
+      },
+      {
+        "title": "Chia hàng & điều phối tồn kho",
+        "description": "Thuật toán gợi ý chia hàng và điều phối tồn kho giữa các cửa hàng.",
+        "items": [
+          "Gợi ý chia hàng theo từng biến thể sản phẩm dựa trên mức tồn mục tiêu",
+          "Cảnh báo bù hàng và điều chuyển hàng bán chạy giữa các cửa hàng",
+          "Điều phối hàng theo tỉ trọng bán dự kiến của từng cửa hàng"
+        ]
+      },
+      {
+        "title": "Kế hoạch sản xuất & nhập hàng",
+        "description": "Lập kế hoạch cung ứng theo danh mục và thời gian dựa trên mục tiêu doanh số và tồn kho.",
+        "items": [
+          "Kế hoạch sản xuất / nhập hàng theo danh mục và tháng",
+          "Theo dõi tiến độ về hàng từ nhiều nguồn cung ứng",
+          "Dashboard theo dõi sản lượng và xuất kế hoạch cho các bộ phận liên quan"
+        ]
+      }
+    ],
+    "techStack": ["SQL", "Python", "Power BI", "RFM", "ETL"],
+    "gallery": [
+      "Phân tích sản phẩm — xu hướng doanh thu, khách mới / quay lại, nhóm tuổi, size với bộ lọc đa chiều",
+      "Phân tích khách hàng — khách hoạt động, tần suất mua, chi tiêu trọn đời, phân bổ độ tuổi",
+      "MOH / Tồn kho — số tháng tồn theo danh mục, theo kho và theo dải MOH"
+    ]
   },
   "courseraProjectDetail": {
   "backButton": "Quay lại",

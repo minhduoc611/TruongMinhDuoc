@@ -13,7 +13,7 @@
     "titleHighlight": "Me", 
     "description": "I am a proactive and passionate learner who is always excited about solving complex technical challenges. With strong teamwork skills and a supportive spirit for colleagues, I continuously improve my professional skills with the goal of reaching Middle level in the next 2-3 years.",
     "viewCV": "View CV",
-    "linkCV":"https://drive.google.com/file/d/1hq3h9V8_yrPD3zrmobnoLtWE1F2ucAWL/view?usp=drive_link"
+    "linkCV":"https://drive.google.com/file/d/1Gutrv970wLuJC9o407nIYGpHTt2UiX0D/view?usp=sharing"
   },
   "portfolioSection": {
     "title": "Portfolio",
@@ -40,6 +40,18 @@
       "webApp": {
         "title": "Building Full-stack Web Application",
         "description": "Modern web application built with Django framework, featuring robust backend architecture, PostgreSQL integration, and responsive frontend design for comprehensive business management solutions."
+      },
+      "livestream": {
+        "title": "Livestream Management System",
+        "description": "A livestream operations management system: automated live session data collection, a payroll & commission module for staff, and a performance dashboard supporting scheduling and evaluation."
+      },
+      "koc": {
+        "title": "KOC/KOL Management & Booking Measurement",
+        "description": "A KOC/KOL and booking campaign management system with an automated crawler that measures video performance, plus alerting and ROI reporting by campaign and region."
+      },
+      "sales": {
+        "title": "Sales Analytics & Supply Chain Planning",
+        "description": "Product & customer analytics dashboards (RFM, retention), an inventory allocation and distribution algorithm between stores, plus production and purchasing planning."
       }
     }
   },
@@ -347,7 +359,141 @@
       }
     }
   },
-"courseraProjectDetail": {
+"livestreamDetail": {
+    "backButton": "Back to Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "Livestream Management System",
+      "subtitle": "Automating livestream operations from data collection to payroll",
+      "overview": "An end-to-end livestream management system for ATINO, covering automatic collection of live session data from TikTok, a payroll & commission module for livestream staff, and a performance dashboard that supports shift scheduling and staff evaluation."
+    },
+    "privacyNote": "* Screenshots from the real system I built. All figures, staff names and internal information are blurred to protect company data.",
+    "galleryTitle": "System screenshots",
+    "sections": [
+      {
+        "title": "Automated live session data collection",
+        "description": "Automates collecting live session data, replacing manual data entry.",
+        "items": [
+          "Automatically collect live session data from a social media platform using Selenium",
+          "Standardize and store data for payroll and analytics",
+          "Reduce manual data-entry errors and time for the operations team"
+        ]
+      },
+      {
+        "title": "Payroll & commission engine",
+        "description": "Automates the payroll process for livestream staff.",
+        "items": [
+          "Hourly pay combined with sales-based commission",
+          "Automatically applies bonus / penalty rules against the shift schedule",
+          "Payroll export, shortening monthly processing time"
+        ]
+      },
+      {
+        "title": "Performance analytics dashboard",
+        "description": "Visualizes performance to support scheduling and evaluation decisions.",
+        "items": [
+          "Analyze performance by session, by staff member and by time slot",
+          "Supports shift scheduling and staff effectiveness evaluation"
+        ]
+      }
+    ],
+    "techStack": ["Python", "Selenium", "Pandas", "Dashboard"],
+    "gallery": [
+      "Live revenue dashboard — live sessions, GMV and views, filterable by channel / staff",
+      "Live performance analysis — staff ranking, effectiveness by channel and by time slot",
+      "Live staff payroll report — hourly pay, commission, late / shift-error penalties and Excel export"
+    ]
+  },
+  "kocDetail": {
+    "backButton": "Back to Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "KOC/KOL Management & Booking Effectiveness Measurement",
+      "subtitle": "Campaign booking management, measurement crawler and ROI reporting by region",
+      "overview": "A KOC/KOL and booking campaign management system for ATINO: from KOC profiles, campaign creation, demo approval and payment-document storage, to a crawler that automatically measures video performance nightly, a Lark alerting system and ROI reports combining multiple cost and revenue sources."
+    },
+    "privacyNote": "* Screenshots from the real system I built. All figures, staff names and internal information are blurred to protect company data.",
+    "galleryTitle": "System screenshots",
+    "sections": [
+      {
+        "title": "KOC & booking campaign management",
+        "description": "A centralized platform managing KOC profiles and the booking campaign lifecycle.",
+        "items": [
+          "Manage KOC profiles and the campaign workflow: campaign creation, booking, demo approval",
+          "Store documents on the cloud; bulk data import / export"
+        ]
+      },
+      {
+        "title": "Automated effectiveness measurement crawler",
+        "description": "Replaces manual per-link video checking with a crawler running automatically on a schedule.",
+        "items": [
+          "Automatically collect video engagement metrics (views, likes, shares, comments) using Playwright",
+          "Run on a schedule, eliminating manual per-link checking"
+        ]
+      },
+      {
+        "title": "Automated alerting & effectiveness reporting",
+        "description": "An alerting and reporting system that reduces reconciliation errors and supports decisions.",
+        "items": [
+          "Automated alerts detect anomalies in posting and reconciliation",
+          "ROI reporting by campaign and region, combining cost and revenue"
+        ]
+      }
+    ],
+    "techStack": ["Python", "Playwright", "BigQuery", "Cloud Storage", "Automation"],
+    "gallery": [
+      "KOC overview — cost, views, engagement, on-schedule posting rate and an attention list",
+      "Booking campaign management — create, search and track each campaign batch",
+      "Evaluation by province — views and CPM by region"
+    ]
+  },
+  "salesDetail": {
+    "backButton": "Back to Portfolio",
+    "tagline": "ATINO · Digital Transformation",
+    "hero": {
+      "title": "Sales Analytics & Supply Chain Planning",
+      "subtitle": "From product & customer analytics to inventory allocation and production planning",
+      "overview": "A sales analytics and supply chain planning system for ATINO: product and customer analytics dashboards (RFM, retention), an algorithm for suggesting inventory allocation and distribution between stores, plus production and purchasing plans by category and month."
+    },
+    "privacyNote": "* Screenshots from the real system I built. All figures, staff names and internal information are blurred to protect company data.",
+    "galleryTitle": "System screenshots",
+    "sections": [
+      {
+        "title": "Product & customer analytics",
+        "description": "Multi-dimensional analytics dashboards on sales data with high query performance.",
+        "items": [
+          "Product dashboard: analyze revenue and quantity across multiple dimensions (category, attributes, region)",
+          "Customer dashboard: RFM segmentation, retention rate and purchase-behavior analysis",
+          "Optimized data model enabling fast dashboard queries over large data"
+        ]
+      },
+      {
+        "title": "Inventory allocation & distribution",
+        "description": "An algorithm suggesting inventory allocation and distribution between stores.",
+        "items": [
+          "Suggest allocation by product variant based on a target inventory level",
+          "Replenishment alerts and transfer of best-selling items between stores",
+          "Distribute stock by each store's expected sales share"
+        ]
+      },
+      {
+        "title": "Production & purchasing planning",
+        "description": "Plans supply by category and time based on sales targets and inventory.",
+        "items": [
+          "Production / purchasing plans by category and month",
+          "Track incoming goods from multiple supply sources",
+          "Output dashboard and exported plans for the relevant departments"
+        ]
+      }
+    ],
+    "techStack": ["SQL", "Python", "Power BI", "RFM", "ETL"],
+    "gallery": [
+      "Product analytics — revenue trend, new / returning customers, age groups and sizes with multi-dimensional filters",
+      "Customer analytics — active customers, purchase frequency, lifetime spend and age distribution",
+      "MOH / Inventory — months-on-hand by category, by warehouse and by MOH band"
+    ]
+  },
+  "courseraProjectDetail": {
   "backButton": "Back to Portfolio",
   "hero": {
     "title": "Automated Coursera Education Data Collection and Analysis System",
